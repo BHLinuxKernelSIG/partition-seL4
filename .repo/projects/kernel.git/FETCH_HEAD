@@ -1,0 +1,10 @@
+a249cde0af45455f1b4c0fd7cf77fae513ca76b0		branch 'experimental' of ssh://github.com/seL4/seL4
+6ef0b35313160c65a8c566201e4b4544078abd3c		branch 'master' of ssh://github.com/seL4/seL4
+ec0a41fed7d7f937b57bd2ccea562d886196e2b0		branch 'x86_64' of ssh://github.com/seL4/seL4
+e88fe4e356d3f1858dd142bf2da8ae393824a0c1	not-for-merge	tag '1.0.3' of ssh://github.com/seL4/seL4
+5f30512da2237a065d6dfb1eae14c9e42ca20156	not-for-merge	tag '1.0.4' of ssh://github.com/seL4/seL4
+2a4ee9ba912c195f526163dca27d48e06d8a81f8	not-for-merge	tag '2.0.0' of ssh://github.com/seL4/seL4
+93aa7e3264041c8aeaf53af2d523ac59a3a37ef1	not-for-merge	tag 'API-experimental-01-03--release-2014-07-29' of ssh://github.com/seL4/seL4
+764a3c8dfbb5f2a09afe18e3bfb449799a55f4a9	not-for-merge	tag 'API-experimental-01-03--release-2014-08-10' of ssh://github.com/seL4/seL4
+2315f4ce797b8bd0a8fd9efc5ed92d02d4a4baa6	not-for-merge	tag 'API-master-01-03--release-2014-07-29' of ssh://github.com/seL4/seL4
+4961cb66a484b4d3a436ac72a6fc286b23912e52	not-for-merge	tag 'API-master-01-03--release-2014-08-10' of ssh://github.com/seL4/seL4

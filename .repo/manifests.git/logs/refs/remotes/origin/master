@@ -1,0 +1,1 @@
+0000000000000000000000000000000000000000 a79d60680f2d34b0fbbc9109025795c583192387 dingguiqiang <920398694@qq.com> 1449039727 +0800	fetch --progress origin --tags +refs/heads/*:refs/remotes/origin/* +refs/heads/master:refs/remotes/origin/master: storing head

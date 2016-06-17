@@ -1,0 +1,1 @@
+0000000000000000000000000000000000000000 820f7efb4fbceeb1d0223f48f34dacfe8378cfdb dingguiqiang <920398694@qq.com> 1449041502 +0800	fetch --progress seL4 --tags +refs/heads/*:refs/remotes/seL4/* +refs/heads/master:refs/remotes/seL4/master: storing head
