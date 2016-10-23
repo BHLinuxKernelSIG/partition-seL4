@@ -206,15 +206,15 @@ terminal_mainloop(void)
 void print_cycle(char* info)
 {
     unsigned long long result;
-    asm volatile("rdtsc" : "=A" (result));
-    seL4_DebugPrintf("%s: cycles are %lld\n", info, result);
+    // asm volatile("rdtsc" : "=A" (result));
+    // seL4_DebugPrintf("%s: cycles are %lld\n", info, result);
 }
 
 
 unsigned long long get_cycle()
 {
-    unsigned long long result;
-    asm volatile("rdtsc" : "=A" (result));
+    unsigned long long result = 0;
+    // asm volatile("rdtsc" : "=A" (result));
     return result;
 }
 

@@ -221,14 +221,14 @@ int* share_init()
 inline unsigned long long get_cycle()
 {
     unsigned long long result;
-    asm volatile("rdtsc" : "=A" (result));
+    // asm volatile("rdtsc" : "=A" (result));
     return result;
 }
 void print_cycle(char* info)
 {
     unsigned long long result;
-    asm volatile("rdtsc" : "=A" (result));
-    seL4_DebugPrintf("%s: cycles are %lld\n", info, result);
+    // asm volatile("rdtsc" : "=A" (result));
+    // seL4_DebugPrintf("%s: cycles are %lld\n", info, result);
 }
 
 /*! @brief Main terminal entry point. */

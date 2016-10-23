@@ -18,7 +18,10 @@
 #include "dispatchers/serv_dispatch.h"
 #include "dispatchers/client_watch.h"
 
- #include <stdlib.h>
+#include <stdlib.h>
+
+#include "schedule/timer_init.h"
+#include "schedule/schedule.h"
 
 /*! @file
     @brief Timer Server main source file.
@@ -55,8 +58,7 @@ static char timeServMMapRegion[TIMESERV_MMAP_REGION_SIZE];
     @param msg The recieved message. (No ownership transfer)
     @return DISPATCH_SUCCESS if message dispatched, DISPATCH_ERROR if unknown message.
 */
-static int
-timer_server_handle_message(struct timeserv_state *s, srv_msg_t *msg)
+int timer_server_handle_message(struct timeserv_state *s, srv_msg_t *msg)
 {
     int result = DISPATCH_PASS;
     int label = seL4_GetMR(0);
@@ -97,52 +99,22 @@ timer_server_handle_message(struct timeserv_state *s, srv_msg_t *msg)
 /*! @brief Main timer server message loop. Simply loops through recieving and dispatching messages
            repeatedly. */
 
-seL4_CPtr localA_cptr;
-seL4_CPtr localB_cptr;
-seL4_CPtr userA_cptr;
-seL4_CPtr userB_cptr;
-seL4_CPtr userC_cptr;
 
+/*
 void print_cycle(char* info)
 {
     unsigned long long result;
-    asm volatile("rdtsc" : "=A" (result));
-    seL4_DebugPrintf("%s: cycles are %lld\n", info, result);
 }
+
 
 unsigned long long get_cycle()
 {
-    unsigned long long result;
-    asm volatile("rdtsc" : "=A" (result));
-    return result;
+    unsigned long long result = 0;
 }
 
 unsigned long long* start;
 unsigned long long cycle;
-
-void schedule(int i)
-{
-    //print_cycle("Global Schedule start");
-
-    if(i%2 == 0)
-    {
-        //seL4_DebugPrintf("\n                                      will RUN partition 1\n");
-        seL4_TCB_Suspend(localB_cptr);
-        seL4_TCB_Suspend(userC_cptr);
-        seL4_TCB_Suspend(userB_cptr);
-        seL4_TCB_Resume(localA_cptr);
-    }
-    else
-    {
-        //seL4_DebugPrintf("\n                                       will RUN partition 2 \n");
-        seL4_TCB_Suspend(localA_cptr);
-        seL4_TCB_Suspend(userA_cptr);
-        seL4_TCB_Resume(localB_cptr);
-    }
-
-        //print_cycle("Global Schedule finish");
-
-}
+*/
 
 static void
 timer_server_mainloop(void)
@@ -155,21 +127,21 @@ timer_server_mainloop(void)
     while (1) {
         msg.message = seL4_Wait(s->commonState.anonEP, &msg.badge);
 
-        seL4_DebugPrintf("\n      timer start, counter is %d\n", ++counter);
+        //seL4_DebugPrintf("\n      timer start, counter is %d\n", ++counter);
         if(counter % 1000 == 0)
         {
             seL4_DebugPrintf("WILL schedule parititions\n");
         }
 
-        cycle = get_cycle();
-        *start = cycle;
+        //cycle = get_cycle();
+        //*start = cycle;
         timer_server_handle_message(s, &msg);
         if(counter % 1000 == 0)
         {
-            schedule(i++);
+            schedule(i);
+            i ++;
         }
-        //seL4_Yield();
-        //client_table_postaction(&s->commonState.clientTable);
+        counter ++;
     }
 }
 
@@ -196,29 +168,23 @@ int* share_init()
 int
 main(void)
 {
+
+//============TIMERSERVER INIT===============//
+
     SET_MUSLC_SYSCALL_TABLE;
     dprintf("Initialising RefOS timer server.\n");
     refosio_setup_morecore_override(timeServMMapRegion, TIMESERV_MMAP_REGION_SIZE);
     refos_initialise();
     timeserv_init();
 
-    start = (unsigned long long *)share_init();
+//=============PARTITION INIT=================//
 
-    localA_cptr = proc_get_hello_cptr();
-    localB_cptr = proc_get_hello1_cptr();
-    userA_cptr = proc_get_hello2_cptr();
-    userB_cptr = proc_get_hello3_cptr();
-    userC_cptr = proc_get_hello4_cptr();
+    part_init();
+    
+//==============SCHEDULE ENTRY================//
 
-    seL4_TCB_Suspend(localA_cptr);
-    seL4_TCB_Suspend(localB_cptr);
-    seL4_TCB_Suspend(userA_cptr);
-    seL4_TCB_Suspend(userB_cptr);
-    seL4_TCB_Suspend(userC_cptr);
+    schedule_entry();
 
-    seL4_DebugPrintf("\nGlobal Scheduler Init Over\n");
-
-    timer_server_mainloop();
-
+    //never return;
     return 0;
 }

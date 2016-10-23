@@ -30,22 +30,22 @@ seL4_CPtr hello1_cptr;
 int main(void)
 {
     refos_initialise();
-    hello1_cptr = proc_get_hello1_cptr();
+    //hello1_cptr = proc_get_hello1_cptr();
     
 	while(1)
     {
-        seL4_DebugPutChar('A');
-        seL4_DebugPutChar('\n');
+        seL4_DebugPrintf("AAAAAAAAAAAAAAAAAA\n");
+        //seL4_DebugPutChar('\n');
 
-        seL4_TCB_Suspend(hello1_cptr);
+        //seL4_TCB_Suspend(hello1_cptr);
 
         //user schedule function
-        seL4_TCB_Resume(hello1_cptr);
+        //seL4_TCB_Resume(hello1_cptr);
 
-        seL4_DebugPutChar('Y');        
-        seL4_DebugPutChar('\n');
+        //seL4_DebugPutChar('Y');        
+        //seL4_DebugPutChar('\n');
 
-        seL4_Yield();
+        //seL4_Yield();
     }
 	return 0;
 }

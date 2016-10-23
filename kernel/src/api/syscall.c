@@ -32,9 +32,8 @@ void print_cycle(char *info);
 
 void print_cycle(char *info)
 {
-    unsigned long long result;
-    asm volatile("rdtsc" : "=A" (result));
-    printf("%s: cycles are %lld\n", info, result);
+    // asm volatile("rdtsc" : "=A" (result));
+    // printf("%s: cycles are %lld\n", info, result);
 }
 
 exception_t

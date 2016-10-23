@@ -78,8 +78,8 @@ void part2_user_schedule(int i)
 void print_cycle(int info)
 {
     unsigned long long result;
-    asm volatile("rdtsc" : "=A" (result));
-    printf("%d: cycles are %lld\n", info, result);
+	//asm volatile("rdtsc" : "=A" (result));
+    // printf("%d: cycles are %lld\n", info, result);
 }
 
 seL4_CPtr hello3_cptr;
@@ -90,29 +90,29 @@ static int i = 0;
 int main(void)
 {
     refos_initialise();
-    hello3_cptr = proc_get_hello3_cptr();
-    hello4_cptr = proc_get_hello4_cptr();
+    //hello3_cptr = proc_get_hello3_cptr();
+    //hello4_cptr = proc_get_hello4_cptr();
     
     while(1)
     {
-        i++;
-        seL4_DebugPutChar('B');
-        seL4_DebugPutChar('\n');
+        //i++;
+        seL4_DebugPrintf("CCCCCCCCCCCCCCCC\n");
+        //seL4_DebugPutChar('\n');
 
-        seL4_TCB_Suspend(hello3_cptr);
-        seL4_TCB_Suspend(hello4_cptr);
+        //seL4_TCB_Suspend(hello3_cptr);
+        //seL4_TCB_Suspend(hello4_cptr);
 
-        if (i % 2 == 0)
-        {
-            seL4_TCB_Resume(hello3_cptr);
-        }
-        else
-        {
-            seL4_TCB_Resume(hello4_cptr);
-        }
-        seL4_Yield();
-        seL4_DebugPutChar('Y');        
-        seL4_DebugPutChar('\n');
+        //if (i % 2 == 0)
+        //{
+        //    seL4_TCB_Resume(hello3_cptr);
+        //}
+        //else
+        //{
+        //    seL4_TCB_Resume(hello4_cptr);
+        //}
+        //seL4_Yield();
+        //seL4_DebugPutChar('Y');        
+        //seL4_DebugPutChar('\n');
     }
     return 0;
 }

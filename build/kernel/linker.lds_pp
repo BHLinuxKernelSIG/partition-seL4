@@ -1,60 +1,47 @@
 ENTRY(_start)
-PADDR_BASE = 0x00000000;
-PADDR_LOAD = 0x00100000;
-PPTR_BASE = 0xe0000000;
-BASE_OFFSET = PPTR_BASE - PADDR_BASE;
+KERNEL_BASE = 0xf0000000;
+PHYS_BASE = 0x80000000;
+KERNEL_OFFSET = KERNEL_BASE - PHYS_BASE;
 SECTIONS
 {
-    . = PADDR_LOAD;
-    .phys . :
-    {
-        *(.mbh)
-        *(.phys.text)
-        _boot_stack_bottom = .;
-        . = . + 2K;
-        . = ALIGN(4K);
-        _boot_stack_top = .;
-        *(.phys)
-        *(.phys.*)
-    }
-    . = . + BASE_OFFSET;
-    .boot . : AT(ADDR(.boot) - BASE_OFFSET)
+    . = KERNEL_BASE;
+    .boot . : AT(ADDR(.boot) - KERNEL_OFFSET)
     {
         *(.boot.text)
-        *(.boot.glob)
-        . = ALIGN(4K);
+        *(.boot.rodata)
+        *(.boot.data)
+        . = ALIGN(64K);
     }
     ki_boot_end = .;
-    .text . : AT(ADDR(.text) - BASE_OFFSET)
+    .text . : AT(ADDR(.text) - KERNEL_OFFSET)
     {
+        . = ALIGN(64K);
+        *(.vectors)
+        *(.vectors.fastpath_call)
+        *(.vectors.fastpath_reply_wait)
+        *(.vectors.text)
+        *(.vectors.*)
         *(.text)
     }
-    .rodata . : AT(ADDR(.rodata) - BASE_OFFSET)
+    .rodata . : AT(ADDR(.rodata) - KERNEL_OFFSET)
     {
         *(.rodata)
         *(.rodata.*)
     }
-    .glob . : AT(ADDR(.glob) - BASE_OFFSET)
-    {
-        *(.glob)
-    }
-    .data . : AT(ADDR(.data) - BASE_OFFSET)
+    .data . : AT(ADDR(.data) - KERNEL_OFFSET)
     {
         *(.data)
     }
+    .bss . : AT(ADDR(.bss) - KERNEL_OFFSET)
+    {
+        *(.bss)
+        _breakpoint_stack_bottom = .;
+        . = . + 4K;
+        _breakpoint_stack_top = .;
+        *(.bss.aligned)
+    }
     . = ALIGN(4K);
     ki_end = .;
-    .ndks 0xffc01000 (DSECT) :
-    {
-        _ndks_start = .;
-        _kernel_stack_bottom = .;
-        *(.ndks.stack)
-        _kernel_stack_top = .;
-        *(.boot.node)
-        *(.bss)
-        *(COMMON)
-        _ndks_end = .;
-    }
     /DISCARD/ :
     {
         *(.note.gnu.build-id)

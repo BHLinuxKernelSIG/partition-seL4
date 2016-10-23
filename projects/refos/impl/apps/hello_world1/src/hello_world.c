@@ -24,19 +24,12 @@
 #include <data_struct/cvector.h>
 
 
-void print_cycle(int info)
-{
-    unsigned long long result;
-    asm volatile("rdtsc" : "=A" (result));
-    printf("%d: cycles are %lld\n", info, result);
-}
-
 int main()
 {
     refos_initialise();
 
     while(1)
-    seL4_DebugPutChar('1');        
+        seL4_DebugPrintf("BBBBBBBBBBBBBBB\n");        
 }
 
 

@@ -11,7 +11,7 @@
 config APP_TIMER_SERVER
     bool "RefOS Timer Server"
     default y
-    depends on LIB_SEL4 && HAVE_LIBC && LIB_SEL4_PLAT_SUPPORT && LIB_REFOS_SYS
+    depends on LIB_SEL4 && HAVE_LIBC && LIB_SEL4_PLAT_SUPPORT && LIB_REFOS_SYS && LIB_PARTITION
     select HAVE_SEL4_APPS
     select APP_PROCESS_SERVER
     help
