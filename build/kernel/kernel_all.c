@@ -1,4 +1,4 @@
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -442,7 +442,7 @@ handleSyscall(syscall_t syscall)
 
     return EXCEPTION_NONE;
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/benchmark.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/benchmark.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -466,7 +466,7 @@ uint32_t *ksLog;
 #endif /* CONFIG_BENCHMARK */
 
 
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/faults.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/faults.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -547,7 +547,7 @@ handleFaultReply(tcb_t *receiver, tcb_t *sender)
         fail("Invalid fault");
     }
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/benchmark.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/benchmark.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -569,7 +569,7 @@ armv_init_ccnt(void)
 }
 
 #endif /* CONFIG_BENCHMARK */
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -597,7 +597,7 @@ cleanInvalidate_D_PoC(void)
     /* V6 has a single op to clean+invalidate D-Cache */
     asm volatile("mcr p15, 0, %0, c7, c14, 0" : : "r"(0));
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/user_access.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/user_access.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -616,7 +616,7 @@ armv_init_user_access(void)
 {
 }
 
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -1127,7 +1127,7 @@ fastpath_reply_wait(word_t cptr, word_t msgInfo)
     msgInfo = wordFromMessageInfo(info);
     fastpath_restore(badge, msgInfo, ksCurThread);
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -1610,7 +1610,7 @@ init_kernel(
     }
 }
 
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/thread.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/thread.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -1654,7 +1654,7 @@ Arch_activateIdleThread(tcb_t *tcb)
 {
     /* Don't need to do anything */
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3486,7 +3486,7 @@ kernelDataAbort(word_t pc)
     halt();
 }
 #endif
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/cache.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/cache.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3673,7 +3673,7 @@ cleanInvalidateL1Caches(void)
     invalidate_I_PoU();
     dsb();
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/capdl.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/capdl.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3979,7 +3979,7 @@ void capDL(void)
 }
 
 #endif
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/debug.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/debug.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4141,7 +4141,7 @@ uncatch_vector(vector_t vector)
     vcr &=  ~BIT(vector);
     setVCR(vcr);
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/errata.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/errata.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4222,7 +4222,7 @@ BOOT_CODE void  __attribute__((externally_visible)) arm_errata(void)
 #endif
 }
 
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/hardware.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/hardware.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4248,7 +4248,7 @@ setNextPC(tcb_t *thread, word_t v)
 {
     setRegister(thread, LR_svc, v);
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/registerset.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/registerset.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4281,7 +4281,7 @@ const register_t exceptionMessage[] = {
 const register_t syscallMessage[] = {
     R0, R1, R2, R3, R4, R5, R6, R7, FaultInstruction, SP, LR, CPSR
 };
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/model/statedata.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/model/statedata.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4313,7 +4313,7 @@ pde_t armKSGlobalPD[BIT(PD_BITS)] ALIGN_BSS(BIT(PD_SIZE_BITS));
 
 /* The global, privileged, page table. */
 pte_t armKSGlobalPT[BIT(PT_BITS)] ALIGN_BSS(BIT(PT_SIZE_BITS));
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/interrupt.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/interrupt.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4335,7 +4335,7 @@ Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
     current_syscall_error.type = seL4_IllegalOperation;
     return EXCEPTION_SYSCALL_ERROR;
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4717,7 +4717,7 @@ Arch_isFrameType(word_t t)
         return false;
     }
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4910,7 +4910,7 @@ void
 Arch_leaveVMAsyncTransfer(tcb_t *tcb)
 {
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/assert.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/assert.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4958,7 +4958,7 @@ void _assert_fail(
 }
 
 #endif
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/inlines.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/inlines.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4975,7 +4975,7 @@ void _assert_fail(
 lookup_fault_t current_lookup_fault;
 fault_t current_fault;
 syscall_error_t current_syscall_error;
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5510,7 +5510,7 @@ bi_finalise(void)
         slot_pos_start, slot_pos_end
     };
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6635,7 +6635,7 @@ printCTE(char *msg, cte_t *cte)
                cte);
     }
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6838,7 +6838,7 @@ resolveAddressBits(cap_t nodeCap, cptr_t capptr, unsigned int n_bits)
     ret.status = EXCEPTION_NONE;
     return ret;
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/faulthandler.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/faulthandler.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6958,7 +6958,7 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
 
     setThreadState(tptr, ThreadState_Inactive);
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7431,7 +7431,7 @@ rescheduleRequired(void)
     ksSchedulerAction = SchedulerAction_ChooseNewThread;
 }
 
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/machine/io.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/machine/io.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7674,7 +7674,7 @@ kprintf(const char *format, ...)
 }
 
 #endif /* defined DEBUG || RELEASE_PRINTF */
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/preemption.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/preemption.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7718,7 +7718,7 @@ preemptionPoint(void)
     return EXCEPTION_NONE;
 }
 
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/statedata.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/statedata.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7772,7 +7772,7 @@ word_t ksDomainTime;
 /* An index into ksDomSchedule for active domain and length. */
 uint32_t ksDomScheduleIdx;
 
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8003,7 +8003,7 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
 }
 
 
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8767,7 +8767,7 @@ loadCapTransfer(word_t *buffer)
     const int offset = seL4_MsgMaxLength + seL4_MsgMaxExtraCaps + 2;
     return capTransferFromWords(buffer + offset);
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9119,7 +9119,7 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
         fail("invalid EP state");
     }
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9390,7 +9390,7 @@ setIRQState(irq_state_t irqState, irq_t irq)
     intStateIRQTable[irq] = irqState;
     maskInterrupt(irqState == IRQInactive, irq);
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -10114,7 +10114,7 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
     doReplyTransfer(ksCurThread, thread, slot);
     return EXCEPTION_NONE;
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11205,7 +11205,7 @@ setThreadName(tcb_t *tcb, const char *name)
     strlcpy(tcb->tcbName, name, TCB_NAME_LENGTH);
 }
 #endif
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11461,7 +11461,7 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
 
     return EXCEPTION_NONE;
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11877,7 +11877,7 @@ handleSpuriousIRQ(void)
     /* Do nothing */
 }
 
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/io.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/io.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11945,7 +11945,7 @@ unsigned char getDebugChar(void)
 }
 
 #endif
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/string.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/string.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11995,7 +11995,7 @@ unsigned int strlcat(char *dest, const char *src, unsigned int size)
 }
 
 #endif
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/util.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/util.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12133,7 +12133,7 @@ str_to_int(const char* str)
 
     return val;
 }
-#line 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/config/default_domain.c"
+#line 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/config/default_domain.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *

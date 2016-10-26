@@ -177,6 +177,9 @@ main(void)
     refos_initialise();
     timeserv_init();
 
+    //while(1)
+    //    seL4_DebugPrintf("timer_server\n");
+
 //=============PARTITION INIT=================//
 
     part_init();

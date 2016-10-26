@@ -189,6 +189,7 @@ main(void)
         assert(!"RefOS system startup error.");
     }
 
+    
     error = proc_load_direct("selfloader", 245, "fileserv/hello_world", PID_NULL,
             PROCESS_PERMISSION_DEVICE_IRQ | PROCESS_PERMISSION_DEVICE_MAP |
             PROCESS_PERMISSION_DEVICE_IOPORT);
@@ -221,13 +222,14 @@ main(void)
         assert(!"RefOS system startup error.");
     }
 
-    error = proc_load_direct("selfloader", 245, "fileserv/hello_world4", PID_NULL,
+    error = proc_load_direct("selfloader", 245, "fileserv/hello_world4", PID_NULL, 
             PROCESS_PERMISSION_DEVICE_IRQ | PROCESS_PERMISSION_DEVICE_MAP |
             PROCESS_PERMISSION_DEVICE_IOPORT);
     if (error) {
         ROS_WARNING("Procserv could not start timer_server.");
         assert(!"RefOS system startup error.");
     }
+    
 
     // -----> Start initial task.
     /*

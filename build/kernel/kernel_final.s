@@ -17,7 +17,7 @@
 	.type	putEncodedChar, %function
 putEncodedChar:
 .LFB378:
-	.file 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/capdl.c"
+	.file 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/capdl.c"
 	.loc 1 61 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -28,7 +28,7 @@ putEncodedChar:
 	cmp	r0, #187
 .LBB3101:
 .LBB3102:
-	.file 2 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/io.c"
+	.file 2 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/io.c"
 	.loc 2 55 0
 	mvn	r1, #1032192
 .LBE3102:
@@ -311,7 +311,7 @@ sendCNode:
 	add	r3, r8, r4, asl #4
 	ldmia	r3, {r0, r1}
 	stmia	r6, {r0, r1}
-	.file 3 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/config/default_domain.c"
+	.file 3 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/config/default_domain.c"
 	.loc 3 19 0
 	ldr	r5, [sp, #0]
 .LVL22:
@@ -362,7 +362,7 @@ sendCNode:
 	.type	frame_cap_comparator, %function
 frame_cap_comparator:
 .LFB460:
-	.file 5 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c"
+	.file 5 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c"
 	.loc 5 116 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -959,7 +959,7 @@ getArg32:
 	.type	print_cycle, %function
 print_cycle:
 .LFB265:
-	.file 6 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c"
+	.file 6 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c"
 	.loc 6 34 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -975,7 +975,7 @@ print_cycle:
 	.type	clean_D_PoU, %function
 clean_D_PoU:
 .LFB276:
-	.file 7 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c"
+	.file 7 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c"
 	.loc 7 16 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -984,7 +984,7 @@ clean_D_PoU:
 	.loc 7 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c" 1
 	mcr p15, 0, r3, c7, c10, 0
 @ 0 "" 2
 	bx	lr
@@ -1004,7 +1004,7 @@ cleanInvalidate_D_PoC:
 	.loc 7 26 0
 	mov	r3, #0
 #APP
-@ 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c" 1
+@ 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c" 1
 	mcr p15, 0, r3, c7, c14, 0
 @ 0 "" 2
 	bx	lr
@@ -1016,7 +1016,7 @@ cleanInvalidate_D_PoC:
 	.type	armv_init_user_access, %function
 armv_init_user_access:
 .LFB278:
-	.file 8 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/user_access.c"
+	.file 8 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/user_access.c"
 	.loc 8 16 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -1032,7 +1032,7 @@ armv_init_user_access:
 	.type	Arch_configureIdleThread, %function
 Arch_configureIdleThread:
 .LFB313:
-	.file 9 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/thread.c"
+	.file 9 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/thread.c"
 	.loc 9 28 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -1041,7 +1041,7 @@ Arch_configureIdleThread:
 .LVL102:
 .LBB3237:
 .LBB3238:
-	.file 10 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h"
+	.file 10 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h"
 	.loc 10 21 0
 	ldr	r3, .L152
 .LBE3238:
@@ -1110,7 +1110,7 @@ Arch_activateIdleThread:
 	.type	activate_global_pd, %function
 activate_global_pd:
 .LFB321:
-	.file 11 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c"
+	.file 11 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c"
 	.loc 11 296 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -1124,11 +1124,11 @@ activate_global_pd:
 .LBB3243:
 .LBB3244:
 .LBB3245:
-	.file 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h"
+	.file 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h"
 	.loc 12 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE3245:
@@ -1137,7 +1137,7 @@ activate_global_pd:
 .LBB3247:
 	.loc 7 26 0
 #APP
-@ 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c" 1
+@ 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c" 1
 	mcr p15, 0, r3, c7, c14, 0
 @ 0 "" 2
 .LBE3247:
@@ -1146,24 +1146,24 @@ activate_global_pd:
 .LBB3249:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE3249:
 .LBE3248:
 .LBB3250:
 .LBB3251:
-	.file 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h"
+	.file 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h"
 	.loc 13 253 0
 #APP
-@ 253 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 253 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 0
 @ 0 "" 2
 .LBB3252:
 .LBB3253:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LBE3253:
@@ -1174,7 +1174,7 @@ activate_global_pd:
 .LBB3255:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LVL105:
@@ -1185,7 +1185,7 @@ activate_global_pd:
 .LBB3257:
 .LBB3258:
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LVL106:
@@ -1194,7 +1194,7 @@ activate_global_pd:
 .LBE3256:
 .LBB3263:
 .LBB3264:
-	.file 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h"
+	.file 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h"
 	.loc 14 40 0
 	ldr	r3, .L159
 .LBE3264:
@@ -1208,7 +1208,7 @@ activate_global_pd:
 	orr	r3, r3, #24
 	.loc 13 135 0
 #APP
-@ 135 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 135 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c2, c0, 0
 @ 0 "" 2
 .LBE3260:
@@ -1218,7 +1218,7 @@ activate_global_pd:
 	.loc 12 32 0
 	mov	r3, #0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LBE3262:
@@ -1230,21 +1230,21 @@ activate_global_pd:
 .LBB3269:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE3269:
 .LBE3268:
 	.loc 13 156 0
 #APP
-@ 156 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 156 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c8, c7, 0
 @ 0 "" 2
 .LBB3270:
 .LBB3271:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE3271:
@@ -1253,7 +1253,7 @@ activate_global_pd:
 .LBB3273:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LBE3273:
@@ -1418,7 +1418,7 @@ maskVMRights:
 	.type	cleanInvalidateCacheRange_RAM, %function
 cleanInvalidateCacheRange_RAM:
 .LFB369:
-	.file 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/cache.c"
+	.file 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/cache.c"
 	.loc 15 33 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -1460,14 +1460,14 @@ cleanInvalidateCacheRange_RAM:
 .LBB3284:
 	.loc 13 192 0
 #APP
-@ 192 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 192 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r5, c7, c10, 1
 @ 0 "" 2
 .LBB3283:
 .LBB3282:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r6, c7, c10, 5
 @ 0 "" 2
 .LBE3282:
@@ -1488,7 +1488,7 @@ cleanInvalidateCacheRange_RAM:
 	.loc 12 18 0
 	mov	ip, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, ip, c7, c10, 4
 @ 0 "" 2
 .LVL126:
@@ -1501,7 +1501,7 @@ cleanInvalidateCacheRange_RAM:
 .LVL128:
 .LBB3288:
 .LBB3289:
-	.file 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c"
+	.file 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c"
 	.loc 16 374 0
 	mov	r2, r2, lsr #5
 .LVL129:
@@ -1574,14 +1574,14 @@ cleanInvalidateCacheRange_RAM:
 .LBB3302:
 	.loc 13 268 0 discriminator 2
 #APP
-@ 268 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 268 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c14, 1
 @ 0 "" 2
 .LBB3301:
 .LBB3300:
 	.loc 12 18 0 discriminator 2
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r1, c7, c10, 4
 @ 0 "" 2
 .LBE3300:
@@ -1600,7 +1600,7 @@ cleanInvalidateCacheRange_RAM:
 	mov	r3, #0
 .LVL139:
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE3305:
@@ -1655,14 +1655,14 @@ cleanCacheRange_RAM:
 .LBB3314:
 	.loc 13 192 0
 #APP
-@ 192 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 192 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, ip, c7, c10, 1
 @ 0 "" 2
 .LBB3313:
 .LBB3312:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r5, c7, c10, 5
 @ 0 "" 2
 .LBE3312:
@@ -1683,7 +1683,7 @@ cleanCacheRange_RAM:
 	mov	r3, #0
 .LVL144:
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LVL145:
@@ -1780,14 +1780,14 @@ cleanCacheRange_PoU:
 .LBB3328:
 	.loc 13 207 0 discriminator 2
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 1
 @ 0 "" 2
 .LBB3327:
 .LBB3326:
 	.loc 12 25 0 discriminator 2
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r1, c7, c10, 5
 @ 0 "" 2
 .LBE3326:
@@ -1937,14 +1937,14 @@ invalidateCacheRange_RAM:
 .LBB3346:
 	.loc 13 227 0 discriminator 2
 #APP
-@ 227 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 227 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c6, 1
 @ 0 "" 2
 .LBB3345:
 .LBB3344:
 	.loc 12 25 0 discriminator 2
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r1, c7, c10, 5
 @ 0 "" 2
 .LBE3344:
@@ -1963,7 +1963,7 @@ invalidateCacheRange_RAM:
 	mov	r3, #0
 .LVL176:
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 	ldmfd	sp!, {r3, r4, r5, r6, r7, pc}
@@ -2010,14 +2010,14 @@ invalidateCacheRange_I:
 .LBB3356:
 	.loc 13 240 0 discriminator 2
 #APP
-@ 240 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 240 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 1
 @ 0 "" 2
 .LBB3355:
 .LBB3354:
 	.loc 12 32 0 discriminator 2
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r1, c7, c5, 4
 @ 0 "" 2
 .LBE3354:
@@ -2060,7 +2060,7 @@ branchFlushRange:
 .LBB3359:
 	.loc 13 277 0 discriminator 2
 #APP
-@ 277 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 277 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 7
 @ 0 "" 2
 .LBE3359:
@@ -2088,7 +2088,7 @@ cleanCaches_PoU:
 	.loc 12 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE3361:
@@ -2097,7 +2097,7 @@ cleanCaches_PoU:
 .LBB3363:
 	.loc 7 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c" 1
 	mcr p15, 0, r3, c7, c10, 0
 @ 0 "" 2
 .LBE3363:
@@ -2106,7 +2106,7 @@ cleanCaches_PoU:
 .LBB3365:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE3365:
@@ -2115,14 +2115,14 @@ cleanCaches_PoU:
 .LBB3367:
 	.loc 13 253 0
 #APP
-@ 253 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 253 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 0
 @ 0 "" 2
 .LBB3368:
 .LBB3369:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LBE3369:
@@ -2133,7 +2133,7 @@ cleanCaches_PoU:
 .LBB3371:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 	bx	lr
@@ -2157,7 +2157,7 @@ cleanInvalidateL1Caches:
 	.loc 12 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE3373:
@@ -2166,7 +2166,7 @@ cleanInvalidateL1Caches:
 .LBB3375:
 	.loc 7 26 0
 #APP
-@ 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c" 1
+@ 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c" 1
 	mcr p15, 0, r3, c7, c14, 0
 @ 0 "" 2
 .LBE3375:
@@ -2175,7 +2175,7 @@ cleanInvalidateL1Caches:
 .LBB3377:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE3377:
@@ -2184,14 +2184,14 @@ cleanInvalidateL1Caches:
 .LBB3379:
 	.loc 13 253 0
 #APP
-@ 253 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 253 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 0
 @ 0 "" 2
 .LBB3380:
 .LBB3381:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LBE3381:
@@ -2202,7 +2202,7 @@ cleanInvalidateL1Caches:
 .LBB3383:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 	bx	lr
@@ -2216,7 +2216,7 @@ cleanInvalidateL1Caches:
 	.type	set_breakpoint, %function
 set_breakpoint:
 .LFB401:
-	.file 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/debug.c"
+	.file 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/debug.c"
 	.loc 17 98 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -2281,7 +2281,7 @@ set_breakpoint:
 .LVL195:
 .LBB3388:
 .LBB3389:
-	.file 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h"
+	.file 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h"
 	.loc 18 170 0
 	cmp	r3, #5
 	ldrls	pc, [pc, r3, asl #2]
@@ -2297,7 +2297,7 @@ set_breakpoint:
 .L253:
 	.loc 18 187 0
 #APP
-@ 187 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 187 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c5, 4
 @ 0 "" 2
 .LVL197:
@@ -2309,7 +2309,7 @@ set_breakpoint:
 	.loc 18 255 0
 	ldr	r3, .L265+8
 #APP
-@ 255 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 255 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r3, c0, c5, 5
 @ 0 "" 2
 	mov	r0, #5
@@ -2323,7 +2323,7 @@ set_breakpoint:
 .LBB3390:
 	.loc 18 184 0
 #APP
-@ 184 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 184 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c4, 4
 @ 0 "" 2
 .LVL200:
@@ -2335,7 +2335,7 @@ set_breakpoint:
 	.loc 18 252 0
 	ldr	r3, .L265+8
 #APP
-@ 252 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 252 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r3, c0, c4, 5
 @ 0 "" 2
 	mov	r0, #4
@@ -2349,7 +2349,7 @@ set_breakpoint:
 .LBB3391:
 	.loc 18 181 0
 #APP
-@ 181 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 181 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c3, 4
 @ 0 "" 2
 .LVL203:
@@ -2361,7 +2361,7 @@ set_breakpoint:
 	.loc 18 249 0
 	ldr	r3, .L265+8
 #APP
-@ 249 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 249 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r3, c0, c3, 5
 @ 0 "" 2
 	mov	r0, #3
@@ -2375,7 +2375,7 @@ set_breakpoint:
 .LBB3392:
 	.loc 18 178 0
 #APP
-@ 178 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 178 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c2, 4
 @ 0 "" 2
 .LVL206:
@@ -2387,7 +2387,7 @@ set_breakpoint:
 	.loc 18 246 0
 	ldr	r3, .L265+8
 #APP
-@ 246 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 246 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r3, c0, c2, 5
 @ 0 "" 2
 	mov	r0, #2
@@ -2401,7 +2401,7 @@ set_breakpoint:
 .LBB3393:
 	.loc 18 175 0
 #APP
-@ 175 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 175 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c1, 4
 @ 0 "" 2
 .LVL209:
@@ -2413,7 +2413,7 @@ set_breakpoint:
 	.loc 18 243 0
 	ldr	r3, .L265+8
 #APP
-@ 243 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 243 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r3, c0, c1, 5
 @ 0 "" 2
 	mov	r0, #1
@@ -2433,7 +2433,7 @@ set_breakpoint:
 .LBB3394:
 	.loc 18 172 0
 #APP
-@ 172 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 172 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c0, 4
 @ 0 "" 2
 .LVL213:
@@ -2445,7 +2445,7 @@ set_breakpoint:
 	.loc 18 240 0
 	ldr	r3, .L265+8
 #APP
-@ 240 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 240 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r3, c0, c0, 5
 @ 0 "" 2
 	mov	r0, #0
@@ -2543,7 +2543,7 @@ clear_breakpoint:
 .L271:
 	.loc 18 240 0
 #APP
-@ 240 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 240 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c0, 5
 @ 0 "" 2
 .L270:
@@ -2569,7 +2569,7 @@ clear_breakpoint:
 .LBB3416:
 	.loc 18 255 0
 #APP
-@ 255 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 255 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c5, 5
 @ 0 "" 2
 .LBE3416:
@@ -2582,7 +2582,7 @@ clear_breakpoint:
 .LBB3417:
 	.loc 18 252 0
 #APP
-@ 252 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 252 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c4, 5
 @ 0 "" 2
 .LBE3417:
@@ -2595,7 +2595,7 @@ clear_breakpoint:
 .LBB3418:
 	.loc 18 249 0
 #APP
-@ 249 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 249 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c3, 5
 @ 0 "" 2
 .LBE3418:
@@ -2608,7 +2608,7 @@ clear_breakpoint:
 .LBB3419:
 	.loc 18 246 0
 #APP
-@ 246 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 246 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c2, 5
 @ 0 "" 2
 .LBE3419:
@@ -2621,7 +2621,7 @@ clear_breakpoint:
 .LBB3420:
 	.loc 18 243 0
 #APP
-@ 243 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 243 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r6, c0, c1, 5
 @ 0 "" 2
 .LBE3420:
@@ -2674,7 +2674,7 @@ catch_vector:
 .LBB3427:
 	.loc 18 124 0
 #APP
-@ 124 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 124 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mrc p14, 0, r3, c0, c7, 0
 @ 0 "" 2
 .LVL225:
@@ -2688,7 +2688,7 @@ catch_vector:
 .LBB3429:
 	.loc 18 132 0
 #APP
-@ 132 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 132 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r0, c0, c7, 0
 @ 0 "" 2
 	bx	lr
@@ -2712,7 +2712,7 @@ uncatch_vector:
 .LBB3431:
 	.loc 18 124 0
 #APP
-@ 124 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 124 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mrc p14, 0, r3, c0, c7, 0
 @ 0 "" 2
 .LVL228:
@@ -2726,7 +2726,7 @@ uncatch_vector:
 .LBB3433:
 	.loc 18 132 0
 #APP
-@ 132 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 132 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r0, c0, c7, 0
 @ 0 "" 2
 	bx	lr
@@ -2741,7 +2741,7 @@ uncatch_vector:
 	.type	arm_errata, %function
 arm_errata:
 .LFB407:
-	.file 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/errata.c"
+	.file 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/errata.c"
 	.loc 19 71 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -2753,7 +2753,7 @@ arm_errata:
 .LBB3437:
 	.loc 13 72 0
 #APP
-@ 72 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 72 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mrc  p15, 0, r2, c0, c0, 0
 @ 0 "" 2
 .LVL230:
@@ -2769,7 +2769,7 @@ arm_errata:
 .LBB3439:
 	.loc 13 80 0
 #APP
-@ 80 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 80 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mrc  p15, 0, r3, c1, c0, 0
 @ 0 "" 2
 .LVL232:
@@ -2782,7 +2782,7 @@ arm_errata:
 .LBB3441:
 	.loc 13 87 0
 #APP
-@ 87 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 87 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr  p15, 0, r3, c1, c0, 0
 @ 0 "" 2
 .LBE3441:
@@ -2791,7 +2791,7 @@ arm_errata:
 .LBB3443:
 	.loc 13 94 0
 #APP
-@ 94 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 94 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mrc  p15, 0, r3, c1, c0, 1
 @ 0 "" 2
 .LVL234:
@@ -2804,7 +2804,7 @@ arm_errata:
 .LBB3445:
 	.loc 13 101 0
 #APP
-@ 101 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 101 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr  p15, 0, r3, c1, c0, 1
 @ 0 "" 2
 	bx	lr
@@ -2825,7 +2825,7 @@ arm_errata:
 	.type	getRestartPC, %function
 getRestartPC:
 .LFB408:
-	.file 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/hardware.c"
+	.file 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/hardware.c"
 	.loc 20 17 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -2865,7 +2865,7 @@ setNextPC:
 	.type	Arch_decodeInterruptControl, %function
 Arch_decodeInterruptControl:
 .LFB410:
-	.file 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/interrupt.c"
+	.file 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/interrupt.c"
 	.loc 21 18 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
@@ -2908,7 +2908,7 @@ Arch_decodeInterruptControl:
 	.type	Arch_updateCapData, %function
 Arch_updateCapData:
 .LFB412:
-	.file 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c"
+	.file 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c"
 	.loc 22 49 0
 	.cfi_startproc
 	@ args = 12, pretend = 8, frame = 0
@@ -2977,7 +2977,7 @@ Arch_isFrameType:
 	.type	Arch_decodeTransfer, %function
 Arch_decodeTransfer:
 .LFB429:
-	.file 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c"
+	.file 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c"
 	.loc 23 179 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -3030,7 +3030,7 @@ Arch_leaveVMAsyncTransfer:
 	.type	bi_finalise, %function
 bi_finalise:
 .LFB453:
-	.file 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c"
+	.file 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c"
 	.loc 24 528 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -3062,7 +3062,7 @@ bi_finalise:
 	.type	doPollFailedTransfer, %function
 doPollFailedTransfer:
 .LFB533:
-	.file 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c"
+	.file 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c"
 	.loc 25 271 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -3130,7 +3130,7 @@ switchToIdleThread:
 	.type	print_unsigned_long, %function
 print_unsigned_long:
 .LFB551:
-	.file 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/machine/io.c"
+	.file 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/machine/io.c"
 	.loc 26 56 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 16
@@ -3974,7 +3974,7 @@ kprintf:
 	.type	_assert_fail, %function
 _assert_fail:
 .LFB433:
-	.file 27 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/assert.c"
+	.file 27 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/assert.c"
 	.loc 27 37 0
 	.cfi_startproc
 	@ Volatile: function does not return.
@@ -4048,7 +4048,7 @@ vm_attributes_new.part.32:
 	.type	getSyscallArg.part.33, %function
 getSyscallArg.part.33:
 .LFB730:
-	.file 28 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h"
+	.file 28 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h"
 	.loc 28 27 0
 	.cfi_startproc
 	@ Volatile: function does not return.
@@ -4693,7 +4693,7 @@ cap_reply_cap_new.part.54:
 	.type	ready_queues_index.part.55, %function
 ready_queues_index.part.55:
 .LFB752:
-	.file 30 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h"
+	.file 30 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h"
 	.loc 30 19 0
 	.cfi_startproc
 	@ Volatile: function does not return.
@@ -6534,7 +6534,7 @@ irq_comparator:
 	.type	mdb_node_ptr_set_cdtRight.part.126, %function
 mdb_node_ptr_set_cdtRight.part.126:
 .LFB823:
-	.file 31 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h"
+	.file 31 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h"
 	.loc 31 227 0
 	.cfi_startproc
 	@ Volatile: function does not return.
@@ -8123,7 +8123,7 @@ fault_vm_fault_new.part.161:
 	.type	insert_region_excluded, %function
 insert_region_excluded:
 .LFB300:
-	.file 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c"
+	.file 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c"
 	.loc 32 38 0
 	.cfi_startproc
 	@ args = 12, pretend = 8, frame = 8
@@ -8231,7 +8231,7 @@ insert_region_excluded:
 	.type	fastpath_copy_mrs, %function
 fastpath_copy_mrs:
 .LFB296:
-	.file 33 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c"
+	.file 33 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c"
 	.loc 33 187 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -8766,7 +8766,7 @@ fastpath_reply_wait:
 .LBB4117:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r5, c7, c10, 4
 @ 0 "" 2
 .LVL719:
@@ -8790,7 +8790,7 @@ fastpath_reply_wait:
 	orr	r3, r3, #24
 	.loc 13 135 0
 #APP
-@ 135 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 135 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c2, c0, 0
 @ 0 "" 2
 .LBE4119:
@@ -8800,7 +8800,7 @@ fastpath_reply_wait:
 	.loc 12 32 0
 	mov	r3, #0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LVL722:
@@ -8813,7 +8813,7 @@ fastpath_reply_wait:
 .LBB4128:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE4128:
@@ -8822,13 +8822,13 @@ fastpath_reply_wait:
 .LBB4130:
 	.loc 13 116 0
 #APP
-@ 116 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 116 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 6
 @ 0 "" 2
 .LVL723:
 .LBE4130:
 .LBE4129:
-	.file 34 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/context_switch.h"
+	.file 34 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/context_switch.h"
 	.loc 34 21 0
 	mov	r6, r6, lsr #24
 .LVL724:
@@ -8836,7 +8836,7 @@ fastpath_reply_wait:
 .LBB4132:
 	.loc 13 123 0
 #APP
-@ 123 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 123 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r6, c13, c0, 1
 @ 0 "" 2
 .LBB4133:
@@ -8844,7 +8844,7 @@ fastpath_reply_wait:
 	.loc 12 32 0
 	mov	r0, #0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c5, 4
 @ 0 "" 2
 .LBE4134:
@@ -8869,7 +8869,7 @@ fastpath_reply_wait:
 	.loc 33 99 0
 	mov	r3, r0
 #APP
-@ 99 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 1
+@ 99 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 1
 	strex r3, r2, [r2]
 @ 0 "" 2
 .LVL726:
@@ -8884,7 +8884,7 @@ fastpath_reply_wait:
 .LVL727:
 	.loc 33 39 0
 #APP
-@ 39 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 1
+@ 39 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 1
 	add sp, r4, #60
 	ldmdb sp, {r2-lr}^
 	rfeia sp
@@ -9358,7 +9358,7 @@ fastpath_call:
 .LBB4306:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r8, c7, c10, 4
 @ 0 "" 2
 .LVL785:
@@ -9382,7 +9382,7 @@ fastpath_call:
 	orr	r3, r3, #24
 	.loc 13 135 0
 #APP
-@ 135 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 135 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c2, c0, 0
 @ 0 "" 2
 .LBE4308:
@@ -9392,7 +9392,7 @@ fastpath_call:
 	.loc 12 32 0
 	mov	r2, #0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r2, c7, c5, 4
 @ 0 "" 2
 .LVL788:
@@ -9405,7 +9405,7 @@ fastpath_call:
 .LBB4317:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 4
 @ 0 "" 2
 .LBE4317:
@@ -9414,7 +9414,7 @@ fastpath_call:
 .LBB4319:
 	.loc 13 116 0
 #APP
-@ 116 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 116 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c5, 6
 @ 0 "" 2
 .LVL789:
@@ -9427,14 +9427,14 @@ fastpath_call:
 .LBB4321:
 	.loc 13 123 0
 #APP
-@ 123 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 123 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r5, c13, c0, 1
 @ 0 "" 2
 .LBB4322:
 .LBB4323:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r2, c7, c5, 4
 @ 0 "" 2
 .LBE4323:
@@ -9458,7 +9458,7 @@ fastpath_call:
 	add	r3, sp, #12
 	.loc 33 99 0
 #APP
-@ 99 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 1
+@ 99 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 1
 	strex r2, r3, [r3]
 @ 0 "" 2
 .LVL792:
@@ -9476,7 +9476,7 @@ fastpath_call:
 .LVL794:
 	.loc 33 39 0
 #APP
-@ 39 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 1
+@ 39 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 1
 	add sp, r4, #60
 	ldmdb sp, {r2-lr}^
 	rfeia sp
@@ -9523,7 +9523,7 @@ fastpath_call:
 	.type	resolveAddressBits, %function
 resolveAddressBits:
 .LFB517:
-	.file 35 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c"
+	.file 35 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c"
 	.loc 35 140 0
 	.cfi_startproc
 	@ args = 4, pretend = 0, frame = 8
@@ -10735,21 +10735,21 @@ findFreeHWASID:
 .LBB4389:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE4389:
 .LBE4388:
 	.loc 13 165 0
 #APP
-@ 165 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 165 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r1, c8, c7, 2
 @ 0 "" 2
 .LBB4390:
 .LBB4391:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE4391:
@@ -10758,7 +10758,7 @@ findFreeHWASID:
 .LBB4393:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LBE4393:
@@ -10919,7 +10919,7 @@ setVMRoot:
 	.loc 12 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LVL1026:
@@ -10941,7 +10941,7 @@ setVMRoot:
 	orr	r3, r3, #24
 	.loc 13 135 0
 #APP
-@ 135 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 135 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c2, c0, 0
 @ 0 "" 2
 .LBE4459:
@@ -10951,7 +10951,7 @@ setVMRoot:
 	.loc 12 32 0
 	mov	r3, #0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 	ldmfd	sp!, {r4, pc}
@@ -10986,7 +10986,7 @@ setVMRoot:
 	.loc 12 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LVL1031:
@@ -11001,7 +11001,7 @@ setVMRoot:
 .LVL1033:
 	.loc 13 135 0
 #APP
-@ 135 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 135 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r4, c2, c0, 0
 @ 0 "" 2
 .LBE4474:
@@ -11010,7 +11010,7 @@ setVMRoot:
 .LBB4476:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LVL1034:
@@ -11023,7 +11023,7 @@ setVMRoot:
 .LBB4480:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE4480:
@@ -11032,7 +11032,7 @@ setVMRoot:
 .LBB4482:
 	.loc 13 116 0
 #APP
-@ 116 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 116 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 6
 @ 0 "" 2
 .LVL1035:
@@ -11042,14 +11042,14 @@ setVMRoot:
 .LBB4484:
 	.loc 13 123 0
 #APP
-@ 123 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 123 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r0, c13, c0, 1
 @ 0 "" 2
 .LBB4485:
 .LBB4486:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 	ldmfd	sp!, {r4, pc}
@@ -11110,7 +11110,7 @@ Arch_switchToThread:
 .LBB4489:
 	.loc 13 109 0
 #APP
-@ 109 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 109 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	strex r0, r1, [r3]
 @ 0 "" 2
 .LBE4489:
@@ -11198,7 +11198,7 @@ setVMRootForFlush:
 	.loc 12 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LVL1045:
@@ -11222,7 +11222,7 @@ setVMRootForFlush:
 	orr	r4, r4, #24
 	.loc 13 135 0
 #APP
-@ 135 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 135 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r4, c2, c0, 0
 @ 0 "" 2
 .LBE4539:
@@ -11231,7 +11231,7 @@ setVMRootForFlush:
 .LBB4541:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LVL1048:
@@ -11244,7 +11244,7 @@ setVMRootForFlush:
 .LBB4530:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE4530:
@@ -11253,7 +11253,7 @@ setVMRootForFlush:
 .LBB4532:
 	.loc 13 116 0
 #APP
-@ 116 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 116 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 6
 @ 0 "" 2
 .LVL1049:
@@ -11263,14 +11263,14 @@ setVMRootForFlush:
 .LBB4528:
 	.loc 13 123 0
 #APP
-@ 123 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 123 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r0, c13, c0, 1
 @ 0 "" 2
 .LBB4527:
 .LBB4526:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 	.loc 11 705 0
@@ -11373,7 +11373,7 @@ flushTable:
 .LBB4574:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 4
 @ 0 "" 2
 .LBE4574:
@@ -11391,7 +11391,7 @@ flushTable:
 .LBB4579:
 	.loc 13 165 0
 #APP
-@ 165 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 165 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c8, c7, 2
 @ 0 "" 2
 .LBB4575:
@@ -11399,7 +11399,7 @@ flushTable:
 	.loc 12 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE4576:
@@ -11408,7 +11408,7 @@ flushTable:
 .LBB4578:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LBE4578:
@@ -11513,14 +11513,14 @@ unmapPageTable:
 .LBB4604:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r4, c7, c10, 1
 @ 0 "" 2
 .LBB4605:
 .LBB4606:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 5
 @ 0 "" 2
 .LBE4606:
@@ -11885,7 +11885,7 @@ cdtFindWithExtra:
 	uxtbeq	r3, r3
 .LBE4691:
 .LBE4690:
-	.file 36 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/capspace.h"
+	.file 36 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/capspace.h"
 	.loc 36 30 0
 	sub	r3, r3, #1
 	cmp	r3, #61
@@ -13681,7 +13681,7 @@ typed_comparator:
 	uxtbeq	r1, r3
 .LBE5035:
 .LBE5034:
-	.file 37 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h"
+	.file 37 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h"
 	.loc 37 139 0
 	cmp	r1, #3
 	beq	.L1366
@@ -14183,7 +14183,7 @@ typed_comparator:
 	.type	print_fault, %function
 print_fault:
 .LFB520:
-	.file 38 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/faulthandler.c"
+	.file 38 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/faulthandler.c"
 	.loc 38 72 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
@@ -15990,7 +15990,7 @@ cdtRemove:
 	.type	emptySlot, %function
 emptySlot:
 .LFB580:
-	.file 39 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c"
+	.file 39 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c"
 	.loc 39 469 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
@@ -16077,7 +16077,7 @@ emptySlot:
 	ldrne	r2, [r2, #0]
 .LBE5586:
 .LBE5588:
-	.file 40 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c"
+	.file 40 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c"
 	.loc 40 268 0
 	ldrne	r1, .L1579+4
 	strne	r3, [r1, r5, asl #2]
@@ -18629,14 +18629,14 @@ doFlush:
 .LBB6161:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 1
 @ 0 "" 2
 .LBB6160:
 .LBB6159:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, ip, c7, c10, 5
 @ 0 "" 2
 .LBE6159:
@@ -18657,7 +18657,7 @@ doFlush:
 	.loc 12 18 0
 	mov	ip, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, ip, c7, c10, 4
 @ 0 "" 2
 .LVL1760:
@@ -18677,14 +18677,14 @@ doFlush:
 .LBB6168:
 	.loc 13 240 0
 #APP
-@ 240 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 240 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r0, c7, c5, 1
 @ 0 "" 2
 .LBB6169:
 .LBB6170:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, ip, c7, c5, 4
 @ 0 "" 2
 .LBE6170:
@@ -18708,7 +18708,7 @@ doFlush:
 .LBB6174:
 	.loc 13 277 0
 #APP
-@ 277 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 277 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 7
 @ 0 "" 2
 .LBE6174:
@@ -18727,7 +18727,7 @@ doFlush:
 	.loc 12 32 0
 	mov	r3, #0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 	ldmfd	sp!, {r3, pc}
@@ -19030,7 +19030,7 @@ handleVMFault:
 .LBB6244:
 	.loc 13 324 0
 #APP
-@ 324 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 324 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mrc p15, 0, r1, c6, c0, 0
 @ 0 "" 2
 .LVL1797:
@@ -19040,7 +19040,7 @@ handleVMFault:
 .LBB6246:
 	.loc 13 316 0
 #APP
-@ 316 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 316 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mrc p15, 0, r2, c5, c0, 0
 @ 0 "" 2
 .LVL1798:
@@ -19100,7 +19100,7 @@ handleVMFault:
 .LBB6254:
 	.loc 13 308 0
 #APP
-@ 308 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 308 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mrc p15, 0, r3, c5, c0, 1
 @ 0 "" 2
 .LVL1807:
@@ -20620,7 +20620,7 @@ flushPage:
 	mov	r5, r2
 .LBB6565:
 .LBB6566:
-	.file 41 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h"
+	.file 41 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h"
 	.loc 41 113 0
 	cmp	r0, #3
 	ldrls	pc, [pc, r0, asl #2]
@@ -20669,7 +20669,7 @@ flushPage:
 .LBB6577:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 4
 @ 0 "" 2
 .LBE6577:
@@ -20687,7 +20687,7 @@ flushPage:
 .LBB6582:
 	.loc 13 174 0
 #APP
-@ 174 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 174 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c8, c7, 1
 @ 0 "" 2
 .LBB6578:
@@ -20695,7 +20695,7 @@ flushPage:
 	.loc 12 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE6579:
@@ -20704,7 +20704,7 @@ flushPage:
 .LBB6581:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LBE6581:
@@ -20875,7 +20875,7 @@ unmapPagePDE:
 .LBB6629:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r5, c7, c10, 1
 @ 0 "" 2
 .LBB6630:
@@ -20883,7 +20883,7 @@ unmapPagePDE:
 	.loc 12 25 0
 	mov	r3, #0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 5
 @ 0 "" 2
 .LVL2029:
@@ -20980,14 +20980,14 @@ unmapPagePDE:
 .LBB6645:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, ip, c7, c10, 1
 @ 0 "" 2
 .LBB6644:
 .LBB6643:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r5, c7, c10, 5
 @ 0 "" 2
 .LBE6643:
@@ -21247,7 +21247,7 @@ unmapPagePTE:
 .LBB6704:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB6705:
@@ -21255,7 +21255,7 @@ unmapPagePTE:
 	.loc 12 25 0
 	mov	r3, #0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 5
 @ 0 "" 2
 .LVL2077:
@@ -21377,14 +21377,14 @@ unmapPagePTE:
 .LBB6721:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, ip, c7, c10, 1
 @ 0 "" 2
 .LBB6720:
 .LBB6719:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE6719:
@@ -21641,7 +21641,7 @@ lookupIPCBuffer:
 	.type	handleFaultReply, %function
 handleFaultReply:
 .LFB275:
-	.file 42 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/faults.c"
+	.file 42 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/faults.c"
 	.loc 42 19 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 8
@@ -21676,7 +21676,7 @@ handleFaultReply:
 	and	r4, r0, #127
 .LBE6792:
 .LBE6791:
-	.file 43 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h"
+	.file 43 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h"
 	.loc 43 83 0
 	cmp	r4, #120
 .LBB6793:
@@ -21765,7 +21765,7 @@ handleFaultReply:
 .LBE6803:
 .LBB6804:
 .LBB6805:
-	.file 44 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h"
+	.file 44 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h"
 	.loc 44 120 0 discriminator 2
 	cmp	r1, #16
 	.loc 44 121 0 discriminator 2
@@ -26456,14 +26456,14 @@ performPageInvocationMapPDE:
 .LBB8034:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB8033:
 .LBB8032:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE8032:
@@ -26735,14 +26735,14 @@ performPageInvocationMapPTE:
 .LBB8092:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB8091:
 .LBB8090:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE8090:
@@ -26965,7 +26965,7 @@ performPageTableInvocationMap:
 .LBB8121:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r4, c7, c10, 1
 @ 0 "" 2
 .LBB8122:
@@ -26973,7 +26973,7 @@ performPageTableInvocationMap:
 	.loc 12 25 0
 	mov	r0, #0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE8123:
@@ -27137,7 +27137,7 @@ unmapAllPageTables:
 .LBE8213:
 .LBB8214:
 .LBB8215:
-	.file 45 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h"
+	.file 45 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h"
 	.loc 45 24 0
 	add	r1, r1, #1879048192
 .LVL2657:
@@ -30710,7 +30710,7 @@ debug_init:
 .LBB8840:
 	.loc 18 70 0
 #APP
-@ 70 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 70 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mrc p14, 0, r2, c0, c0, 0
 @ 0 "" 2
 .LVL3033:
@@ -30748,7 +30748,7 @@ debug_init:
 	.loc 18 105 0
 	mov	r3, #32768
 #APP
-@ 105 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 105 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r3, c0, c1, 0
 @ 0 "" 2
 .LVL3038:
@@ -30785,7 +30785,7 @@ debug_init:
 .L2975:
 	.loc 18 240 0
 #APP
-@ 240 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 240 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r1, c0, c0, 5
 @ 0 "" 2
 .L2974:
@@ -30803,7 +30803,7 @@ debug_init:
 	.loc 18 132 0
 	mov	r3, #0
 #APP
-@ 132 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 132 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r3, c0, c7, 0
 @ 0 "" 2
 	ldmfd	sp!, {r4, pc}
@@ -30815,7 +30815,7 @@ debug_init:
 .LBB8845:
 	.loc 18 255 0
 #APP
-@ 255 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 255 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r1, c0, c5, 5
 @ 0 "" 2
 .LBE8845:
@@ -30832,7 +30832,7 @@ debug_init:
 .LBB8846:
 	.loc 18 252 0
 #APP
-@ 252 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 252 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r1, c0, c4, 5
 @ 0 "" 2
 .LBE8846:
@@ -30849,7 +30849,7 @@ debug_init:
 .LBB8847:
 	.loc 18 249 0
 #APP
-@ 249 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 249 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r1, c0, c3, 5
 @ 0 "" 2
 .LBE8847:
@@ -30866,7 +30866,7 @@ debug_init:
 .LBB8848:
 	.loc 18 246 0
 #APP
-@ 246 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 246 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r1, c0, c2, 5
 @ 0 "" 2
 .LBE8848:
@@ -30883,7 +30883,7 @@ debug_init:
 .LBB8849:
 	.loc 18 243 0
 #APP
-@ 243 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
+@ 243 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
 	mcr p14, 0, r1, c0, c1, 5
 @ 0 "" 2
 .LBE8849:
@@ -30927,7 +30927,7 @@ kernelDataAbort:
 .LBB8858:
 	.loc 13 316 0
 #APP
-@ 316 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 316 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mrc p15, 0, r4, c5, c0, 0
 @ 0 "" 2
 .LVL3054:
@@ -30937,7 +30937,7 @@ kernelDataAbort:
 .LBB8860:
 	.loc 13 324 0
 #APP
-@ 324 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 324 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mrc p15, 0, r5, c6, c0, 0
 @ 0 "" 2
 .LVL3055:
@@ -30994,7 +30994,7 @@ kernelPrefetchAbort:
 .LBB8862:
 	.loc 13 308 0
 #APP
-@ 308 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 308 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mrc p15, 0, r4, c5, c0, 1
 @ 0 "" 2
 .LVL3062:
@@ -31159,7 +31159,7 @@ checkValidIPCBuffer:
 	.type	preemptionPoint, %function
 preemptionPoint:
 .LFB556:
-	.file 46 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/preemption.c"
+	.file 46 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/preemption.c"
 	.loc 46 22 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -31223,7 +31223,7 @@ preemptionPoint:
 	.type	completeAsyncIPC, %function
 completeAsyncIPC:
 .LFB564:
-	.file 47 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c"
+	.file 47 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c"
 	.loc 47 199 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -32201,7 +32201,7 @@ loadCapTransfer:
 	.type	replyFromKernel_error, %function
 replyFromKernel_error:
 .LFB597:
-	.file 48 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c"
+	.file 48 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c"
 	.loc 48 207 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -32592,7 +32592,7 @@ setIRQState:
 	.type	getObjectSize, %function
 getObjectSize:
 .LFB614:
-	.file 49 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c"
+	.file 49 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c"
 	.loc 49 34 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -37711,7 +37711,7 @@ maskCapRights:
 	.type	tcbSchedEnqueue, %function
 tcbSchedEnqueue:
 .LFB631:
-	.file 50 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c"
+	.file 50 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c"
 	.loc 50 52 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -39105,7 +39105,7 @@ decodeARMMMUInvocation:
 .LBB11004:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, sl, c7, c10, 1
 @ 0 "" 2
 .LBB11005:
@@ -39113,7 +39113,7 @@ decodeARMMMUInvocation:
 	.loc 12 25 0
 	mov	r0, #0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE11006:
@@ -45871,7 +45871,7 @@ handleUnknownSyscall:
 .LVL4645:
 .LBB11916:
 .LBB11917:
-	.file 51 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/string.c"
+	.file 51 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/string.c"
 	.loc 51 19 0
 	cmp	r2, r4
 	beq	.L4337
@@ -47752,7 +47752,7 @@ strlcat:
 	.type	memzero, %function
 memzero:
 .LFB691:
-	.file 52 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/util.c"
+	.file 52 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/util.c"
 	.loc 52 22 0
 	.cfi_startproc
 	@ args = 0, pretend = 0, frame = 0
@@ -50040,14 +50040,14 @@ Arch_createObject:
 .LBB12562:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB12561:
 .LBB12560:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE12560:
@@ -50271,14 +50271,14 @@ Arch_createObject:
 .LBB12588:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB12587:
 .LBB12586:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE12586:
@@ -50354,14 +50354,14 @@ Arch_createObject:
 .LBB12602:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB12601:
 .LBB12600:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE12600:
@@ -50413,14 +50413,14 @@ Arch_createObject:
 .LBB12612:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB12611:
 .LBB12610:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE12610:
@@ -50472,14 +50472,14 @@ Arch_createObject:
 .LBB12622:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB12621:
 .LBB12620:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE12620:
@@ -50531,14 +50531,14 @@ Arch_createObject:
 .LBB12632:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB12631:
 .LBB12630:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE12630:
@@ -51121,7 +51121,7 @@ createNewObjects:
 	.type	invokeUntyped_Retype, %function
 invokeUntyped_Retype:
 .LFB663:
-	.file 53 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c"
+	.file 53 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c"
 	.loc 53 230 0
 	.cfi_startproc
 	@ args = 24, pretend = 0, frame = 0
@@ -52506,14 +52506,14 @@ Arch_finaliseCap:
 .LBB13052:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 1
 @ 0 "" 2
 .LBB13051:
 .LBB13050:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r1, c7, c10, 5
 @ 0 "" 2
 .LBE13050:
@@ -60453,14 +60453,14 @@ allocate_bi_frame:
 .LBB14389:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, ip, c7, c10, 1
 @ 0 "" 2
 .LBB14388:
 .LBB14387:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r6, c7, c10, 5
 @ 0 "" 2
 .LBE14387:
@@ -60609,14 +60609,14 @@ create_ipcbuf_frame:
 .LBB14446:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r1, c7, c10, 1
 @ 0 "" 2
 .LBB14445:
 .LBB14444:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, lr, c7, c10, 5
 @ 0 "" 2
 .LBE14444:
@@ -61736,14 +61736,14 @@ init_kernel:
 .LBB14813:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 1
 @ 0 "" 2
 .LBB14812:
 .LBB14811:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r1, c7, c10, 5
 @ 0 "" 2
 .LBE14811:
@@ -62361,7 +62361,7 @@ init_kernel:
 	.loc 12 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE14870:
@@ -62370,7 +62370,7 @@ init_kernel:
 .LBB14872:
 	.loc 7 26 0
 #APP
-@ 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c" 1
+@ 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c" 1
 	mcr p15, 0, r3, c7, c14, 0
 @ 0 "" 2
 .LBE14872:
@@ -62379,7 +62379,7 @@ init_kernel:
 .LBB14874:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE14874:
@@ -62388,7 +62388,7 @@ init_kernel:
 .LBB14876:
 	.loc 13 253 0
 #APP
-@ 253 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 253 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 0
 @ 0 "" 2
 .LBB14877:
@@ -62396,7 +62396,7 @@ init_kernel:
 	.loc 12 32 0
 	mov	r7, #0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r7, c7, c5, 4
 @ 0 "" 2
 .LBE14878:
@@ -62407,7 +62407,7 @@ init_kernel:
 .LBB14880:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r7, c7, c10, 4
 @ 0 "" 2
 .LBE14880:
@@ -62560,7 +62560,7 @@ init_kernel:
 .LBB14908:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 4
 @ 0 "" 2
 .LBE14908:
@@ -62569,7 +62569,7 @@ init_kernel:
 .LBB14910:
 	.loc 7 26 0
 #APP
-@ 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c" 1
+@ 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c" 1
 	mcr p15, 0, r2, c7, c14, 0
 @ 0 "" 2
 .LBE14910:
@@ -62579,7 +62579,7 @@ init_kernel:
 	.loc 12 18 0
 	mov	r3, #0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE14912:
@@ -62588,14 +62588,14 @@ init_kernel:
 .LBB14914:
 	.loc 13 253 0
 #APP
-@ 253 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 253 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 0
 @ 0 "" 2
 .LBB14915:
 .LBB14916:
 	.loc 12 32 0
 #APP
-@ 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c5, 4
 @ 0 "" 2
 .LBE14916:
@@ -62606,7 +62606,7 @@ init_kernel:
 .LBB14918:
 	.loc 12 18 0
 #APP
-@ 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r3, c7, c10, 4
 @ 0 "" 2
 .LBE14918:
@@ -63069,14 +63069,14 @@ Arch_recycleCap:
 .LBB15108:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB15107:
 .LBB15106:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE15106:
@@ -63253,14 +63253,14 @@ Arch_recycleCap:
 .LBB15163:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB15162:
 .LBB15161:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, ip, c7, c10, 5
 @ 0 "" 2
 .LBE15161:
@@ -63740,14 +63740,14 @@ Arch_recycleCap:
 .LBB15258:
 	.loc 13 207 0
 #APP
-@ 207 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
+@ 207 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
 	mcr p15, 0, r2, c7, c10, 1
 @ 0 "" 2
 .LBB15257:
 .LBB15256:
 	.loc 12 25 0
 #APP
-@ 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+@ 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 	mcr p15, 0, r0, c7, c10, 5
 @ 0 "" 2
 .LBE15256:
@@ -68948,8 +68948,9 @@ epit1:
 	.ascii	"ipc_buffer != NULL\000"
 	.space	1
 .LC7:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/i"
-	.ascii	"nclude/api/syscall.h\000"
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api"
+	.ascii	"/syscall.h\000"
+	.space	2
 .LC8:
 	.ascii	"(bitsLeft & ~0x3ful) == ((0 && (bitsLeft & (1ul << "
 	.ascii	"31))) ? 0x0 : 0)\000"
@@ -68993,9 +68994,8 @@ epit1:
 	.ascii	"dom == 0\000"
 	.space	3
 .LC21:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/i"
-	.ascii	"nclude/kernel/thread.h\000"
-	.space	2
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/ker"
+	.ascii	"nel/thread.h\000"
 .LC22:
 	.ascii	"((~0x1 >> 0) & v) == ((0 && (v & (1ul << (31)))) ? "
 	.ascii	"0x0 : 0)\000"
@@ -69075,16 +69075,15 @@ epit1:
 	.ascii	"typeA == cap_irq_handler_cap\000"
 	.space	3
 .LC45:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/kernel/cdt.c\000"
-	.space	1
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/"
+	.ascii	"cdt.c\000"
+	.space	3
 .LC46:
 	.ascii	"(cte & MASK(2)) == 0\000"
 	.space	3
 .LC47:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/i"
-	.ascii	"nclude/object/structures.h\000"
-	.space	2
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/obj"
+	.ascii	"ect/structures.h\000"
 .LC48:
 	.ascii	"((~0x1f >> 0) & v) == ((0 && (v & (1ul << (31)))) ?"
 	.ascii	" 0x0 : 0)\000"
@@ -69103,8 +69102,9 @@ epit1:
 	.ascii	"reg.start <= reg.end\000"
 	.space	3
 .LC53:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/kernel/boot.c\000"
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/"
+	.ascii	"boot.c\000"
+	.space	2
 .LC54:
 	.ascii	"(capFMappedObjectHigh & ~0xffffful) == ((0 && (capF"
 	.ascii	"MappedObjectHigh & (1ul << 31))) ? 0x0 : 0)\000"
@@ -69160,22 +69160,21 @@ epit1:
 	.ascii	"result\000"
 	.space	1
 .LC71:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/arch/arm/kernel/boot.c\000"
-	.space	3
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/ar"
+	.ascii	"m/kernel/boot.c\000"
+	.space	1
 .LC72:
 	.ascii	"length <= 4\000"
 .LC73:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/arch/arm/fastpath/fastpath.c\000"
-	.space	1
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/ar"
+	.ascii	"m/fastpath/fastpath.c\000"
+	.space	3
 .LC74:
 	.ascii	"levelBits != 0\000"
 	.space	1
 .LC75:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/kernel/cspace.c\000"
-	.space	2
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/"
+	.ascii	"cspace.c\000"
 .LC76:
 	.ascii	"(address & ~0xfffff000ul) == ((0 && (address & (1ul"
 	.ascii	" << 31))) ? 0x0 : 0)\000"
@@ -69214,9 +69213,9 @@ epit1:
 	.ascii	"(vptr & MASK(PT_BITS + ARMSmallPageBits)) == 0\000"
 	.space	1
 .LC86:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/arch/arm/kernel/vspace.c\000"
-	.space	1
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/ar"
+	.ascii	"m/kernel/vspace.c\000"
+	.space	3
 .LC87:
 	.ascii	"pd\000"
 	.space	1
@@ -69239,15 +69238,15 @@ epit1:
 .LC93:
 	.ascii	"!\"Unknown cap type\"\000"
 .LC94:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/i"
-	.ascii	"nclude/arch/arm/arch/object/capspace.h\000"
-	.space	2
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arc"
+	.ascii	"h/arm/arch/object/capspace.h\000"
 .LC95:
 	.ascii	"comp\000"
 	.space	3
 .LC96:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/i"
-	.ascii	"nclude/arch/arm/arch/object/structures.h\000"
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arc"
+	.ascii	"h/arm/arch/object/structures.h\000"
+	.space	2
 .LC97:
 	.ascii	"type < ARRAY_SIZE(comparator)\000"
 	.space	2
@@ -69321,14 +69320,15 @@ epit1:
 	.ascii	"Invalid syscall error\000"
 	.space	2
 .LC122:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/arch/arm/object/tcb.c\000"
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/ar"
+	.ascii	"m/object/tcb.c\000"
+	.space	2
 .LC123:
 	.ascii	"Invalid object type\000"
 .LC124:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/arch/arm/object/objecttype.c\000"
-	.space	1
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/ar"
+	.ascii	"m/object/objecttype.c\000"
+	.space	3
 .LC125:
 	.ascii	"Invalid arch cap\000"
 	.space	3
@@ -69351,9 +69351,9 @@ epit1:
 	.ascii	"Invalid page size\000"
 	.space	2
 .LC132:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/i"
-	.ascii	"nclude/arch/arm/arch/machine/hardware.h\000"
-	.space	1
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arc"
+	.ascii	"h/arm/arch/machine/hardware.h\000"
+	.space	3
 .LC133:
 	.ascii	"(vptr & MASK(pageBitsForSize(page_size))) == 0\000"
 	.space	1
@@ -69394,8 +69394,9 @@ epit1:
 	.ascii	"Invalid fault\000"
 	.space	2
 .LC146:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/arch/arm/api/faults.c\000"
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/ar"
+	.ascii	"m/api/faults.c\000"
+	.space	2
 .LC147:
 	.ascii	"vaddr >= PPTR_TOP\000"
 	.space	2
@@ -69495,16 +69496,16 @@ epit1:
 	.ascii	"tried to complete async ipc with inactive AEP\000"
 	.space	2
 .LC179:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/object/asyncendpoint.c\000"
-	.space	3
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/"
+	.ascii	"asyncendpoint.c\000"
+	.space	1
 .LC180:
 	.ascii	"cap_get_capType(destSlot->cap) == cap_null_cap\000"
 	.space	1
 .LC181:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/object/cnode.c\000"
-	.space	3
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/"
+	.ascii	"cnode.c\000"
+	.space	1
 .LC182:
 	.ascii	"((~0xfffffff0ul << 0) & v) == ((0 && (v & (1ul << ("
 	.ascii	"31)))) ? 0x0 : 0)\000"
@@ -69525,9 +69526,8 @@ epit1:
 	.ascii	"Invalid cap type\000"
 	.space	3
 .LC188:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/object/objecttype.c\000"
-	.space	2
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/"
+	.ascii	"objecttype.c\000"
 .LC189:
 	.ascii	"async_endpoint_ptr_get_state(aepptr) == AEPState_Wa"
 	.ascii	"iting\000"
@@ -69547,9 +69547,8 @@ epit1:
 	.ascii	"Current thread is blocked\000"
 	.space	2
 .LC195:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/kernel/thread.c\000"
-	.space	2
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/"
+	.ascii	"thread.c\000"
 .LC196:
 	.ascii	"IRQControl: Illegal operation.\000"
 	.space	1
@@ -69585,8 +69584,9 @@ epit1:
 	.ascii	"invalid EP state\000"
 	.space	3
 .LC208:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/object/endpoint.c\000"
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/"
+	.ascii	"endpoint.c\000"
+	.space	2
 .LC209:
 	.ascii	"thread\000"
 	.space	1
@@ -69596,9 +69596,9 @@ epit1:
 .LC211:
 	.ascii	"cap_get_capType(masterCap) == cap_reply_cap\000"
 .LC212:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/object/tcb.c\000"
-	.space	1
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/"
+	.ascii	"tcb.c\000"
+	.space	3
 .LC213:
 	.ascii	"cap_reply_cap_get_capReplyMaster(masterCap)\000"
 .LC214:
@@ -69674,9 +69674,8 @@ epit1:
 	.ascii	"(unsigned int)s % 4 == 0\000"
 	.space	3
 .LC238:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/util.c\000"
-	.space	3
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/util.c\000"
+	.space	1
 .LC239:
 	.ascii	"n % 4 == 0\000"
 	.space	1
@@ -69793,9 +69792,9 @@ epit1:
 	.ascii	"Invalid IRQ state\000"
 	.space	2
 .LC274:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/object/interrupt.c\000"
-	.space	3
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/"
+	.ascii	"interrupt.c\000"
+	.space	1
 .LC275:
 	.ascii	"Spurious interrupt\012\000"
 .LC276:
@@ -69907,8 +69906,9 @@ epit1:
 	.ascii	"caller != ksCurThread\000"
 	.space	2
 .LC311:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/s"
-	.ascii	"rc/api/syscall.c\000"
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/sys"
+	.ascii	"call.c\000"
+	.space	2
 .LC312:
 	.ascii	"Attempted reply operation when no reply cap present"
 	.ascii	".\000"
@@ -70084,36 +70084,36 @@ ndks_boot:
 	.space	28
 	.text
 .Letext0:
-	.file 54 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/stdint.h"
-	.file 55 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h"
-	.file 56 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/basic_types.h"
-	.file 57 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/objecttype.h"
-	.file 58 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/api/objecttype.h"
-	.file 59 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/constants.h"
-	.file 60 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/compound_types.h"
-	.file 61 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine.h"
+	.file 54 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/stdint.h"
+	.file 55 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h"
+	.file 56 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/basic_types.h"
+	.file 57 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/objecttype.h"
+	.file 58 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/api/objecttype.h"
+	.file 59 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/constants.h"
+	.file 60 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/compound_types.h"
+	.file 61 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine.h"
 	.file 62 "./plat/machine/hardware_gen.h"
-	.file 63 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/devices.h"
-	.file 64 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/errors.h"
-	.file 65 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h"
-	.file 66 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h"
-	.file 67 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h"
-	.file 68 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/vspace.h"
+	.file 63 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/devices.h"
+	.file 64 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/errors.h"
+	.file 65 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h"
+	.file 66 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h"
+	.file 67 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h"
+	.file 68 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/vspace.h"
 	.file 69 "./arch/api/syscall.h"
-	.file 70 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h"
-	.file 71 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h"
-	.file 72 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/bootinfo.h"
-	.file 73 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/boot.h"
+	.file 70 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h"
+	.file 71 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h"
+	.file 72 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/bootinfo.h"
+	.file 73 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/boot.h"
 	.file 74 "./api/invocation.h"
 	.file 75 "./arch/api/invocation.h"
-	.file 76 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdarg.h"
+	.file 76 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdarg.h"
 	.file 77 "<built-in>"
-	.file 78 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/registerset.c"
-	.file 79 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/inlines.c"
-	.file 80 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/model/statedata.c"
-	.file 81 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/statedata.c"
-	.file 82 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h"
-	.file 83 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/fastpath/fastpath.h"
+	.file 78 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/registerset.c"
+	.file 79 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/inlines.c"
+	.file 80 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/model/statedata.c"
+	.file 81 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/statedata.c"
+	.file 82 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h"
+	.file 83 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/fastpath/fastpath.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
 	.4byte	0x2f630
@@ -266010,14 +266010,14 @@ ndks_boot:
 	.byte	0x3
 	.uleb128 0
 	.uleb128 0x54
-	.file 85 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h"
+	.file 85 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h"
 	.byte	0x3
 	.uleb128 0xb
 	.uleb128 0x55
 	.byte	0x3
 	.uleb128 0xe
 	.uleb128 0x38
-	.file 86 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h"
+	.file 86 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h"
 	.byte	0x3
 	.uleb128 0xe
 	.uleb128 0x56
@@ -266045,11 +266045,11 @@ ndks_boot:
 	.byte	0x3
 	.uleb128 0xf
 	.uleb128 0x2b
-	.file 87 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h"
+	.file 87 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h"
 	.byte	0x3
 	.uleb128 0xe
 	.uleb128 0x57
-	.file 88 "/home/kq/kangqiao_seL4/RefOS_partition_all/include/generated/autoconf.h"
+	.file 88 "/home/kq/kangqiao_seL4/RefOS_x86/include/generated/autoconf.h"
 	.byte	0x3
 	.uleb128 0x11
 	.uleb128 0x58
@@ -266066,7 +266066,7 @@ ndks_boot:
 	.byte	0x3
 	.uleb128 0x11
 	.uleb128 0x1d
-	.file 89 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h"
+	.file 89 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h"
 	.byte	0x3
 	.uleb128 0x4
 	.uleb128 0x59
@@ -266088,7 +266088,7 @@ ndks_boot:
 	.uleb128 0x52
 	.byte	0x4
 	.byte	0x4
-	.file 90 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/api/types.h"
+	.file 90 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/api/types.h"
 	.byte	0x3
 	.uleb128 0x12
 	.uleb128 0x5a
@@ -266200,16 +266200,16 @@ ndks_boot:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
-	.file 91 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/benchmark.h"
+	.file 91 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/benchmark.h"
 	.byte	0x3
 	.uleb128 0xc
 	.uleb128 0x5b
-	.file 92 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/benchmark.h"
+	.file 92 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/benchmark.h"
 	.byte	0x3
 	.uleb128 0xe
 	.uleb128 0x5c
 	.byte	0x4
-	.file 93 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h"
+	.file 93 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h"
 	.byte	0x3
 	.uleb128 0xf
 	.uleb128 0x5d
@@ -266221,7 +266221,7 @@ ndks_boot:
 	.uleb128 0xf
 	.uleb128 0x37
 	.byte	0x4
-	.file 94 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/io.h"
+	.file 94 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/io.h"
 	.byte	0x3
 	.uleb128 0x10
 	.uleb128 0x5e
@@ -266330,7 +266330,7 @@ ndks_boot:
 	.uleb128 0x25
 	.byte	0x4
 	.byte	0x4
-	.file 95 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/hardware.h"
+	.file 95 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/hardware.h"
 	.byte	0x3
 	.uleb128 0x11
 	.uleb128 0x5f
@@ -266360,7 +266360,7 @@ ndks_boot:
 	.uleb128 0x40
 	.byte	0x4
 	.byte	0x4
-	.file 96 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h"
+	.file 96 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h"
 	.byte	0x3
 	.uleb128 0x10
 	.uleb128 0x60
@@ -266387,7 +266387,7 @@ ndks_boot:
 	.uleb128 0x10
 	.uleb128 0x1f
 	.byte	0x4
-	.file 97 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/tcb.h"
+	.file 97 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/tcb.h"
 	.byte	0x3
 	.uleb128 0x12
 	.uleb128 0x61
@@ -266417,7 +266417,7 @@ ndks_boot:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
-	.file 98 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/model/statedata.h"
+	.file 98 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/model/statedata.h"
 	.byte	0x3
 	.uleb128 0x11
 	.uleb128 0x62
@@ -266439,7 +266439,7 @@ ndks_boot:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
-	.file 99 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h"
+	.file 99 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h"
 	.byte	0x3
 	.uleb128 0x11
 	.uleb128 0x63
@@ -266469,7 +266469,7 @@ ndks_boot:
 	.uleb128 0xe
 	.uleb128 0x41
 	.byte	0x4
-	.file 100 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/faults.h"
+	.file 100 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/faults.h"
 	.byte	0x3
 	.uleb128 0xf
 	.uleb128 0x64
@@ -266477,7 +266477,7 @@ ndks_boot:
 	.uleb128 0xe
 	.uleb128 0x41
 	.byte	0x4
-	.file 101 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h"
+	.file 101 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h"
 	.byte	0x3
 	.uleb128 0xf
 	.uleb128 0x65
@@ -266508,7 +266508,7 @@ ndks_boot:
 	.uleb128 0x12
 	.uleb128 0xe
 	.byte	0x4
-	.file 102 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/objecttype.h"
+	.file 102 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/objecttype.h"
 	.byte	0x3
 	.uleb128 0x20
 	.uleb128 0x66
@@ -266538,7 +266538,7 @@ ndks_boot:
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
-	.file 103 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/asyncendpoint.h"
+	.file 103 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/asyncendpoint.h"
 	.byte	0x3
 	.uleb128 0x10
 	.uleb128 0x67
@@ -266555,7 +266555,7 @@ ndks_boot:
 	.uleb128 0x11
 	.uleb128 0x42
 	.byte	0x4
-	.file 104 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/endpoint.h"
+	.file 104 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/endpoint.h"
 	.byte	0x3
 	.uleb128 0x12
 	.uleb128 0x68
@@ -266568,7 +266568,7 @@ ndks_boot:
 	.uleb128 0x1f
 	.byte	0x4
 	.byte	0x4
-	.file 105 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h"
+	.file 105 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h"
 	.byte	0x3
 	.uleb128 0x13
 	.uleb128 0x69
@@ -266584,7 +266584,7 @@ ndks_boot:
 	.uleb128 0x10
 	.uleb128 0x1f
 	.byte	0x4
-	.file 106 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/interrupt.h"
+	.file 106 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/interrupt.h"
 	.byte	0x3
 	.uleb128 0x11
 	.uleb128 0x6a
@@ -266618,7 +266618,7 @@ ndks_boot:
 	.uleb128 0x16
 	.uleb128 0x43
 	.byte	0x4
-	.file 107 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h"
+	.file 107 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h"
 	.byte	0x3
 	.uleb128 0x17
 	.uleb128 0x6b
@@ -266669,7 +266669,7 @@ ndks_boot:
 	.uleb128 0x1f
 	.byte	0x4
 	.byte	0x4
-	.file 108 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/faulthandler.h"
+	.file 108 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/faulthandler.h"
 	.byte	0x3
 	.uleb128 0x11
 	.uleb128 0x6c
@@ -266710,7 +266710,7 @@ ndks_boot:
 	.uleb128 0x16
 	.uleb128 0x60
 	.byte	0x4
-	.file 109 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/string.h"
+	.file 109 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/string.h"
 	.byte	0x3
 	.uleb128 0x17
 	.uleb128 0x6d
@@ -266719,7 +266719,7 @@ ndks_boot:
 	.uleb128 0x56
 	.byte	0x4
 	.byte	0x4
-	.file 110 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/capdl.h"
+	.file 110 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/capdl.h"
 	.byte	0x3
 	.uleb128 0x1a
 	.uleb128 0x6e
@@ -266748,7 +266748,7 @@ ndks_boot:
 	.uleb128 0xb
 	.uleb128 0x29
 	.byte	0x4
-	.file 111 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/user_access.h"
+	.file 111 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/user_access.h"
 	.byte	0x3
 	.uleb128 0xb
 	.uleb128 0x6f
@@ -266773,7 +266773,7 @@ ndks_boot:
 	.uleb128 0xe
 	.uleb128 0x5d
 	.byte	0x4
-	.file 112 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/profiler.h"
+	.file 112 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/profiler.h"
 	.byte	0x3
 	.uleb128 0xf
 	.uleb128 0x70
@@ -266817,7 +266817,7 @@ ndks_boot:
 	.uleb128 0xe
 	.uleb128 0x52
 	.byte	0x4
-	.file 113 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/linker.h"
+	.file 113 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/linker.h"
 	.byte	0x3
 	.uleb128 0xf
 	.uleb128 0x71
@@ -266887,7 +266887,7 @@ ndks_boot:
 	.uleb128 0x10
 	.uleb128 0xd
 	.byte	0x4
-	.file 114 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/boot.h"
+	.file 114 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/boot.h"
 	.byte	0x3
 	.uleb128 0x11
 	.uleb128 0x72
@@ -266936,7 +266936,7 @@ ndks_boot:
 	.uleb128 0xe
 	.uleb128 0x44
 	.byte	0x4
-	.file 115 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/thread.h"
+	.file 115 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/thread.h"
 	.byte	0x3
 	.uleb128 0xf
 	.uleb128 0x73
@@ -266977,7 +266977,7 @@ ndks_boot:
 	.uleb128 0x11
 	.uleb128 0x1e
 	.byte	0x4
-	.file 116 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cdt.h"
+	.file 116 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cdt.h"
 	.byte	0x3
 	.uleb128 0x12
 	.uleb128 0x74
@@ -267066,7 +267066,7 @@ ndks_boot:
 	.uleb128 0xf
 	.uleb128 0x60
 	.byte	0x4
-	.file 117 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/capdl.h"
+	.file 117 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/capdl.h"
 	.byte	0x3
 	.uleb128 0x10
 	.uleb128 0x75
@@ -267075,7 +267075,7 @@ ndks_boot:
 	.uleb128 0x11
 	.uleb128 0x6e
 	.byte	0x4
-	.file 118 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/debug_helpers.h"
+	.file 118 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/debug_helpers.h"
 	.byte	0x3
 	.uleb128 0x12
 	.uleb128 0x76
@@ -267436,7 +267436,7 @@ ndks_boot:
 	.uleb128 0xb
 	.uleb128 0x41
 	.byte	0x4
-	.file 119 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/preemption.h"
+	.file 119 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/preemption.h"
 	.byte	0x3
 	.uleb128 0xc
 	.uleb128 0x77
@@ -269209,8 +269209,8 @@ ndks_boot:
 	.ascii	"__UINT_LEAST64_TYPE__ long long unsigned int\000"
 .LASF1200:
 	.ascii	"slot1\000"
-.LASF1202:
-	.ascii	"slot2\000"
+.LASF417:
+	.ascii	"ARMPageInvalidate_Data\000"
 .LASF852:
 	.ascii	"endpoint_ptr_mset_epQueue_tail_state\000"
 .LASF1159:
@@ -271840,9 +271840,6 @@ ndks_boot:
 	.ascii	"receiver\000"
 .LASF1692:
 	.ascii	"__ORDER_BIG_ENDIAN__ 4321\000"
-.LASF1660:
-	.ascii	"/home/kq/kangqiao_seL4/RefOS_partition_all/build/ke"
-	.ascii	"rnel\000"
 .LASF634:
 	.ascii	"l1index\000"
 .LASF297:
@@ -271961,6 +271958,8 @@ ndks_boot:
 	.ascii	"Arch_decodeTransfer\000"
 .LASF1227:
 	.ascii	"pde_pde_section_get_AP\000"
+.LASF1202:
+	.ascii	"slot2\000"
 .LASF1310:
 	.ascii	"slot3\000"
 .LASF1640:
@@ -272686,8 +272685,8 @@ ndks_boot:
 	.ascii	"fipndl\000"
 .LASF1866:
 	.ascii	"__UFRACT_IBIT__ 0\000"
-.LASF417:
-	.ascii	"ARMPageInvalidate_Data\000"
+.LASF1660:
+	.ascii	"/home/kq/kangqiao_seL4/RefOS_x86/build/kernel\000"
 .LASF693:
 	.ascii	"endpoint_ptr_get_state\000"
 .LASF193:
