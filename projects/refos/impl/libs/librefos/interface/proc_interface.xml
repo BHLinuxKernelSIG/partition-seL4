@@ -14,8 +14,10 @@
 
 <interface label_min='PROCSERV_METHODS_BASE' connect_ep='REFOS_PROCSERV_EP'>
     <include>refos/refos.h</include>
- 
 
+    <function name="proc_getpid" return='int'>
+        @return pid
+    </function>
 
     <function name="proc_get_hello_cptr" return='seL4_CPtr'>
 

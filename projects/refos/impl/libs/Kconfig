@@ -35,5 +35,6 @@ source "$SEL4_LIBS_PATH/libutils/Kconfig"
 source "$SEL4_LIBS_PATH/libvterm/Kconfig"
 source "$SEL4_LIBS_PATH/libplatsupport/Kconfig"
 source "$SEL4_LIBS_PATH/libpartition/Kconfig"
+source "$SEL4_LIBS_PATH/libapex/Kconfig"
 
 endmenu

@@ -1,7 +1,7 @@
 /*
  * Automatically generated C config: don't edit
  * Project Configuration
- * Wed Oct 26 20:14:38 2016
+ * Thu Oct 27 16:37:04 2016
  */
 #define AUTOCONF_INCLUDED
 #define CONFIG_APP_HELLO_WORLD2 1
@@ -9,6 +9,7 @@
 #define CONFIG_IRQ_REPORTING 1
 #define CONFIG_PLAT_KZM 1
 #define CONFIG_LIB_ELF 1
+#define CONFIG_LIB_APEX 1
 #define CONFIG_USER_DEBUG_BUILD 1
 #define CONFIG_LIB_SEL4_VKA 1
 #define CONFIG_LIB_SEL4_PLAT_SUPPORT_START 1

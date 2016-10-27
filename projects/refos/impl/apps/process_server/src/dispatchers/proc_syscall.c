@@ -47,6 +47,12 @@
  */
 
 
+int proc_getpid_handler(void *user)
+{
+    struct proc_pcb* p = (struct proc_pcb*)user;
+    return p->pid;
+}
+
 seL4_CPtr
 proc_get_hello_cptr_handler(void *rpc_userptr) 
 {

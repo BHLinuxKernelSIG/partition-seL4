@@ -10,4 +10,4 @@
 
 apps-$(CONFIG_APP_SNAKE)  += hello_world3
 
-hello_world3: libmuslc libsel4 librefossys librefos libdatastruct
+hello_world3: libmuslc libsel4 librefossys librefos libdatastruct libapex

@@ -24,6 +24,7 @@
 #include <data_struct/cvector.h>
 
 #include <refos-io/morecore.h>
+#include <test_apex.h>
 
 /*
 void part2_user_schedule(int i);

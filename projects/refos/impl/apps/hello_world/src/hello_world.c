@@ -24,6 +24,9 @@
 #include <data_struct/cvector.h>
 
 #include <refos-io/morecore.h>
+#include <test_apex.h>
+
+#include <apex_proc.h>
 
 seL4_CPtr hello1_cptr;
 
@@ -34,7 +37,8 @@ int main(void)
     
 	while(1)
     {
-        seL4_DebugPrintf("AAAAAAAAAAAAAAAAAA\n");
+        seL4_DebugPrintf("AAAAAAAAAAAAAAAAAA, %d, %d\n", GET, HELLO);
+        seL4_DebugPrintf("mypid is %d\n", GET_PID());
         //seL4_DebugPutChar('\n');
 
         //seL4_TCB_Suspend(hello1_cptr);

@@ -25,6 +25,7 @@
 /*! @brief RPC syscall label enums for proc interface. */
 enum rpc_proc_label_enum {
     RPC_PROC_LABEL_MIN = PROCSERV_METHODS_BASE,
+    RPC_PROC_GETPID,
     RPC_PROC_GET_HELLO_CPTR,
     RPC_PROC_GET_HELLO1_CPTR,
     RPC_PROC_GET_HELLO2_CPTR,
@@ -55,6 +56,10 @@ enum rpc_proc_label_enum {
     RPC_PROC_LABEL_MAX
 };
 #endif
+
+void server_proc_getpid(void *rpc_userptr);
+void reply_proc_getpid(void *rpc_userptr, int rpc___ret__);
+extern int proc_getpid_handler(void *rpc_userptr) __attribute__((weak));
 
 void server_proc_get_hello_cptr(void *rpc_userptr);
 void reply_proc_get_hello_cptr(void *rpc_userptr, seL4_CPtr rpc___ret__);

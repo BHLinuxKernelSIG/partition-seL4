@@ -22,6 +22,7 @@ deps_config := \
 	/home/kq/kangqiao_seL4/RefOS_x86/apps/selfloader/Kconfig \
 	/home/kq/kangqiao_seL4/RefOS_x86/apps/process_server/Kconfig \
 	apps/Kconfig \
+	/home/kq/kangqiao_seL4/RefOS_x86/libs/libapex/Kconfig \
 	/home/kq/kangqiao_seL4/RefOS_x86/libs/libpartition/Kconfig \
 	/home/kq/kangqiao_seL4/RefOS_x86/libs/libplatsupport/Kconfig \
 	/home/kq/kangqiao_seL4/RefOS_x86/libs/libvterm/Kconfig \

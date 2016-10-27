@@ -200,7 +200,7 @@ typedef struct v_region {
 /*
  * Automatically generated C config: don't edit
  * Project Configuration
- * Wed Oct 26 20:14:38 2016
+ * Thu Oct 27 16:37:04 2016
  */
 # 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 2
 

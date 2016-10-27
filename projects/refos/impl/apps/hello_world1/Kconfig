@@ -11,7 +11,7 @@
 config APP_HELLO_WORLD1
     bool "Snake"
     default y
-    depends on LIB_SEL4 && HAVE_LIBC && LIB_REFOS
+    depends on LIB_SEL4 && HAVE_LIBC && LIB_REFOS && LIB_APEX
     help
         Snake game for RefOS. Drawing done using ANSI.
         The Snake game is a demo for RefOS, showcasing UNIX-like dataspace

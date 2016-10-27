@@ -23,13 +23,14 @@
 #include <refos/vmlayout.h>
 #include <data_struct/cvector.h>
 
+#include <test_apex.h>
 
 int main()
 {
     refos_initialise();
 
     while(1)
-        seL4_DebugPrintf("BBBBBBBBBBBBBBB\n");        
+        seL4_DebugPrintf("BBBBBBBBBBBBBBB, %d, %d\n", GET, SET);        
 }
 
 

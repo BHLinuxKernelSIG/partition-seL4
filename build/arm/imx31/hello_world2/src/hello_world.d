@@ -52,7 +52,8 @@ src/hello_world.o: \
  /home/kq/kangqiao_seL4/RefOS_x86/stage/arm/imx31/include/refos-util/cspace.h \
  /home/kq/kangqiao_seL4/RefOS_x86/stage/arm/imx31/include/refos/vmlayout.h \
  /home/kq/kangqiao_seL4/RefOS_x86/stage/arm/imx31/include/data_struct/cvector.h \
- /home/kq/kangqiao_seL4/RefOS_x86/stage/arm/imx31/include/refos-io/morecore.h
+ /home/kq/kangqiao_seL4/RefOS_x86/stage/arm/imx31/include/refos-io/morecore.h \
+ /home/kq/kangqiao_seL4/RefOS_x86/stage/arm/imx31/include/test_apex.h
 
 /home/kq/kangqiao_seL4/RefOS_x86/stage/arm/imx31/include/stdbool.h:
 
@@ -159,3 +160,5 @@ src/hello_world.o: \
 /home/kq/kangqiao_seL4/RefOS_x86/stage/arm/imx31/include/data_struct/cvector.h:
 
 /home/kq/kangqiao_seL4/RefOS_x86/stage/arm/imx31/include/refos-io/morecore.h:
+
+/home/kq/kangqiao_seL4/RefOS_x86/stage/arm/imx31/include/test_apex.h:
