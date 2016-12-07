@@ -5,6 +5,11 @@
 #
 
 #
+# partition config
+#
+
+
+#
 # seL4 Kernel
 #
 CONFIG_ARCH_ARM_V6=y

@@ -34,6 +34,8 @@
 #include "../memserv/ringbuffer.h"
 #include "proc_client_watch.h"
 
+#include "../partition/partition.h"
+
 #define REFOS_PCB_MAGIC 0xB33FFEED
 #define REFOS_PCB_DEBUGNAME_LEN 32
 
@@ -66,6 +68,7 @@ struct proc_pcb {
 
     uint32_t parentPID; /* No ownership. */
     bool parentWaiting;
+    struct process *proc;
 };
 
 /* ---------------------------------- Proc interface functions ---------------------------------- */

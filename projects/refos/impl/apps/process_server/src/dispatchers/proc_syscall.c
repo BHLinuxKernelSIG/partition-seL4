@@ -16,11 +16,19 @@
 
 #include "../system/process/pid.h"
 #include "../system/process/process.h"
+#include "../system/process/thread.h"
 #include "../system/process/proc_client_watch.h"
 #include "../system/addrspace/vspace.h"
 #include "../system/memserv/window.h"
 #include "../system/memserv/dataspace.h"
 #include "../system/memserv/ringbuffer.h"
+
+#include "../system/partition/partition.h"
+#include "../system/partition/port.h"
+#include "../system/partition/partinit.h"
+#include "../system/partition/sched.h"
+
+#include <stdint.h>
 
 /*! @file
     @brief Dispatcher for the procserv syscalls.
@@ -46,11 +54,341 @@
             error. (eg. ran out of heap or untyped memory).
  */
 
+// ==================== sampling interface ===============//
+
+int proc_port_sampling_create_handler(void *user, 
+                                    char *name,
+                                    int size, 
+                                    int core, 
+                                    int period, 
+                                    int *id)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+
+    *id = 0;
+    int gid = *id;
+
+    //pok_ports[gid].index      = pok_queue.size - pok_queue.available_size;
+    pok_ports[gid].off_b      = 0;
+    pok_ports[gid].off_e      = 0;
+    pok_ports[gid].size       = size;
+    pok_ports[gid].full       = FALSE;
+    //pok_ports[gid].partition  = pok_current_partition;
+    pok_ports[gid].partition  = part;
+    pok_ports[gid].direction  = core;
+    pok_ports[gid].ready      = TRUE;
+    pok_ports[gid].kind       = POK_PORT_KIND_SAMPLING;
+
+    //pok_queue.available_size  = pok_queue.available_size - size;
+    pok_ports[gid].refresh        = period;
+    pok_ports[gid].last_receive   = 0;
+
+    pok_ports[gid].data = malloc(size);
+
+    procServ.shared_dspace = ram_dspace_create(&procServ.dspaceList, size);
+
+    //caps[gid] = procServ.shared_dspace->pages[0].cptr;
+
+    return 0;
+}
+
+int proc_port_sampling_write_handler(void *user, int id, void* addr, int len)
+{
+    int error;
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+
+    pok_ports[id].must_be_flushed = TRUE;
+
+    vspace_t *vspace = &pcb->vspace.vspace;
+    seL4_CPtr cap = vspace_get_cap(vspace, addr);
+
+    cspacepath_t loadee_frame_cap;
+    cspacepath_t loader_frame_cap;
+
+    vka_cspace_make_path(&procServ.vka, cap, &loadee_frame_cap);
+
+    error = vka_cnode_copy(&loader_frame_cap, &loadee_frame_cap, seL4_AllRights);
+    assert(error == 0);
+
+    char *loader_vaddr = vspace_map_pages(&procServ.vspace, 
+                                        &loader_frame_cap.capPtr, 
+                                        NULL, 
+                                        seL4_AllRights,
+                                        1, 
+                                        seL4_PageBits, 
+                                        1
+                            );
+
+    if (len > pok_ports[id].size)
+    {
+        return POK_ERRNO_SIZE;
+    }
+
+    memcpy(pok_ports[id].data, loader_vaddr, len);
+
+    pok_ports[id].empty = FALSE;
+    //pok_ports[pid].last_receive = POK_GETTICK ();
+
+    return POK_ERRNO_OK;    
+}
+
+int proc_port_sampling_read_handler(void *user, int id, void *addr, 
+                                    int* len, int *valid)
+{
+    int error;
+
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    vspace_t *vspace = &pcb->vspace.vspace;
+    seL4_CPtr cap = vspace_get_cap(vspace, addr);
+
+    cspacepath_t loadee_frame_cap;
+    cspacepath_t loader_frame_cap;
+
+    vka_cspace_make_path(&procServ.vka, cap, &loadee_frame_cap);
+
+    error = vka_cnode_copy(&loader_frame_cap, &loadee_frame_cap, seL4_AllRights);
+    assert(error == 0);
+
+    char *loader_vaddr = vspace_map_pages(&procServ.vspace, 
+                                          &loader_frame_cap.capPtr, 
+                                          NULL, 
+                                          seL4_AllRights,
+                                          1, 
+                                          seL4_PageBits, 
+                                          1
+                                    );
+
+    memcpy(loader_vaddr, pok_ports[id].data, pok_ports[id].size);
+
+    return 0;
+}
+
+//==================process interface ==================//
+
+int proc_set_prio_handler(void *user, int pid, int prio)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct proc_tcb* tcb = (struct proc_tcb*)cvector_get(&pcb->threads, 0);
+    seL4_CPtr ktcb = thread_tcb_obj(tcb);
+
+    struct partition *part = pcb->proc->part;
+
+    if (part->low > pid || part->high < pid)
+        return POK_ERRNO_PARAM;
+
+    int error = seL4_TCB_SetPriority(ktcb, prio);
+    if(error)
+        return POK_ERRNO_PARAM;
+    else
+        return POK_ERRNO_OK;
+}
+
+
+int proc_stop_self_handler(void *user)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct proc_tcb* tcb = (struct proc_tcb*)cvector_get(&pcb->threads, 0);
+    seL4_CPtr ktcb = thread_tcb_obj(tcb);
+
+    seL4_TCB_Suspend(ktcb);
+
+    return 0;
+}
+
+int proc_stop_handler(void *user, int pid)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+
+    struct partition *part = pcb->proc->part;
+
+    if (part->low > pid || part->high < pid)
+        return POK_ERRNO_PARAM;
+
+    struct proc_pcb* p = pid_get_pcb(&procServ.PIDList, pid);
+    struct proc_tcb* tcb = (struct proc_tcb*)cvector_get(&p->threads, 0);
+    seL4_CPtr ktcb = thread_tcb_obj(tcb);
+
+    seL4_TCB_Suspend(ktcb);
+
+    return POK_ERRNO_OK;
+}
+
+int proc_resume_handler(void *user, int pid)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+
+    struct partition *part = pcb->proc->part;
+
+    if (part->low > pid || part->high < pid)
+        return POK_ERRNO_PARAM;
+
+    struct proc_pcb* p = pid_get_pcb(&procServ.PIDList, pid);
+    struct proc_tcb* tcb = (struct proc_tcb*)cvector_get(&p->threads, 0);
+    seL4_CPtr ktcb = thread_tcb_obj(tcb);
+
+    seL4_TCB_Resume(ktcb);
+
+    return POK_ERRNO_OK;
+}
+
+// =============== to implement get_proces_status ============= //
+
+int proc_get_baseprio_from_pid_handler(void *user, int pid)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+
+    if (part->low > pid || part->high < pid)
+        return -1;
+    return proc_array[pid].prio;
+}
+
+int proc_get_currprio_from_pid_handler(void *user, int pid)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+    if (part->low > pid || part->high < pid)
+        return -1;
+    return proc_array[pid].prio;
+}
+
+int proc_get_status_from_pid_handler(void *user, int pid)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+
+    if (part->low > pid || part->high < pid)
+        return -1;
+    return proc_array[pid].status;
+}
+
+int proc_get_deadline_from_pid_handler(void *user, int pid)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+
+    if (part->low > pid || part->high < pid)
+        return -1;
+    return proc_array[pid].deadline;
+}
+
+int proc_get_period_from_pid_handler(void *user, int pid)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+
+    if (part->low > pid || part->high < pid)
+        return -1;
+    return proc_array[pid].period;
+}
+
+int proc_get_timecap_from_pid(void *user, int pid)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+
+    if (part->low > pid || part->high < pid)
+        return -1;
+    return proc_array[pid].timecap;
+}
+
+int proc_get_entrypoint_from_pid(void *user, int pid)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+
+    if (part->low > pid || part->high < pid)
+        return -1;
+    return proc_array[pid].entrypoint;
+}
+
+int proc_get_stacksize_from_pid(void *user, int pid)
+{
+    return POK_USER_STACK_SIZE;
+}
+
+// TODO
+/*
+int proc_get_name_from_pid_handler(void *user, int pid)
+{
+    struct proc_pcb* p = (struct proc_pcb*)user;
+    seL4_DebugPrintf("get name not implemented yet!\n");
+    return 0;
+}*/
+
+// =============== to implement get_process_id ============= //
+
+int proc_get_pid_from_name_handler(void *user, char *name)
+{
+    for (int i = 0; i < num_of_proc; i++)
+    {
+        if (!strcmp(name, proc_array[i].name))
+            return i;
+    }
+
+    return 0;
+}
 
 int proc_getpid_handler(void *user)
 {
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct process *p = pcb->proc;
+    return p->index;
+}
+
+// ================ to implement GET_PARTITION_STATUS ============== //
+
+int proc_current_partition_get_id_handler(void *user)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+    return part->index;
+}
+
+int proc_current_partition_get_period_handler(void *user)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+    return part->period;
+}
+
+uint64_t proc_current_partition_get_duration_handler(void *user)
+{
+    //struct proc_pcb* pcb = (struct proc_pcb*)user;
+    //struct partition *part = pcb->proc->part;
+    uint64_t duration = pok_sched_slots[POK_SCHED_CURRENT_PARTITION];
+    return duration;
+}
+
+int proc_current_partition_get_lock_level_handler(void *user)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+    return part->lock_level;
+}
+
+int proc_current_partition_get_operating_mode_handler(void *user)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+    return part->mode;
+}
+
+int proc_current_partition_get_start_condition_handler(void *user)
+{
+    struct proc_pcb* pcb = (struct proc_pcb*)user;
+    struct partition *part = pcb->proc->part;
+    return part->start_cond;
+}
+
+//================= testing ===============  //
+
+int proc_getpid2_handler(void *user, int *pid)
+{
     struct proc_pcb* p = (struct proc_pcb*)user;
-    return p->pid;
+    *pid = p->pid;
+    return 0;
 }
 
 seL4_CPtr

@@ -27,30 +27,45 @@
 #include <test_apex.h>
 
 #include <apex_proc.h>
+#include <apex_part.h>
+#include <apex_sampling.h>
 
-seL4_CPtr hello1_cptr;
+void test_ping()
+{
+        seL4_MessageInfo_t tag = seL4_MessageInfo_new(0,0,0,1);
+        seL4_SetMR(0, 0xabcd);
+        //printf("[hello0]will call process server\n");
+        seL4_NBSend(REFOS_PROCSERV_EP, tag);
+}
+
+void SET_PARTITION_MODE (OPERATING_MODE_TYPE mode,
+                         RETURN_CODE_TYPE *return_code);
+
+void thread1()
+{
+    while(1)
+    {
+        seL4_DebugPrintf("[PART 0] hello world from part 0 thread 1 \n");
+        test_ping();
+    }
+}
+
 
 int main(void)
 {
     refos_initialise();
-    //hello1_cptr = proc_get_hello1_cptr();
-    
-	while(1)
-    {
-        seL4_DebugPrintf("AAAAAAAAAAAAAAAAAA, %d, %d\n", GET, HELLO);
-        seL4_DebugPrintf("mypid is %d\n", GET_PID());
-        //seL4_DebugPutChar('\n');
+    static char clone_stack[1][4096];
 
-        //seL4_TCB_Suspend(hello1_cptr);
+    seL4_DebugPrintf("hello0: before clone thread\n");
+    int threadID = proc_clone(thread1, &clone_stack[0][4096], 0, 0);
 
-        //user schedule function
-        //seL4_TCB_Resume(hello1_cptr);
+    seL4_DebugPrintf("[PART 0] hello world from part 0 thread 0.\n");
+    seL4_DebugPrintf("[PART 0] Init finish, will set to normal.\n");
 
-        //seL4_DebugPutChar('Y');        
-        //seL4_DebugPutChar('\n');
+    OPERATING_MODE_TYPE mode = NORMAL;
+    RETURN_CODE_TYPE ret;
+    SET_PARTITION_MODE(mode, &ret);
 
-        //seL4_Yield();
-    }
 	return 0;
 }
 

@@ -25,12 +25,35 @@
 /*! @brief RPC syscall label enums for proc interface. */
 enum rpc_proc_label_enum {
     RPC_PROC_LABEL_MIN = PROCSERV_METHODS_BASE,
+    RPC_PROC_PORT_SAMPLING_CREATE,
+    RPC_PROC_PORT_SAMPLING_WRITE,
+    RPC_PROC_PORT_SAMPLING_READ,
+    RPC_PROC_SET_PRIO,
+    RPC_PROC_STOP_SELF,
+    RPC_PROC_STOP,
+    RPC_PROC_RESUME,
+    RPC_PROC_GET_DEADLINE_FROM_PID,
+    RPC_PROC_GET_CURRPRIO_FROM_PID,
+    RPC_PROC_GET_STATUS_FROM_PID,
+    RPC_PROC_GET_PERIOD_FROM_PID,
+    RPC_PROC_GET_TIMECAP_FROM_PID,
+    RPC_PROC_GET_ENTRYPOINT_FROM_PID,
+    RPC_PROC_GET_STACKSIZE_FROM_PID,
+    RPC_PROC_GET_BASEPRIO_FROM_PID,
+    RPC_PROC_CURRENT_PARTITION_GET_ID,
+    RPC_PROC_CURRENT_PARTITION_GET_PERIOD,
+    RPC_PROC_CURRENT_PARTITION_GET_DURATION,
+    RPC_PROC_CURRENT_PARTITION_GET_LOCK_LEVEL,
+    RPC_PROC_CURRENT_PARTITION_GET_OPERATING_MODE,
+    RPC_PROC_CURRENT_PARTITION_GET_START_CONDITION,
+    RPC_PROC_GET_PID_FROM_NAME,
     RPC_PROC_GETPID,
     RPC_PROC_GET_HELLO_CPTR,
     RPC_PROC_GET_HELLO1_CPTR,
     RPC_PROC_GET_HELLO2_CPTR,
     RPC_PROC_GET_HELLO3_CPTR,
     RPC_PROC_GET_HELLO4_CPTR,
+    RPC_PROC_GETPID2,
     RPC_PROC_PING,
     RPC_PROC_NEW_ENDPOINT_INTERNAL,
     RPC_PROC_NEW_ASYNC_ENDPOINT_INTERNAL,
@@ -57,6 +80,94 @@ enum rpc_proc_label_enum {
 };
 #endif
 
+void server_proc_port_sampling_create(void *rpc_userptr);
+void reply_proc_port_sampling_create(void *rpc_userptr, int* rpc_id, int rpc___ret__);
+extern int proc_port_sampling_create_handler(void *rpc_userptr , char * rpc_name , int rpc_size , int rpc_core , int rpc_period , int* rpc_id) __attribute__((weak));
+
+void server_proc_port_sampling_write(void *rpc_userptr);
+void reply_proc_port_sampling_write(void *rpc_userptr, int rpc___ret__);
+extern int proc_port_sampling_write_handler(void *rpc_userptr , int rpc_id , void * rpc_addr , int rpc_len) __attribute__((weak));
+
+void server_proc_port_sampling_read(void *rpc_userptr);
+void reply_proc_port_sampling_read(void *rpc_userptr, int* rpc_len, int* rpc_valid, int rpc___ret__);
+extern int proc_port_sampling_read_handler(void *rpc_userptr , int rpc_id , void * rpc_addr , int* rpc_len , int* rpc_valid) __attribute__((weak));
+
+void server_proc_set_prio(void *rpc_userptr);
+void reply_proc_set_prio(void *rpc_userptr, int rpc___ret__);
+extern int proc_set_prio_handler(void *rpc_userptr , int rpc_pid , int rpc_prio) __attribute__((weak));
+
+void server_proc_stop_self(void *rpc_userptr);
+void reply_proc_stop_self(void *rpc_userptr, int rpc___ret__);
+extern int proc_stop_self_handler(void *rpc_userptr) __attribute__((weak));
+
+void server_proc_stop(void *rpc_userptr);
+void reply_proc_stop(void *rpc_userptr, int rpc___ret__);
+extern int proc_stop_handler(void *rpc_userptr , int rpc_pid) __attribute__((weak));
+
+void server_proc_resume(void *rpc_userptr);
+void reply_proc_resume(void *rpc_userptr, int rpc___ret__);
+extern int proc_resume_handler(void *rpc_userptr , int rpc_pid) __attribute__((weak));
+
+void server_proc_get_deadline_from_pid(void *rpc_userptr);
+void reply_proc_get_deadline_from_pid(void *rpc_userptr, int rpc___ret__);
+extern int proc_get_deadline_from_pid_handler(void *rpc_userptr , int rpc_pid) __attribute__((weak));
+
+void server_proc_get_currprio_from_pid(void *rpc_userptr);
+void reply_proc_get_currprio_from_pid(void *rpc_userptr, int rpc___ret__);
+extern int proc_get_currprio_from_pid_handler(void *rpc_userptr , int rpc_pid) __attribute__((weak));
+
+void server_proc_get_status_from_pid(void *rpc_userptr);
+void reply_proc_get_status_from_pid(void *rpc_userptr, int rpc___ret__);
+extern int proc_get_status_from_pid_handler(void *rpc_userptr , int rpc_pid) __attribute__((weak));
+
+void server_proc_get_period_from_pid(void *rpc_userptr);
+void reply_proc_get_period_from_pid(void *rpc_userptr, int rpc___ret__);
+extern int proc_get_period_from_pid_handler(void *rpc_userptr , int rpc_pid) __attribute__((weak));
+
+void server_proc_get_timecap_from_pid(void *rpc_userptr);
+void reply_proc_get_timecap_from_pid(void *rpc_userptr, int rpc___ret__);
+extern int proc_get_timecap_from_pid_handler(void *rpc_userptr , int rpc_pid) __attribute__((weak));
+
+void server_proc_get_entrypoint_from_pid(void *rpc_userptr);
+void reply_proc_get_entrypoint_from_pid(void *rpc_userptr, int rpc___ret__);
+extern int proc_get_entrypoint_from_pid_handler(void *rpc_userptr , int rpc_pid) __attribute__((weak));
+
+void server_proc_get_stacksize_from_pid(void *rpc_userptr);
+void reply_proc_get_stacksize_from_pid(void *rpc_userptr, int rpc___ret__);
+extern int proc_get_stacksize_from_pid_handler(void *rpc_userptr , int rpc_pid) __attribute__((weak));
+
+void server_proc_get_baseprio_from_pid(void *rpc_userptr);
+void reply_proc_get_baseprio_from_pid(void *rpc_userptr, int rpc___ret__);
+extern int proc_get_baseprio_from_pid_handler(void *rpc_userptr , int rpc_pid) __attribute__((weak));
+
+void server_proc_current_partition_get_id(void *rpc_userptr);
+void reply_proc_current_partition_get_id(void *rpc_userptr, int rpc___ret__);
+extern int proc_current_partition_get_id_handler(void *rpc_userptr) __attribute__((weak));
+
+void server_proc_current_partition_get_period(void *rpc_userptr);
+void reply_proc_current_partition_get_period(void *rpc_userptr, int rpc___ret__);
+extern int proc_current_partition_get_period_handler(void *rpc_userptr) __attribute__((weak));
+
+void server_proc_current_partition_get_duration(void *rpc_userptr);
+void reply_proc_current_partition_get_duration(void *rpc_userptr, uint64_t rpc___ret__);
+extern uint64_t proc_current_partition_get_duration_handler(void *rpc_userptr) __attribute__((weak));
+
+void server_proc_current_partition_get_lock_level(void *rpc_userptr);
+void reply_proc_current_partition_get_lock_level(void *rpc_userptr, int rpc___ret__);
+extern int proc_current_partition_get_lock_level_handler(void *rpc_userptr) __attribute__((weak));
+
+void server_proc_current_partition_get_operating_mode(void *rpc_userptr);
+void reply_proc_current_partition_get_operating_mode(void *rpc_userptr, int rpc___ret__);
+extern int proc_current_partition_get_operating_mode_handler(void *rpc_userptr) __attribute__((weak));
+
+void server_proc_current_partition_get_start_condition(void *rpc_userptr);
+void reply_proc_current_partition_get_start_condition(void *rpc_userptr, int rpc___ret__);
+extern int proc_current_partition_get_start_condition_handler(void *rpc_userptr) __attribute__((weak));
+
+void server_proc_get_pid_from_name(void *rpc_userptr);
+void reply_proc_get_pid_from_name(void *rpc_userptr, int rpc___ret__);
+extern int proc_get_pid_from_name_handler(void *rpc_userptr , char* rpc_name) __attribute__((weak));
+
 void server_proc_getpid(void *rpc_userptr);
 void reply_proc_getpid(void *rpc_userptr, int rpc___ret__);
 extern int proc_getpid_handler(void *rpc_userptr) __attribute__((weak));
@@ -80,6 +191,10 @@ extern seL4_CPtr proc_get_hello3_cptr_handler(void *rpc_userptr) __attribute__((
 void server_proc_get_hello4_cptr(void *rpc_userptr);
 void reply_proc_get_hello4_cptr(void *rpc_userptr, seL4_CPtr rpc___ret__);
 extern seL4_CPtr proc_get_hello4_cptr_handler(void *rpc_userptr) __attribute__((weak));
+
+void server_proc_getpid2(void *rpc_userptr);
+void reply_proc_getpid2(void *rpc_userptr, int* rpc_pid, int rpc___ret__);
+extern int proc_getpid2_handler(void *rpc_userptr , int* rpc_pid) __attribute__((weak));
 
 void server_proc_ping(void *rpc_userptr);
 void reply_proc_ping(void *rpc_userptr, refos_err_t rpc___ret__);

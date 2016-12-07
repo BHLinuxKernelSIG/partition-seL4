@@ -10,14 +10,94 @@
      @TAG(NICTA_BSD)
   -->
 
-
-
 <interface label_min='PROCSERV_METHODS_BASE' connect_ep='REFOS_PROCSERV_EP'>
     <include>refos/refos.h</include>
 
-    <function name="proc_getpid" return='int'>
-        @return pid
+    <function name="proc_port_sampling_create" return='int'>
+        <param type="char *" name="name"/>
+        <param type="int" name="size"/>
+        <param type="int" name="core"/>
+        <param type="int" name="period"/>
+        <param type="int*" name="id" dir="out"/>
     </function>
+
+    <function name="proc_port_sampling_write" return='int'>
+        <param type="int" name="id"/>
+        <param type="void *" name="addr"/>
+        <param type="int" name="len"/>
+    </function>
+
+    <function name="proc_port_sampling_read" return='int'>
+        <param type="int" name="id"/>
+        <param type="void *" name="addr"/>
+        <param type="int*" name="len" dir="out"/>
+        <param type="int*" name="valid" dir="out"/>
+    </function>
+
+    <function name="proc_set_prio" return='int'>
+        <param type="int" name="pid"/>
+        <param type="int" name="prio"/>
+    </function>
+
+    <function name="proc_stop_self" return='int'>
+    </function>
+
+    <function name="proc_stop" return='int'>
+        <param type="int" name="pid"/>
+    </function>
+
+    <function name="proc_resume" return='int'>
+        <param type="int" name="pid"/>
+    </function>
+
+    <function name="proc_get_deadline_from_pid" return='int'>
+        <param type="int" name="pid"/>
+    </function>
+    <function name="proc_get_currprio_from_pid" return='int'>
+        <param type="int" name="pid"/>
+    </function>
+    <function name="proc_get_status_from_pid" return='int'>
+        <param type="int" name="pid"/>
+    </function>
+    <function name="proc_get_period_from_pid" return='int'>
+        <param type="int" name="pid"/>
+    </function>
+    <function name="proc_get_timecap_from_pid" return='int'>
+        <param type="int" name="pid"/>
+    </function>
+    <function name="proc_get_entrypoint_from_pid" return='int'>
+        <param type="int" name="pid"/>
+    </function>
+    <function name="proc_get_stacksize_from_pid" return='int'>
+        <param type="int" name="pid"/>
+    </function>
+    <function name="proc_get_baseprio_from_pid" return='int'>
+        <param type="int" name="pid"/>
+    </function>
+
+
+    <function name="proc_current_partition_get_id" return='int'>
+    </function>
+    <function name="proc_current_partition_get_period" return='int'>
+    </function>
+    <function name="proc_current_partition_get_duration" return='uint64_t'>
+    </function>
+    <function name="proc_current_partition_get_lock_level" return='int'>
+    </function>
+    <function name="proc_current_partition_get_operating_mode" return='int'>
+    </function>
+    <function name="proc_current_partition_get_start_condition" return='int'>
+    </function>
+
+
+    <function name="proc_get_pid_from_name" return='int'>
+        <param type="char*" name="name"/>
+    </function>
+
+    <function name="proc_getpid" return='int'>
+    </function>
+
+
 
     <function name="proc_get_hello_cptr" return='seL4_CPtr'>
 
@@ -39,6 +119,10 @@
 
     </function>
 
+
+    <function name="proc_getpid2" return='int'>
+        <param type="int*" name="pid" dir="out"/>
+    </function>
 
 
     <function name="proc_ping" return='refos_err_t'>

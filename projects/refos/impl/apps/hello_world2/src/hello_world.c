@@ -25,96 +25,53 @@
 
 #include <refos-io/morecore.h>
 #include <test_apex.h>
+#include <apex_proc.h>
+#include <apex_part.h>
+#include <apex_sampling.h>
 
-/*
-void part2_user_schedule(int i);
+void test_ping()
+{
+        seL4_MessageInfo_t tag = seL4_MessageInfo_new(0,0,0,1);
+        seL4_SetMR(0, 0xabcd);
+        //printf("[hello0]will call process server\n");
+        seL4_NBSend(REFOS_PROCSERV_EP, tag);
+}
 
-static int i = 0;
+void thread3()
+{
+    while(1)
+    {
+        seL4_DebugPrintf("[PART 1] hello world from part 1 thread 3 \n");
+        test_ping();
+    }
+}
 
-seL4_CPtr hello3_cptr;
-seL4_CPtr hello4_cptr;
+void thread4()
+{
+    while(1)
+    {
+        seL4_DebugPrintf("[PART 1] hello world from part 1 thread 4 \n");
+        test_ping();
+    }
+}
 
 int main(void)
 {
-    refos_initialise();
-    while(1)
-    printf("123123123");
-
-    hello3_cptr = proc_get_hello3_cptr();
-    hello4_cptr = proc_get_hello4_cptr();
-
-    printf("\nPartition 2 scheduler Init Over\n");
-    while(1)
-    {
-        printf("In partition 2 scheduler\n");
-        printf("  will suspend all threads\n");
-        seL4_TCB_Suspend(hello3_cptr);
-        seL4_TCB_Suspend(hello4_cptr);
-
-
-        printf("  will schedule new thread\n");
-        part2_user_schedule(i++);
-
-        printf("  will yeild myself\n");
-        seL4_Yield();
-    }
-}
-
-void part2_user_schedule(int i)
-{
-    if(i%2 == 0)
-    {
-        printf("      will run hello 3\n");
-        seL4_TCB_Resume(hello3_cptr);
-    }
-    else
-    {
-        printf("      will run hello 4\n");
-        seL4_TCB_Resume(hello4_cptr);
-    }
-}
-
-*/
-
-void print_cycle(int info)
-{
-    unsigned long long result;
-	//asm volatile("rdtsc" : "=A" (result));
-    // printf("%d: cycles are %lld\n", info, result);
-}
-
-seL4_CPtr hello3_cptr;
-seL4_CPtr hello4_cptr;
-
-static int i = 0;
-
-int main(void)
-{
-    refos_initialise();
-    //hello3_cptr = proc_get_hello3_cptr();
-    //hello4_cptr = proc_get_hello4_cptr();
+    static char clone_stack1[2][4096];
+    static char clone_stack2[2][4096];
     
-    while(1)
-    {
-        //i++;
-        seL4_DebugPrintf("CCCCCCCCCCCCCCCC\n");
-        //seL4_DebugPutChar('\n');
+    refos_initialise();
 
-        //seL4_TCB_Suspend(hello3_cptr);
-        //seL4_TCB_Suspend(hello4_cptr);
+    proc_clone(thread3, &clone_stack1[0][4096], 0, 0);
+    proc_clone(thread4, &clone_stack2[1][4096], 0, 0);
+    
+    seL4_DebugPrintf("[PART 1] hello world from part 1 thread 2\n");
+    seL4_DebugPrintf("[PART 1] Init finish, will set to normal.\n");
 
-        //if (i % 2 == 0)
-        //{
-        //    seL4_TCB_Resume(hello3_cptr);
-        //}
-        //else
-        //{
-        //    seL4_TCB_Resume(hello4_cptr);
-        //}
-        //seL4_Yield();
-        //seL4_DebugPutChar('Y');        
-        //seL4_DebugPutChar('\n');
-    }
+    OPERATING_MODE_TYPE mode = NORMAL;
+    RETURN_CODE_TYPE ret;
+    SET_PARTITION_MODE(mode, &ret);
+
     return 0;
 }
 

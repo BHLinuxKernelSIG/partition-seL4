@@ -8,7 +8,7 @@
 #include <refos-io/morecore.h>
 #include "../state.h"
 
-#include <partition.h>
+#include "partition.h"
 
 seL4_CPtr A_cptr;
 seL4_CPtr B_cptr;

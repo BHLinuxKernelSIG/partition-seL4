@@ -25,12 +25,35 @@
 /*! @brief RPC syscall label enums for proc interface. */
 enum rpc_proc_label_enum {
     RPC_PROC_LABEL_MIN = PROCSERV_METHODS_BASE,
+    RPC_PROC_PORT_SAMPLING_CREATE,
+    RPC_PROC_PORT_SAMPLING_WRITE,
+    RPC_PROC_PORT_SAMPLING_READ,
+    RPC_PROC_SET_PRIO,
+    RPC_PROC_STOP_SELF,
+    RPC_PROC_STOP,
+    RPC_PROC_RESUME,
+    RPC_PROC_GET_DEADLINE_FROM_PID,
+    RPC_PROC_GET_CURRPRIO_FROM_PID,
+    RPC_PROC_GET_STATUS_FROM_PID,
+    RPC_PROC_GET_PERIOD_FROM_PID,
+    RPC_PROC_GET_TIMECAP_FROM_PID,
+    RPC_PROC_GET_ENTRYPOINT_FROM_PID,
+    RPC_PROC_GET_STACKSIZE_FROM_PID,
+    RPC_PROC_GET_BASEPRIO_FROM_PID,
+    RPC_PROC_CURRENT_PARTITION_GET_ID,
+    RPC_PROC_CURRENT_PARTITION_GET_PERIOD,
+    RPC_PROC_CURRENT_PARTITION_GET_DURATION,
+    RPC_PROC_CURRENT_PARTITION_GET_LOCK_LEVEL,
+    RPC_PROC_CURRENT_PARTITION_GET_OPERATING_MODE,
+    RPC_PROC_CURRENT_PARTITION_GET_START_CONDITION,
+    RPC_PROC_GET_PID_FROM_NAME,
     RPC_PROC_GETPID,
     RPC_PROC_GET_HELLO_CPTR,
     RPC_PROC_GET_HELLO1_CPTR,
     RPC_PROC_GET_HELLO2_CPTR,
     RPC_PROC_GET_HELLO3_CPTR,
     RPC_PROC_GET_HELLO4_CPTR,
+    RPC_PROC_GETPID2,
     RPC_PROC_PING,
     RPC_PROC_NEW_ENDPOINT_INTERNAL,
     RPC_PROC_NEW_ASYNC_ENDPOINT_INTERNAL,
@@ -57,7 +80,50 @@ enum rpc_proc_label_enum {
 };
 #endif
 
-/*@return pid */
+int proc_port_sampling_create(char * name, int size, int core, int period, int* id);
+
+int proc_port_sampling_write(int id, void * addr, int len);
+
+int proc_port_sampling_read(int id, void * addr, int* len, int* valid);
+
+int proc_set_prio(int pid, int prio);
+
+int proc_stop_self();
+
+int proc_stop(int pid);
+
+int proc_resume(int pid);
+
+int proc_get_deadline_from_pid(int pid);
+
+int proc_get_currprio_from_pid(int pid);
+
+int proc_get_status_from_pid(int pid);
+
+int proc_get_period_from_pid(int pid);
+
+int proc_get_timecap_from_pid(int pid);
+
+int proc_get_entrypoint_from_pid(int pid);
+
+int proc_get_stacksize_from_pid(int pid);
+
+int proc_get_baseprio_from_pid(int pid);
+
+int proc_current_partition_get_id();
+
+int proc_current_partition_get_period();
+
+uint64_t proc_current_partition_get_duration();
+
+int proc_current_partition_get_lock_level();
+
+int proc_current_partition_get_operating_mode();
+
+int proc_current_partition_get_start_condition();
+
+int proc_get_pid_from_name(char* name);
+
 int proc_getpid();
 
 seL4_CPtr proc_get_hello_cptr();
@@ -69,6 +135,8 @@ seL4_CPtr proc_get_hello2_cptr();
 seL4_CPtr proc_get_hello3_cptr();
 
 seL4_CPtr proc_get_hello4_cptr();
+
+int proc_getpid2(int* pid);
 
 /*! @brief Ping the process server. Useful for debugging.
    @return ESUCCESS if success, refos_error error code otherwise. */

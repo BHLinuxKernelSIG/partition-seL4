@@ -25,6 +25,8 @@
 #include "proc_client_watch.h"
 #include <refos/refos.h>
 
+#include "../partition/partition.h"
+
 /*! @file
     @brief Process management module for process server. */
 
@@ -543,12 +545,16 @@ proc_clone(struct proc_pcb *p, int *threadID, vaddr_t stackAddr, vaddr_t entryPo
         return ENOMEM;
     }
 
+    seL4_DebugPrintf("[clone] before threadconfig\n");
+
     /* Configure new thread, sharing the process's address space */
     int error = thread_config(thread, t->priority, (vaddr_t) entryPoint, &p->vspace);
     if (error) {
         ROS_ERROR("Failed to configure thread for new thread.");
         goto exit1;
     }
+
+    seL4_DebugPrintf("[clone] after threadconfig\n");
 
     /* Add thread to list. */
     dvprintf("Adding to threads list...\n");
@@ -560,11 +566,25 @@ proc_clone(struct proc_pcb *p, int *threadID, vaddr_t stackAddr, vaddr_t entryPo
     assert(cvector_count(&p->threads) >= 1);
 
     /* Start the new child thread. */
+
+    seL4_DebugPrintf("[clone] before start\n");
+
     error = proc_start_thread(p, tID, NULL, NULL);
     if (error) {
         ROS_ERROR("Could not start child thread %d!", tID);
         goto exit2;
     }
+
+    uint32_t thread_id;
+    pok_thread_attr_t attr = {0};
+    seL4_DebugPrintf("[clone] will create sth, part id is %d\n",
+                     current_partition);
+
+    seL4_DebugPrintf("[clone] before create\n");
+
+    pok_ret_t ret = pok_partition_thread_create (&thread_id,
+                                                  &attr,
+                                                  current_partition);
 
     return ESUCCESS;
 

@@ -1,2 +1,2 @@
 src/init.o: \
- /home/kq/kangqiao_seL4/RefOS_x86/libs/libsel4platsupport/src/init.c
+ /home/kq/kangqiao_seL4/RefOS_partition_all/libs/libsel4platsupport/src/init.c

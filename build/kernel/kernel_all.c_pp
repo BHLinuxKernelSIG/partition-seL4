@@ -1,7 +1,7 @@
 # 1 "kernel_all.c"
-# 1 "<命令行>"
+# 1 "<command-line>"
 # 1 "kernel_all.c"
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12,21 +12,7 @@
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-
-
-
-
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/basic_types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -40,7 +26,7 @@
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/basic_types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -54,7 +40,21 @@
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+
+
+
+
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -76,9 +76,9 @@ typedef unsigned long long uint64_t;
 typedef signed char int8_t;
 typedef signed short int16_t;
 typedef signed long int32_t;
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 2
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/basic_types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/basic_types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -92,7 +92,7 @@ typedef signed long int32_t;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -102,7 +102,7 @@ typedef signed long int32_t;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 2
 
 typedef uint32_t word_t;
 typedef uint32_t vptr_t;
@@ -117,7 +117,7 @@ enum hwASIDConstants {
     hwASIDMax = 255,
     hwASIDBits = 8
 };
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/basic_types.h" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/basic_types.h" 2
 
 enum _bool {
     false = 0,
@@ -139,8 +139,8 @@ typedef struct v_region {
     vptr_t start;
     vptr_t end;
 } v_region_t;
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/compound_types.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/compound_types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -154,7 +154,7 @@ typedef struct v_region {
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -164,8 +164,8 @@ typedef struct v_region {
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/compound_types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/compound_types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -179,7 +179,7 @@ typedef struct v_region {
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -196,13 +196,13 @@ typedef struct v_region {
 /* Compile-time configuration parameters. Might be set by the build system. */
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/include/generated/autoconf.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/include/generated/autoconf.h" 1
 /*
  * Automatically generated C config: don't edit
  * Project Configuration
- * Thu Oct 27 16:37:04 2016
+ * Mon Dec  5 17:24:16 2016
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 2
 
 
 /* size of the initial thread's root CNode (2^x slots, x >= 4) */
@@ -265,8 +265,8 @@ typedef struct v_region {
 
 
 /* maximum number of IOMMU RMRR entries we can record while ACPI parsing */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -276,8 +276,8 @@ typedef struct v_region {
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -287,7 +287,7 @@ typedef struct v_region {
  *
  * @TAG(GD_GPL)
  */
-# 45 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h"
+# 45 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h"
 /* Borrowed from linux/include/linux/compiler.h */
 
 
@@ -317,12 +317,12 @@ void *memcpy(void* ptr_dst, const void* ptr_src, unsigned int n);
 int strncmp(const char *s1, const char *s2, int n);
 int __attribute__((__const__)) char_to_int(char c);
 int __attribute__((__pure__)) str_to_int(const char* str);
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 2
 # 1 "./api/types_gen.h" 1
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -336,7 +336,7 @@ int __attribute__((__pure__)) str_to_int(const char* str);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -346,7 +346,7 @@ int __attribute__((__pure__)) str_to_int(const char* str);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 2
 
 
 
@@ -371,7 +371,7 @@ void _assert_fail(
 
 /* Create an assert that will trigger a compile error if it fails. */
 # 5 "./api/types_gen.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -382,7 +382,7 @@ void _assert_fail(
  * @TAG(GD_GPL)
  */
 # 6 "./api/types_gen.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -393,7 +393,7 @@ void _assert_fail(
  * @TAG(GD_GPL)
  */
 # 7 "./api/types_gen.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -558,8 +558,8 @@ cap_rights_get_capAllowWrite(cap_rights_t cap_rights) {
     }
     return ret;
 }
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/api/types.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -573,7 +573,7 @@ cap_rights_get_capAllowWrite(cap_rights_t cap_rights) {
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/objecttype.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -597,8 +597,8 @@ typedef enum api_object {
 } seL4_ObjectType;
 
 typedef uint32_t api_object_t;
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/api/types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/api/objecttype.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/api/types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/api/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -623,9 +623,9 @@ typedef enum _object {
 } seL4_ArchObjectType;
 
 typedef uint32_t object_t;
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/api/types.h" 2
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/api/types.h" 2
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -635,8 +635,8 @@ typedef uint32_t object_t;
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/constants.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/constants.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -668,7 +668,7 @@ enum seL4_MsgLimits {
 enum {
     seL4_MsgMaxLength = 120,
 };
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 2
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 2
 
 /* cap_rights_t defined in api/types.bf */
 
@@ -751,13 +751,13 @@ wordFromMessageInfo(message_info_t mi)
 {
     return mi.words[0];
 }
-# 111 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h"
+# 111 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h"
 /*
  * Print to serial a message helping userspace programmers to determine why the
  * kernel is not performing their requested operation.
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/compound_types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/compound_types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -771,7 +771,7 @@ wordFromMessageInfo(message_info_t mi)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -781,8 +781,8 @@ wordFromMessageInfo(message_info_t mi)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -792,12 +792,12 @@ wordFromMessageInfo(message_info_t mi)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 2
 # 1 "./arch/object/structures_gen.h" 1
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -808,7 +808,7 @@ wordFromMessageInfo(message_info_t mi)
  * @TAG(GD_GPL)
  */
 # 5 "./arch/object/structures_gen.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -819,7 +819,7 @@ wordFromMessageInfo(message_info_t mi)
  * @TAG(GD_GPL)
  */
 # 6 "./arch/object/structures_gen.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -830,7 +830,7 @@ wordFromMessageInfo(message_info_t mi)
  * @TAG(GD_GPL)
  */
 # 7 "./arch/object/structures_gen.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3734,7 +3734,7 @@ lookup_fault_guard_mismatch_get_bitsFound(lookup_fault_t lookup_fault) {
     }
     return ret;
 }
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 2
 
 enum irq_state {
     IRQInactive = 0,
@@ -3773,14 +3773,14 @@ typedef uint32_t async_endpoint_state_t;
  * differ by architecture, they are declared in the
  * arch structures.h
  */
-# 72 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h"
+# 72 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h"
 /* Generate a tcb_t or cte_t pointer from a tcb block reference */
 
 
 
 
 /* Generate a cte_t pointer from a tcb_t pointer */
-# 88 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h"
+# 88 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h"
 static inline cap_t __attribute__((__const__))
 Zombie_new(uint32_t number, uint32_t type, uint32_t ptr)
 {
@@ -3874,7 +3874,7 @@ typedef uint32_t tcb_cnode_index_t;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3888,7 +3888,7 @@ typedef uint32_t tcb_cnode_index_t;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3898,8 +3898,8 @@ typedef uint32_t tcb_cnode_index_t;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3909,8 +3909,8 @@ typedef uint32_t tcb_cnode_index_t;
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3920,8 +3920,8 @@ typedef uint32_t tcb_cnode_index_t;
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3931,9 +3931,9 @@ typedef uint32_t tcb_cnode_index_t;
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 2
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3943,7 +3943,7 @@ typedef uint32_t tcb_cnode_index_t;
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h"
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h"
 /* The stack is the very last page of virtual memory. */
 
 /*
@@ -3952,12 +3952,12 @@ typedef uint32_t tcb_cnode_index_t;
  * is 0x0, which is perfectly valid and would wrap correctly, but let's not
  * test the boundary cases here.
  */
-# 47 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h"
+# 47 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h"
 /* Processor ID used to check if errata work arounds need to be performed */
 
 
 /* Control register fields */
-# 68 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h"
+# 68 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h"
 /* Processor mode encodings (for CPS etc.) */
 
 
@@ -3977,7 +3977,7 @@ typedef uint32_t tcb_cnode_index_t;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -3987,7 +3987,7 @@ typedef uint32_t tcb_cnode_index_t;
  *
  * @TAG(GD_GPL)
  */
-# 88 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h" 2
+# 88 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h" 2
 
 enum vm_fault_type {
     ARMDataAbort = 0,
@@ -4027,11 +4027,11 @@ pageBitsForSize(vm_page_size_t pagesize)
         return ARMSuperSectionBits;
 
     default:
-        _fail("Invalid page size", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h", 127, __func__);
+        _fail("Invalid page size", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h", 127, __func__);
     }
 }
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4045,7 +4045,7 @@ pageBitsForSize(vm_page_size_t pagesize)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4055,14 +4055,14 @@ pageBitsForSize(vm_page_size_t pagesize)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h" 2
 
 /*
  * We cannot allow async aborts in the verified kernel, but
  * they are useful in identifying invalid memory access bugs
  * so we enable them in debug mode.
  */
-# 40 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h"
+# 40 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h"
 /* Offsets within the user context, these need to match the order in
  * register_t below */
 
@@ -4070,7 +4070,7 @@ pageBitsForSize(vm_page_size_t pagesize)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4080,8 +4080,8 @@ pageBitsForSize(vm_page_size_t pagesize)
  *
  * @TAG(GD_GPL)
  */
-# 48 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 48 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4091,8 +4091,8 @@ pageBitsForSize(vm_page_size_t pagesize)
  *
  * @TAG(GD_GPL)
  */
-# 49 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
+# 49 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4102,7 +4102,7 @@ pageBitsForSize(vm_page_size_t pagesize)
  *
  * @TAG(GD_GPL)
  */
-# 50 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h" 2
+# 50 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h" 2
 
 /* These are the indices of the registers in the
  * saved thread context.  The values are determined
@@ -4179,7 +4179,7 @@ sanitiseRegister(register_t reg, word_t v)
         return v;
     }
 }
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 2
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 2
 
 /* Object sizes */
 
@@ -4203,7 +4203,7 @@ enum vm_rights {
     VMReadWrite = 3
 };
 typedef uint32_t vm_rights_t;
-# 56 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h"
+# 56 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h"
 /* Page directory entries (PDEs) */
 enum pde_type {
     PDEInvalid = 0,
@@ -4211,7 +4211,7 @@ enum pde_type {
     PDEMapping = 2
 };
 typedef uint32_t pde_type_t;
-# 75 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h"
+# 75 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h"
 struct user_data {
     word_t words[(1ul<<(ARMSmallPageBits)) / sizeof(word_t)];
 };
@@ -4263,7 +4263,7 @@ cap_get_archCapSizeBits(cap_t cap)
         return 0;
 
     default:
-        if(!(!"Unknown cap type")) _assert_fail("!\"Unknown cap type\"", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h", 126, __FUNCTION__);
+        if(!(!"Unknown cap type")) _assert_fail("!\"Unknown cap type\"", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h", 126, __FUNCTION__);
         /* Unreachable, but GCC can't figure that out */
         return 0;
     }
@@ -4290,7 +4290,7 @@ cap_get_archCapPtr(cap_t cap)
         return ((void *)0);
 
     default:
-        if(!(!"Unknown cap type")) _assert_fail("!\"Unknown cap type\"", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h", 153, __FUNCTION__);
+        if(!(!"Unknown cap type")) _assert_fail("!\"Unknown cap type\"", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h", 153, __FUNCTION__);
         /* Unreachable, but GCC can't figure that out */
         return ((void *)0);
     }
@@ -4326,7 +4326,7 @@ pte_ptr_get_pteType(pte_t *pte_ptr)
         return pte_pte_invalid;
     }
 }
-# 182 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 2
+# 182 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 2
 
 static inline word_t __attribute__((__const__))
 wordFromVMRights(vm_rights_t vm_rights)
@@ -4368,13 +4368,13 @@ static inline word_t mdb_node_get_cdtRight(mdb_node_t mdb)
 
 static inline void mdb_node_ptr_set_cdtLeft(mdb_node_t *mdb, word_t cte)
 {
-    if(!((cte & ((1ul<<(2))-1ul)) == 0)) _assert_fail("(cte & MASK(2)) == 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h", 223, __FUNCTION__);
+    if(!((cte & ((1ul<<(2))-1ul)) == 0)) _assert_fail("(cte & MASK(2)) == 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h", 223, __FUNCTION__);
     mdb_node_ptr_set_cdtLeft_(mdb, (cte & 0x1FFFFFFF) >> 2);
 }
 
 static inline void mdb_node_ptr_set_cdtRight(mdb_node_t *mdb, word_t cte)
 {
-    if(!((cte & ((1ul<<(2))-1ul)) == 0)) _assert_fail("(cte & MASK(2)) == 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h", 229, __FUNCTION__);
+    if(!((cte & ((1ul<<(2))-1ul)) == 0)) _assert_fail("(cte & MASK(2)) == 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h", 229, __FUNCTION__);
     mdb_node_ptr_set_cdtRight_(mdb, (cte & 0x1FFFFFFF) >> 2);
 }
 
@@ -4426,7 +4426,7 @@ typedef struct tcb tcb_t;
 /* Ensure TCB size is sane. */
 typedef int
  __assert_failed_tcb_size_sane
-# 279 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h"
+# 279 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h"
  [((1 << (4 + 4)) + sizeof(tcb_t) <= (1 << ((4 + 4)+1))) ? 1 : -1];
 
 
@@ -4547,7 +4547,7 @@ cap_get_capBadge(cap_t cap)
     return 0;
 }
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/capspace.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/capspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4600,7 +4600,7 @@ cap_get_capSpaceType(cap_t cap)
         return capSpaceDomain;
 
     default:
-        if(!(!"Unknown cap type")) _assert_fail("!\"Unknown cap type\"", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/capspace.h", 53, __FUNCTION__);
+        if(!(!"Unknown cap type")) _assert_fail("!\"Unknown cap type\"", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/capspace.h", 53, __FUNCTION__);
         /* Unreachable, but GCC can't figure that out */
         return 0;
     }
@@ -4636,7 +4636,7 @@ cap_get_capSpacePtr(cap_t cap)
         return (void*)0;
 
     default:
-        if(!(!"Unknown cap type")) _assert_fail("!\"Unknown cap type\"", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/capspace.h", 89, __FUNCTION__);
+        if(!(!"Unknown cap type")) _assert_fail("!\"Unknown cap type\"", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/capspace.h", 89, __FUNCTION__);
         /* Unreachable, but GCC can't figure that out */
         return 0;
     }
@@ -4672,7 +4672,7 @@ cap_get_capSpaceSize(cap_t cap)
         return 1;
 
     default:
-        if(!(!"Unknown cap type")) _assert_fail("!\"Unknown cap type\"", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/capspace.h", 125, __FUNCTION__);
+        if(!(!"Unknown cap type")) _assert_fail("!\"Unknown cap type\"", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/capspace.h", 125, __FUNCTION__);
         /* Unreachable, but GCC can't figure that out */
         return 0;
     }
@@ -4694,7 +4694,7 @@ cap_get_capExtraComp(cap_t cap)
         case ARMSuperSection:
             return ((unsigned int)(((pde_t *)(cap_frame_cap_get_capFMappedObject(cap))) + cap_frame_cap_get_capFMappedIndex(cap)));
         default:
-            _fail("Unknown frame size", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/capspace.h", 147, __func__);
+            _fail("Unknown frame size", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/capspace.h", 147, __func__);
         }
     case cap_page_table_cap:
         if (!cap_page_table_cap_get_capPTMappedObject(cap)) {
@@ -4723,9 +4723,9 @@ cte_depth_bits_cap(cap_t cap)
 {
     return cte_depth_bits_type(cap_get_capType(cap));
 }
-# 400 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 2
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/compound_types.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
+# 400 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/compound_types.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4735,7 +4735,7 @@ cte_depth_bits_cap(cap_t cap)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/compound_types.h" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/compound_types.h" 2
 
 struct pde_range {
     pde_t *pd;
@@ -4757,9 +4757,9 @@ struct extra_caps {
     cte_ptr_t excaprefs[((1ul<<(seL4_MsgExtraCapBits))-1)];
 };
 typedef struct extra_caps extra_caps_t;
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 2
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/benchmark.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 2
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/benchmark.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4773,7 +4773,7 @@ typedef struct extra_caps extra_caps_t;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/benchmark.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/benchmark.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4783,44 +4783,8 @@ typedef struct extra_caps extra_caps_t;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/benchmark.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-
-
-
-
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/io.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/benchmark.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4834,7 +4798,7 @@ typedef struct extra_caps extra_caps_t;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4844,13 +4808,49 @@ typedef struct extra_caps extra_caps_t;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/io.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/io.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+
+
+
+
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/io.h" 2
 
 
 void imx31_uart_putchar(char c);
 void putDebugChar(unsigned char c);
 unsigned char getDebugChar(void);
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 2
 
 
 unsigned int puts(const char *s) __attribute__((externally_visible));
@@ -4862,11 +4862,11 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
 
 
 /* printf will result in output */
-# 40 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h"
+# 40 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h"
 /* release_printfs will NOT result in output */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/benchmark.h" 2
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/benchmark.h" 2
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4880,7 +4880,7 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4894,7 +4894,7 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4904,8 +4904,8 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h"
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4915,8 +4915,8 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4926,8 +4926,8 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4937,8 +4937,8 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4948,8 +4948,8 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4959,8 +4959,8 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
  *
  * @TAG(GD_GPL)
  */
-# 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h"
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4970,8 +4970,8 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
  *
  * @TAG(GD_GPL)
  */
-# 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 1
+# 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4981,8 +4981,8 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
  *
  * @TAG(GD_GPL)
  */
-# 27 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine.h" 1
+# 27 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -4992,7 +4992,7 @@ unsigned int print_unsigned_long(unsigned long x, unsigned int ui_base) __attrib
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine.h"
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine.h"
 enum IRQConstants {
     INTERRUPT_PMU = 23,
     INTERRUPT_EPIT1 = 28,
@@ -5005,12 +5005,12 @@ enum irqNumbers {
 
 typedef uint32_t interrupt_t;
 typedef uint32_t irq_t;
-# 28 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 2
+# 28 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 2
 # 1 "./plat/machine/hardware_gen.h" 1
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5021,7 +5021,7 @@ typedef uint32_t irq_t;
  * @TAG(GD_GPL)
  */
 # 5 "./plat/machine/hardware_gen.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5032,7 +5032,7 @@ typedef uint32_t irq_t;
  * @TAG(GD_GPL)
  */
 # 6 "./plat/machine/hardware_gen.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5043,7 +5043,7 @@ typedef uint32_t irq_t;
  * @TAG(GD_GPL)
  */
 # 7 "./plat/machine/hardware_gen.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5112,8 +5112,8 @@ epitcr_set_en(epitcr_t epitcr, uint32_t v) {
     epitcr.words[0] |= (v << 0) & 0x1ul;
     return epitcr;
 }
-# 29 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/devices.h" 1
+# 29 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/devices.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5127,7 +5127,7 @@ epitcr_set_en(epitcr_t epitcr, uint32_t v) {
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5137,10 +5137,10 @@ epitcr_set_en(epitcr_t epitcr, uint32_t v) {
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/devices.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/devices.h" 2
 
 /* kernel devices */
-# 27 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/devices.h"
+# 27 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/devices.h"
 struct imx31_l2cc_id {
     uint32_t id; /* 000 */
     uint32_t type; /* 004 */
@@ -5180,7 +5180,7 @@ struct imx31_l2cc_lockdown {
     uint32_t lock_way_D; /* 900 */
     uint32_t lock_way_I; /* 904 */
 };
-# 30 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 2
+# 30 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 2
 
 static inline void* __attribute__((__const__))
 ptrFromPAddr(paddr_t paddr)
@@ -5230,8 +5230,8 @@ void plat_cleanL2Range(paddr_t start, paddr_t end);
 void plat_invalidateL2Range(paddr_t start, paddr_t end);
 /** MODIFIES: [*] */
 void plat_cleanInvalidateL2Range(paddr_t start, paddr_t end);
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5265,9 +5265,9 @@ static inline void isb(void)
 {
     __asm__ volatile("mcr p15, 0, %0, c7, c5, 4" : : "r"(0) : "memory");
 }
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 2
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 2
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5277,10 +5277,10 @@ static inline void isb(void)
  *
  * @TAG(GD_GPL)
  */
-# 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 2
-# 41 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h"
+# 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 2
+# 41 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h"
 /** Generic timer CP15 registers **/
-# 62 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h"
+# 62 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h"
 word_t __attribute__((__pure__)) getRestartPC(tcb_t *thread);
 void setNextPC(tcb_t *thread, word_t v);
 
@@ -5554,8 +5554,8 @@ static inline void clearMemory(word_t* ptr, unsigned int bits)
     cleanCacheRange_PoU((word_t)ptr, (word_t)ptr + (1ul<<(bits)) - 1,
                         addrFromPPtr(ptr));
 }
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5565,8 +5565,8 @@ static inline void clearMemory(word_t* ptr, unsigned int bits)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5580,7 +5580,7 @@ static inline void clearMemory(word_t* ptr, unsigned int bits)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5590,8 +5590,8 @@ static inline void clearMemory(word_t* ptr, unsigned int bits)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5601,8 +5601,8 @@ static inline void clearMemory(word_t* ptr, unsigned int bits)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5612,7 +5612,7 @@ static inline void clearMemory(word_t* ptr, unsigned int bits)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 2
 
 static inline void
 setRegister(tcb_t *thread, register_t reg, word_t w)
@@ -5625,8 +5625,8 @@ getRegister(tcb_t *thread, register_t reg)
 {
     return thread->tcbArch.tcbContext.registers[reg];
 }
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/hardware.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5640,7 +5640,7 @@ getRegister(tcb_t *thread, register_t reg)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5650,8 +5650,8 @@ getRegister(tcb_t *thread, register_t reg)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/hardware.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/hardware.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5661,8 +5661,8 @@ getRegister(tcb_t *thread, register_t reg)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/hardware.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/hardware.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5672,8 +5672,8 @@ getRegister(tcb_t *thread, register_t reg)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/hardware.h" 2
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/hardware.h" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h" 2
 
 /* platform independent functions */
 
@@ -5711,8 +5711,8 @@ inKernelWindow(void *pptr)
     paddr_t paddr = pptr_to_paddr(pptr);
     return ((paddr >= 0x80000000 /* for compatibility with proofs */) && (paddr < (0xfff00000 - (0xf0000000 - 0x80000000))));
 }
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5726,7 +5726,7 @@ inKernelWindow(void *pptr)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5736,8 +5736,8 @@ inKernelWindow(void *pptr)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/errors.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/errors.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5764,7 +5764,7 @@ typedef enum {
     seL4_RevokeFirst,
     seL4_NotEnoughMemory,
 } seL4_Error;
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 2
 /* These datatypes differ markedly from haskell, due to the
  * different implementation of the various fault monads */
 
@@ -5795,8 +5795,8 @@ typedef struct syscall_error syscall_error_t;
 extern lookup_fault_t current_lookup_fault;
 extern fault_t current_fault;
 extern syscall_error_t current_syscall_error;
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5810,7 +5810,7 @@ extern syscall_error_t current_syscall_error;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5820,8 +5820,8 @@ extern syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5831,56 +5831,8 @@ extern syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-
-
-
-
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 2
-
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/tcb.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5894,7 +5846,7 @@ extern syscall_error_t current_syscall_error;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5904,8 +5856,8 @@ extern syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/tcb.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5915,7 +5867,55 @@ extern syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/tcb.h" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 2
+
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/tcb.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+
+
+
+
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/tcb.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/tcb.h" 2
 
 unsigned int setMRs_fault(tcb_t *sender, tcb_t* receiver,
                           word_t *receiveIPCBuffer);
@@ -5924,8 +5924,8 @@ word_t __attribute__((__const__)) Arch_decodeTransfer(word_t flags);
 exception_t __attribute__((__const__)) Arch_performTransfer(word_t arch, tcb_t *tcb_src,
                                        tcb_t *tcb_dest);
 void Arch_leaveVMAsyncTransfer(tcb_t *tcb);
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5939,7 +5939,7 @@ void Arch_leaveVMAsyncTransfer(tcb_t *tcb);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5949,8 +5949,8 @@ void Arch_leaveVMAsyncTransfer(tcb_t *tcb);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5960,8 +5960,8 @@ void Arch_leaveVMAsyncTransfer(tcb_t *tcb);
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -5971,7 +5971,7 @@ void Arch_leaveVMAsyncTransfer(tcb_t *tcb);
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 2
 
 struct slot_range {
     cte_t *cnode;
@@ -6007,7 +6007,7 @@ exception_t ensureEmptySlot(cte_t *slot);
 bool_t __attribute__((__pure__)) slotCapLongRunningDelete(cte_t *slot);
 cte_t *getReceiveSlots(tcb_t *thread, word_t *buffer);
 cap_transfer_t __attribute__((__pure__)) loadCapTransfer(word_t *buffer);
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 2
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 2
 
 
 /* Maximum length of the tcb name, including null terminator */
@@ -6086,8 +6086,8 @@ void setExtraBadge(word_t *bufferPtr, word_t badge, unsigned int i);
 exception_t lookupExtraCaps(tcb_t* thread, word_t *bufferPtr, message_info_t info);
 
 void setThreadName(tcb_t *thread, const char *name);
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/model/statedata.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6101,7 +6101,7 @@ void setThreadName(tcb_t *thread, const char *name);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6111,8 +6111,8 @@ void setThreadName(tcb_t *thread, const char *name);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/model/statedata.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/model/statedata.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6122,8 +6122,8 @@ void setThreadName(tcb_t *thread, const char *name);
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/model/statedata.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/model/statedata.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6133,8 +6133,8 @@ void setThreadName(tcb_t *thread, const char *name);
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/model/statedata.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/model/statedata.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6144,14 +6144,14 @@ void setThreadName(tcb_t *thread, const char *name);
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/model/statedata.h" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/model/statedata.h" 2
 
 extern word_t armKSGlobalsFrame[(1ul<<(ARMSmallPageBits)) / sizeof(word_t)] __attribute__((externally_visible));
 extern pde_t *armKSHWASIDTable[(1ul<<(hwASIDBits))] __attribute__((externally_visible));
 extern hw_asid_t armKSNextASID __attribute__((externally_visible));
 extern pde_t armKSGlobalPD[(1ul<<(12))] __attribute__((externally_visible));
 extern pte_t armKSGlobalPT[(1ul<<(8))] __attribute__((externally_visible));
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 2
 
 extern tcb_queue_t ksReadyQueues[] __attribute__((externally_visible));
 extern word_t ksReadyQueuesL1Bitmap[1] __attribute__((externally_visible));
@@ -6168,8 +6168,8 @@ extern const unsigned int ksDomScheduleLength;
 extern uint32_t ksDomScheduleIdx;
 extern dom_t ksCurDomain;
 extern word_t ksDomainTime;
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6183,7 +6183,7 @@ extern word_t ksDomainTime;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/vspace.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6197,7 +6197,7 @@ extern word_t ksDomainTime;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6207,8 +6207,8 @@ extern word_t ksDomainTime;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/vspace.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/vspace.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6218,8 +6218,8 @@ extern word_t ksDomainTime;
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/vspace.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/vspace.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6229,7 +6229,7 @@ extern word_t ksDomainTime;
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/vspace.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/vspace.h" 2
 
 void map_it_pt_cap(cap_t pt_cap);
 void map_it_frame_cap(cap_t frame_cap);
@@ -6297,8 +6297,8 @@ exception_t performPageInvocationMapPTE(cap_t cap, cte_t *ctSlot,
 exception_t performPageInvocationMapPDE(cap_t cap, cte_t *ctSlot,
                                         pde_t pde, pde_range_t pde_entries);
 exception_t performPageInvocationUnmap(cap_t cap, cte_t *ctSlot);
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h" 2
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 2
 # 1 "./arch/api/syscall.h" 1
 /* @LICENSE(OKL_CORE) */
 
@@ -6329,7 +6329,7 @@ enum syscall {
 # 58 "./arch/api/syscall.h"
 };
 typedef uint32_t syscall_t;
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 2
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 2
 
 exception_t handleSyscall(syscall_t syscall) __attribute__((externally_visible));
 exception_t handleInterruptEntry(void) __attribute__((externally_visible));
@@ -6344,13 +6344,13 @@ getSyscallArg(unsigned int i, word_t* ipc_buffer)
         return getRegister(ksCurThread, msgRegisters[i]);
     }
 
-    if(!(ipc_buffer != ((void *)0))) _assert_fail("ipc_buffer != NULL", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h", 33, __FUNCTION__);
+    if(!(ipc_buffer != ((void *)0))) _assert_fail("ipc_buffer != NULL", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h", 33, __FUNCTION__);
     return ipc_buffer[i + 1];
 }
 
 extern extra_caps_t current_extra_caps;
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6360,33 +6360,8 @@ extern extra_caps_t current_extra_caps;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/faults.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-
-
-
-
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/faults.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/faults.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6400,7 +6375,7 @@ extern extra_caps_t current_extra_caps;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6410,8 +6385,8 @@ extern extra_caps_t current_extra_caps;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/faults.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6425,7 +6400,7 @@ extern extra_caps_t current_extra_caps;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6435,8 +6410,8 @@ extern extra_caps_t current_extra_caps;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6446,8 +6421,11 @@ extern extra_caps_t current_extra_caps;
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+
+
+
+
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6457,8 +6435,8 @@ extern extra_caps_t current_extra_caps;
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6468,8 +6446,8 @@ extern extra_caps_t current_extra_caps;
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6479,7 +6457,29 @@ extern extra_caps_t current_extra_caps;
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 2
 
 struct deriveCap_ret {
     exception_t status;
@@ -6493,7 +6493,7 @@ struct finaliseCap_ret {
 };
 typedef struct finaliseCap_ret finaliseCap_ret_t;
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/objecttype.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6507,7 +6507,7 @@ typedef struct finaliseCap_ret finaliseCap_ret_t;
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6517,8 +6517,8 @@ typedef struct finaliseCap_ret finaliseCap_ret_t;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/objecttype.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/objecttype.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6528,8 +6528,8 @@ typedef struct finaliseCap_ret finaliseCap_ret_t;
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/objecttype.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/objecttype.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6539,8 +6539,8 @@ typedef struct finaliseCap_ret finaliseCap_ret_t;
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/objecttype.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/objecttype.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6550,8 +6550,8 @@ typedef struct finaliseCap_ret finaliseCap_ret_t;
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/objecttype.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/objecttype.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6561,8 +6561,8 @@ typedef struct finaliseCap_ret finaliseCap_ret_t;
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/objecttype.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/objecttype.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6572,7 +6572,7 @@ typedef struct finaliseCap_ret finaliseCap_ret_t;
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/objecttype.h" 2
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/objecttype.h" 2
 
 deriveCap_ret_t Arch_deriveCap(cte_t *slot, cap_t cap);
 cap_t __attribute__((__const__)) Arch_updateCapData(bool_t preserve, word_t data, cap_t cap);
@@ -6589,7 +6589,7 @@ exception_t Arch_decodeInvocation(word_t label, unsigned int length,
 void Arch_prepareThreadDelete(tcb_t *thread);
 word_t Arch_getObjectSize(word_t t);
 bool_t Arch_isFrameType(word_t t);
-# 33 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 2
+# 33 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 2
 
 deriveCap_ret_t deriveCap(cte_t *slot, cap_t cap);
 finaliseCap_ret_t finaliseCap(cap_t cap, bool_t final, bool_t exposed);
@@ -6613,8 +6613,8 @@ exception_t performInvocation_AsyncEndpoint(async_endpoint_t *aep,
                                             word_t badge);
 exception_t performInvocation_Reply(tcb_t *thread, cte_t *slot);
 word_t getObjectSize(word_t t, word_t userObjSize);
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/asyncendpoint.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/asyncendpoint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6628,7 +6628,7 @@ word_t getObjectSize(word_t t, word_t userObjSize);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6638,8 +6638,8 @@ word_t getObjectSize(word_t t, word_t userObjSize);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/asyncendpoint.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/asyncendpoint.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6649,7 +6649,7 @@ word_t getObjectSize(word_t t, word_t userObjSize);
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/asyncendpoint.h" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/asyncendpoint.h" 2
 
 void sendAsyncIPC(async_endpoint_t *aepptr, word_t badge);
 void receiveAsyncIPC(tcb_t *thread, cap_t cap, bool_t isBlocking);
@@ -6658,8 +6658,8 @@ void asyncIPCCancel(tcb_t *threadPtr, async_endpoint_t *aepptr);
 void completeAsyncIPC(async_endpoint_t *aepptr, tcb_t *tcb);
 void unbindAsyncEndpoint(tcb_t *tcb);
 void bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr);
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6669,8 +6669,8 @@ void bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr);
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/endpoint.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/endpoint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6684,7 +6684,7 @@ void bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6694,8 +6694,8 @@ void bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/endpoint.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/endpoint.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6705,7 +6705,7 @@ void bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr);
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/endpoint.h" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/endpoint.h" 2
 
 void sendIPC(bool_t blocking, bool_t do_call, word_t badge,
              bool_t canGrant, tcb_t *thread, endpoint_t *epptr);
@@ -6715,8 +6715,8 @@ void epCancelAll(endpoint_t *epptr);
 void epCancelBadgedSends(endpoint_t *epptr, word_t badge);
 void replyFromKernel_error(tcb_t *thread);
 void replyFromKernel_success_empty(tcb_t *thread);
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6730,7 +6730,7 @@ void replyFromKernel_success_empty(tcb_t *thread);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6740,8 +6740,8 @@ void replyFromKernel_success_empty(tcb_t *thread);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6751,8 +6751,8 @@ void replyFromKernel_success_empty(tcb_t *thread);
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6762,8 +6762,8 @@ void replyFromKernel_success_empty(tcb_t *thread);
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/interrupt.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/interrupt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6777,7 +6777,7 @@ void replyFromKernel_success_empty(tcb_t *thread);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6787,8 +6787,8 @@ void replyFromKernel_success_empty(tcb_t *thread);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/interrupt.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/interrupt.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6798,8 +6798,8 @@ void replyFromKernel_success_empty(tcb_t *thread);
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/interrupt.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/interrupt.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6809,12 +6809,12 @@ void replyFromKernel_success_empty(tcb_t *thread);
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/interrupt.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/interrupt.h" 2
 
 exception_t Arch_decodeInterruptControl(unsigned int length,
                                         extra_caps_t extraCaps);
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6824,7 +6824,7 @@ exception_t Arch_decodeInterruptControl(unsigned int length,
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 2
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 2
 
 exception_t decodeIRQControlInvocation(word_t label, unsigned int length,
                                        cte_t *srcSlot, extra_caps_t extraCaps,
@@ -6841,8 +6841,8 @@ void deletedIRQHandler(irq_t irq);
 void handleInterrupt(irq_t irq);
 bool_t isIRQActive(irq_t irq);
 void setIRQState(irq_state_t irqState, irq_t irq);
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6852,8 +6852,8 @@ void setIRQState(irq_state_t irqState, irq_t irq);
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6863,8 +6863,8 @@ void setIRQState(irq_state_t irqState, irq_t irq);
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6874,8 +6874,8 @@ void setIRQState(irq_state_t irqState, irq_t irq);
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6889,7 +6889,7 @@ void setIRQState(irq_state_t irqState, irq_t irq);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6899,8 +6899,8 @@ void setIRQState(irq_state_t irqState, irq_t irq);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6910,8 +6910,8 @@ void setIRQState(irq_state_t irqState, irq_t irq);
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6921,8 +6921,8 @@ void setIRQState(irq_state_t irqState, irq_t irq);
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6932,8 +6932,8 @@ void setIRQState(irq_state_t irqState, irq_t irq);
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6943,7 +6943,7 @@ void setIRQState(irq_state_t irqState, irq_t irq);
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h" 2
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h" 2
 
 
 
@@ -6955,9 +6955,9 @@ exception_t invokeUntyped_Retype(cte_t *srcSlot, void* base_ign,
                                  void* freeRegionBase, object_t newType,
                                  unsigned int objSize, slot_range_t destSlots,
                                  bool_t call, bool_t deviceMemory);
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 2
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/faults.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/faults.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6967,11 +6967,11 @@ exception_t invokeUntyped_Retype(cte_t *srcSlot, void* base_ign,
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/faults.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/faults.h" 2
 
 bool_t handleFaultReply(tcb_t *receiver, tcb_t *sender);
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6985,7 +6985,7 @@ bool_t handleFaultReply(tcb_t *receiver, tcb_t *sender);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -6995,8 +6995,8 @@ bool_t handleFaultReply(tcb_t *receiver, tcb_t *sender);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7006,8 +7006,8 @@ bool_t handleFaultReply(tcb_t *receiver, tcb_t *sender);
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7017,8 +7017,8 @@ bool_t handleFaultReply(tcb_t *receiver, tcb_t *sender);
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7028,7 +7028,7 @@ bool_t handleFaultReply(tcb_t *receiver, tcb_t *sender);
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 2
 
 struct lookupCap_ret {
     exception_t status;
@@ -7077,8 +7077,8 @@ lookupSlot_ret_t lookupPivotSlot(cap_t root, cptr_t capptr,
 resolveAddressBits_ret_t resolveAddressBits(cap_t nodeCap,
                                             cptr_t capptr,
                                             unsigned int n_bits);
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/faulthandler.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/faulthandler.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7092,7 +7092,7 @@ resolveAddressBits_ret_t resolveAddressBits(cap_t nodeCap,
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7102,13 +7102,13 @@ resolveAddressBits_ret_t resolveAddressBits(cap_t nodeCap,
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/faulthandler.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/faulthandler.h" 2
 
 void handleFault(tcb_t *tptr);
 exception_t sendFaultIPC(tcb_t *tptr);
 void handleDoubleFault(tcb_t *tptr, fault_t ex1);
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7122,7 +7122,7 @@ void handleDoubleFault(tcb_t *tptr, fault_t ex1);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7132,8 +7132,8 @@ void handleDoubleFault(tcb_t *tptr, fault_t ex1);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7143,8 +7143,8 @@ void handleDoubleFault(tcb_t *tptr, fault_t ex1);
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7154,7 +7154,7 @@ void handleDoubleFault(tcb_t *tptr, fault_t ex1);
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 2
 
 static inline __attribute__((__pure__)) uint32_t
 ready_queues_index(uint32_t dom, uint32_t prio)
@@ -7162,7 +7162,7 @@ ready_queues_index(uint32_t dom, uint32_t prio)
     if (1 > 1) {
         return dom * 256 + prio;
     } else {
-        if(!(dom == 0)) _assert_fail("dom == 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h", 24, __FUNCTION__);
+        if(!(dom == 0)) _assert_fail("dom == 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h", 24, __FUNCTION__);
         return prio;
     }
 }
@@ -7206,8 +7206,8 @@ void switchIfRequiredTo(tcb_t *tptr);
 void setThreadState(tcb_t *tptr, _thread_state_t ts) __attribute__((externally_visible));
 void timerTick(void);
 void rescheduleRequired(void);
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7217,8 +7217,8 @@ void rescheduleRequired(void);
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7228,8 +7228,8 @@ void rescheduleRequired(void);
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7239,8 +7239,8 @@ void rescheduleRequired(void);
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7250,8 +7250,8 @@ void rescheduleRequired(void);
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/string.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/string.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7267,7 +7267,7 @@ void rescheduleRequired(void);
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7277,15 +7277,15 @@ void rescheduleRequired(void);
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/string.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/string.h" 2
 
 unsigned int strnlen(const char *s, unsigned int maxlen);
 unsigned int strlcpy(char *dest, const char *src, unsigned int size);
 unsigned int strlcat(char *dest, const char *src, unsigned int size);
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/capdl.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/capdl.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7300,7 +7300,7 @@ unsigned int strlcat(char *dest, const char *src, unsigned int size);
 
 
 void capDL(void);
-# 27 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c" 2
+# 27 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c" 2
 
 
 void print_cycle(char *info);
@@ -7384,7 +7384,7 @@ handleUnknownSyscall(word_t w)
         setThreadName(((tcb_t *)(cap_thread_cap_get_capTCBPtr(lu_ret.cap))), name);
         return EXCEPTION_NONE;
     }
-# 168 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c"
+# 168 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c"
     current_fault = fault_unknown_syscall_new(w);
     handleFault(ksCurThread);
 
@@ -7515,7 +7515,7 @@ handleReply(void)
         caller = ((tcb_t *)(cap_reply_cap_get_capTCBPtr(callerCap)));
         /* Haskell error:
          * "handleReply: caller must not be the current thread" */
-        if(!(caller != ksCurThread)) _assert_fail("caller != ksCurThread", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c", 298, __FUNCTION__);
+        if(!(caller != ksCurThread)) _assert_fail("caller != ksCurThread", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c", 298, __FUNCTION__);
         doReplyTransfer(ksCurThread, caller, callerSlot);
         //deleteCallerCap(ksCurThread);
         return;
@@ -7529,7 +7529,7 @@ handleReply(void)
         break;
     }
 
-    _fail("handleReply: invalid caller cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c", 312, __func__);
+    _fail("handleReply: invalid caller cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c", 312, __func__);
 }
 
 static void
@@ -7653,7 +7653,7 @@ handleSyscall(syscall_t syscall)
         break;
 
     default:
-        _fail("Invalid syscall", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/api/syscall.c", 436, __func__);
+        _fail("Invalid syscall", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/api/syscall.c", 436, __func__);
     }
 
     schedule();
@@ -7661,7 +7661,7 @@ handleSyscall(syscall_t syscall)
 
     return EXCEPTION_NONE;
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/benchmark.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/benchmark.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7671,7 +7671,7 @@ handleSyscall(syscall_t syscall)
  *
  * @TAG(GD_GPL)
  */
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/faults.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/faults.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7682,7 +7682,7 @@ handleSyscall(syscall_t syscall)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7692,8 +7692,8 @@ handleSyscall(syscall_t syscall)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/faults.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/faults.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7703,8 +7703,8 @@ handleSyscall(syscall_t syscall)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/faults.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/faults.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7714,8 +7714,8 @@ handleSyscall(syscall_t syscall)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/faults.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/faults.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/faults.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/faults.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7725,8 +7725,8 @@ handleSyscall(syscall_t syscall)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/faults.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/faults.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7736,7 +7736,7 @@ handleSyscall(syscall_t syscall)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/faults.c" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/faults.c" 2
 
 bool_t
 handleFaultReply(tcb_t *receiver, tcb_t *sender)
@@ -7799,10 +7799,10 @@ handleFaultReply(tcb_t *receiver, tcb_t *sender)
     return (label == 0);
 
     default:
-        _fail("Invalid fault", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/api/faults.c", 78, __func__);
+        _fail("Invalid fault", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/api/faults.c", 78, __func__);
     }
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/benchmark.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/benchmark.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7812,7 +7812,7 @@ handleFaultReply(tcb_t *receiver, tcb_t *sender)
  *
  * @TAG(GD_GPL)
  */
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7823,7 +7823,7 @@ handleFaultReply(tcb_t *receiver, tcb_t *sender)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7833,7 +7833,7 @@ handleFaultReply(tcb_t *receiver, tcb_t *sender)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/cache.c" 2
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/cache.c" 2
 
 /** DONT_TRANSLATE */
 void
@@ -7850,7 +7850,7 @@ cleanInvalidate_D_PoC(void)
     /* V6 has a single op to clean+invalidate D-Cache */
     __asm__ volatile("mcr p15, 0, %0, c7, c14, 0" : : "r"(0));
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/user_access.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/user_access.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7861,7 +7861,7 @@ cleanInvalidate_D_PoC(void)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/user_access.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/user_access.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7876,8 +7876,8 @@ cleanInvalidate_D_PoC(void)
 
 
 void armv_init_user_access(void);
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/user_access.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/user_access.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/user_access.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/user_access.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7887,13 +7887,13 @@ void armv_init_user_access(void);
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/armv/armv6/user_access.c" 2
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/armv/armv6/user_access.c" 2
 
 void
 armv_init_user_access(void)
 {
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7904,7 +7904,7 @@ armv_init_user_access(void)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7914,8 +7914,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7925,8 +7925,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7936,8 +7936,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7947,8 +7947,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/profiler.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/profiler.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7969,7 +7969,7 @@ armv_init_user_access(void)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7979,8 +7979,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/profiler.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/hardware.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/profiler.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -7990,9 +7990,9 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/profiler.h" 2
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/profiler.h" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8002,8 +8002,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8013,8 +8013,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8024,8 +8024,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8035,8 +8035,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8046,8 +8046,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8057,33 +8057,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/fastpath/fastpath.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-
-
-
-
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/fastpath/fastpath.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/linker.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/fastpath/fastpath.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8097,7 +8072,7 @@ armv_init_user_access(void)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8107,7 +8082,32 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/linker.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/fastpath/fastpath.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/linker.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+
+
+
+
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/linker.h" 2
 
 /* code that is only used during kernel bootstrapping */
 
@@ -8119,8 +8119,8 @@ armv_init_user_access(void)
 
 
 /* data will be aligned to n bytes in a special BSS section */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/fastpath/fastpath.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/fastpath/fastpath.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8130,8 +8130,8 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/fastpath/fastpath.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/fastpath/fastpath.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8141,7 +8141,7 @@ armv_init_user_access(void)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/fastpath/fastpath.h" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/fastpath/fastpath.h" 2
 
 void slowpath(syscall_t syscall)
 __attribute__((externally_visible)) __attribute__((__noreturn__));
@@ -8151,8 +8151,8 @@ __attribute__((externally_visible)) __attribute__((__noreturn__)) __attribute__(
 
 void fastpath_reply_wait(word_t cptr, word_t r_msgInfo)
 __attribute__((externally_visible)) __attribute__((__noreturn__)) __attribute__((__section__(".vectors.fastpath_reply_wait")));
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/context_switch.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/context_switch.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8165,7 +8165,7 @@ __attribute__((externally_visible)) __attribute__((__noreturn__)) __attribute__(
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8175,8 +8175,8 @@ __attribute__((externally_visible)) __attribute__((__noreturn__)) __attribute__(
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/context_switch.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/api/types.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/context_switch.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8186,7 +8186,7 @@ __attribute__((externally_visible)) __attribute__((__noreturn__)) __attribute__(
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/context_switch.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/context_switch.h" 2
 
 /** MODIFIES: [*] */
 static inline void setHardwareASID(hw_asid_t hw_asid)
@@ -8206,8 +8206,8 @@ static inline void armv_contextSwitch(pde_t *pd)
 {
     armv_contextSwitch_HWASID(pd, getHWASID(pd));
 }
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h" 1
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8217,7 +8217,7 @@ static inline void armv_contextSwitch(pde_t *pd)
  *
  * @TAG(GD_GPL)
  */
-# 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c" 2
+# 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c" 2
 
 /* When building the fastpath the assembler in traps.S makes these
  * assumptions. Because compile_asserts are hard to do in assembler,
@@ -8385,11 +8385,11 @@ fastpath_copy_mrs(unsigned int length, tcb_t *src, tcb_t *dest)
         return;
     }
 
-    if(!(length <= 4)) _assert_fail("length <= 4", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c", 192, __FUNCTION__);
-    if(!(msgRegisters[0] == 2)) _assert_fail("msgRegisters[0] == 2", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c", 193, __FUNCTION__);
-    if(!(msgRegisters[1] == 3)) _assert_fail("msgRegisters[1] == 3", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c", 194, __FUNCTION__);
-    if(!(msgRegisters[2] == 4)) _assert_fail("msgRegisters[2] == 4", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c", 195, __FUNCTION__);
-    if(!(msgRegisters[3] == 5)) _assert_fail("msgRegisters[3] == 5", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/fastpath/fastpath.c", 196, __FUNCTION__);
+    if(!(length <= 4)) _assert_fail("length <= 4", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c", 192, __FUNCTION__);
+    if(!(msgRegisters[0] == 2)) _assert_fail("msgRegisters[0] == 2", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c", 193, __FUNCTION__);
+    if(!(msgRegisters[1] == 3)) _assert_fail("msgRegisters[1] == 3", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c", 194, __FUNCTION__);
+    if(!(msgRegisters[2] == 4)) _assert_fail("msgRegisters[2] == 4", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c", 195, __FUNCTION__);
+    if(!(msgRegisters[3] == 5)) _assert_fail("msgRegisters[3] == 5", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/fastpath/fastpath.c", 196, __FUNCTION__);
 
     /* Unrolling the loop manually speeds up all 1-4-length IPCs. */
     if (length >= 1) {
@@ -8704,7 +8704,7 @@ fastpath_reply_wait(word_t cptr, word_t msgInfo)
     msgInfo = wordFromMessageInfo(info);
     fastpath_restore(badge, msgInfo, ksCurThread);
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8715,7 +8715,7 @@ fastpath_reply_wait(word_t cptr, word_t msgInfo)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8725,22 +8725,8 @@ fastpath_reply_wait(word_t cptr, word_t msgInfo)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/boot.h" 1
-/*
- * Copyright 2014, General Dynamics C4 Systems
- *
- * This software may be distributed and modified according to the terms of
- * the GNU General Public License version 2. Note that NO WARRANTY is provided.
- * See "LICENSE_GPLv2.txt" for details.
- *
- * @TAG(GD_GPL)
- */
-
-
-
-
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/bootinfo.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/boot.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8754,7 +8740,7 @@ fastpath_reply_wait(word_t cptr, word_t msgInfo)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/bootinfo.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8764,8 +8750,11 @@ fastpath_reply_wait(word_t cptr, word_t msgInfo)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/bootinfo.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+
+
+
+
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8775,7 +8764,18 @@ fastpath_reply_wait(word_t cptr, word_t msgInfo)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/bootinfo.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/bootinfo.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
+/*
+ * Copyright 2014, General Dynamics C4 Systems
+ *
+ * This software may be distributed and modified according to the terms of
+ * the GNU General Public License version 2. Note that NO WARRANTY is provided.
+ * See "LICENSE_GPLv2.txt" for details.
+ *
+ * @TAG(GD_GPL)
+ */
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/bootinfo.h" 2
 
 
 
@@ -8785,7 +8785,7 @@ fastpath_reply_wait(word_t cptr, word_t msgInfo)
 
 
 /* fixed cap positions in root CNode */
-# 39 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/bootinfo.h"
+# 39 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/bootinfo.h"
 /* type definitions */
 
 typedef uint32_t slot_pos_t;
@@ -8823,7 +8823,7 @@ typedef struct bi {
 
 /* adjust constants in config.h if this assert fails */
 typedef int __assert_failed_bi_size[(sizeof(bi_t) <= (1ul<<(12))) ? 1 : -1];
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/boot.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/boot.h" 2
 
 
 
@@ -8905,8 +8905,8 @@ create_initial_thread(
     vptr_t ipcbuf_vptr,
     cap_t ipcbuf_cap
 );
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8916,8 +8916,8 @@ create_initial_thread(
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8927,8 +8927,8 @@ create_initial_thread(
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8938,8 +8938,8 @@ create_initial_thread(
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8949,8 +8949,8 @@ create_initial_thread(
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/boot.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/boot.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8964,7 +8964,7 @@ create_initial_thread(
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8974,7 +8974,7 @@ create_initial_thread(
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/boot.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/boot.h" 2
 
 cap_t create_unmapped_it_frame_cap(pptr_t pptr, bool_t use_large);
 cap_t create_mapped_it_frame_cap(cap_t pd_cap, pptr_t pptr, vptr_t vptr, bool_t use_large, bool_t executable);
@@ -8985,8 +8985,8 @@ void init_kernel(
     int32_t pv_offset,
     vptr_t v_entry
 );
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/vspace.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -8996,8 +8996,8 @@ void init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/benchmark.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/benchmark.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9007,8 +9007,8 @@ void init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/user_access.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/user_access.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9018,8 +9018,8 @@ void init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/linker.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/linker.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9029,8 +9029,8 @@ void init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9040,8 +9040,8 @@ void init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9051,7 +9051,7 @@ void init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c" 2
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c" 2
 
 
 /* pointer to the end of boot code/data in kernel image */
@@ -9090,7 +9090,7 @@ insert_region_excluded(region_t mem_reg, region_t reserved_reg)
     /* Add the lower region if it exists */
     if (mem_reg.start < mem_reg.end) {
         result = insert_region(mem_reg);
-        if(!(result)) _assert_fail("result", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c", 62, __FUNCTION__);
+        if(!(result)) _assert_fail("result", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c", 62, __FUNCTION__);
     }
     /* Validate the upper region */
     if (residual_reg.start > residual_reg.end) {
@@ -9126,11 +9126,11 @@ init_freemem(region_t ui_reg)
     }
 
     /* Force ordering and exclusivity of reserved regions. */
-    if(!(res_reg[0].start < res_reg[0].end)) _assert_fail("res_reg[0].start < res_reg[0].end", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c", 98, __FUNCTION__);
-    if(!(res_reg[1].start < res_reg[1].end)) _assert_fail("res_reg[1].start < res_reg[1].end", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c", 99, __FUNCTION__);
-    if(!(res_reg[2].start < res_reg[2].end)) _assert_fail("res_reg[2].start < res_reg[2].end", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c", 100, __FUNCTION__);
-    if(!(res_reg[0].end <= res_reg[1].start)) _assert_fail("res_reg[0].end <= res_reg[1].start", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c", 101, __FUNCTION__);
-    if(!(res_reg[1].end <= res_reg[2].start)) _assert_fail("res_reg[1].end <= res_reg[2].start", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c", 102, __FUNCTION__);
+    if(!(res_reg[0].start < res_reg[0].end)) _assert_fail("res_reg[0].start < res_reg[0].end", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c", 98, __FUNCTION__);
+    if(!(res_reg[1].start < res_reg[1].end)) _assert_fail("res_reg[1].start < res_reg[1].end", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c", 99, __FUNCTION__);
+    if(!(res_reg[2].start < res_reg[2].end)) _assert_fail("res_reg[2].start < res_reg[2].end", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c", 100, __FUNCTION__);
+    if(!(res_reg[0].end <= res_reg[1].start)) _assert_fail("res_reg[0].end <= res_reg[1].start", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c", 101, __FUNCTION__);
+    if(!(res_reg[1].end <= res_reg[2].start)) _assert_fail("res_reg[1].end <= res_reg[2].start", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c", 102, __FUNCTION__);
     for (i = 0; i < get_num_avail_p_regs(); i++) {
         cur_reg = paddr_to_pptr_reg(get_avail_p_reg(i));
         /* Adjust region if it exceeds the kernel window
@@ -9148,7 +9148,7 @@ init_freemem(region_t ui_reg)
         cur_reg = insert_region_excluded(cur_reg, res_reg[2]);
         if (cur_reg.start != cur_reg.end) {
             result = insert_region(cur_reg);
-            if(!(result)) _assert_fail("result", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c", 120, __FUNCTION__);
+            if(!(result)) _assert_fail("result", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c", 120, __FUNCTION__);
         }
     }
 }
@@ -9507,10 +9507,10 @@ init_kernel(
                              pv_offset,
                              v_entry);
     if (!result) {
-        _fail("Kernel init failed for some reason :(", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/boot.c", 479, __func__);
+        _fail("Kernel init failed for some reason :(", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/boot.c", 479, __func__);
     }
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/thread.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/thread.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9521,7 +9521,7 @@ init_kernel(
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9531,8 +9531,8 @@ init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9542,8 +9542,8 @@ init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/model/statedata.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9553,8 +9553,8 @@ init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/vspace.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9564,8 +9564,8 @@ init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/thread.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9579,7 +9579,7 @@ init_kernel(
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9589,14 +9589,14 @@ init_kernel(
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/thread.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/thread.h" 2
 
 void Arch_switchToThread(tcb_t *tcb);
 void Arch_switchToIdleThread(void);
 void Arch_configureIdleThread(tcb_t *tcb);
 void __attribute__((__const__)) Arch_activateIdleThread(tcb_t *tcb);
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/linker.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/linker.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9606,7 +9606,7 @@ void __attribute__((__const__)) Arch_activateIdleThread(tcb_t *tcb);
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/thread.c" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/thread.c" 2
 
 void
 Arch_switchToThread(tcb_t *tcb)
@@ -9634,7 +9634,7 @@ Arch_activateIdleThread(tcb_t *tcb)
 {
     /* Don't need to do anything */
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9645,7 +9645,7 @@ Arch_activateIdleThread(tcb_t *tcb)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9655,8 +9655,8 @@ Arch_activateIdleThread(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/benchmark.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/benchmark.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9666,8 +9666,8 @@ Arch_activateIdleThread(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9677,8 +9677,8 @@ Arch_activateIdleThread(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9688,8 +9688,8 @@ Arch_activateIdleThread(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/boot.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/boot.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9699,8 +9699,8 @@ Arch_activateIdleThread(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9710,8 +9710,8 @@ Arch_activateIdleThread(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9721,8 +9721,8 @@ Arch_activateIdleThread(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cdt.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cdt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9736,7 +9736,7 @@ Arch_activateIdleThread(tcb_t *tcb)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9746,8 +9746,8 @@ Arch_activateIdleThread(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cdt.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cdt.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9757,8 +9757,8 @@ Arch_activateIdleThread(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cdt.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cdt.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9768,7 +9768,7 @@ Arch_activateIdleThread(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cdt.h" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cdt.h" 2
 
 void cdtInsert(cte_t *parentSlot, cte_t *newSlot);
 void cdtRemove(cte_t *slot);
@@ -9781,8 +9781,8 @@ cte_t *cdtFind(cap_t hypothetical);
 cte_t *cdtFindAtDepth(cap_t hypothetical, uint32_t depth);
 cte_t *cdtFindWithExtra(cap_t hypothetical);
 cte_t *cdtFindTypedInRange(word_t base, unsigned int size_bits);
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9792,8 +9792,8 @@ cte_t *cdtFindTypedInRange(word_t base, unsigned int size_bits);
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9803,8 +9803,8 @@ cte_t *cdtFindTypedInRange(word_t base, unsigned int size_bits);
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9814,8 +9814,8 @@ cte_t *cdtFindTypedInRange(word_t base, unsigned int size_bits);
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9825,7 +9825,7 @@ cte_t *cdtFindTypedInRange(word_t base, unsigned int size_bits);
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
 # 1 "./arch/api/invocation.h" 1
 /* @LICENSE(OKL_CORE) */
 
@@ -9898,8 +9898,8 @@ enum arch_invocation_label {
     ARMPageGetAddress = nInvocationLabels + 12,
     nArchInvocationLabels
 };
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/vspace.h" 1
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9909,8 +9909,8 @@ enum arch_invocation_label {
  *
  * @TAG(GD_GPL)
  */
-# 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/linker.h" 1
+# 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/linker.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9920,8 +9920,8 @@ enum arch_invocation_label {
  *
  * @TAG(GD_GPL)
  */
-# 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/tcb.h" 1
+# 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/tcb.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9931,8 +9931,8 @@ enum arch_invocation_label {
  *
  * @TAG(GD_GPL)
  */
-# 27 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/devices.h" 1
+# 27 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/devices.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9942,8 +9942,8 @@ enum arch_invocation_label {
  *
  * @TAG(GD_GPL)
  */
-# 28 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+# 28 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9953,8 +9953,8 @@ enum arch_invocation_label {
  *
  * @TAG(GD_GPL)
  */
-# 29 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/armv/armv6/armv/context_switch.h" 1
+# 29 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/armv/armv6/armv/context_switch.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -9964,7 +9964,7 @@ enum arch_invocation_label {
  *
  * @TAG(GD_GPL)
  */
-# 30 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c" 2
+# 30 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c" 2
 
 /* ARM uses multiple identical mappings in a page table / page directory to construct
  * large mappings. In both cases it happens to be 16 entries, which can be calculated by
@@ -10021,7 +10021,7 @@ APFromVMRights(vm_rights_t vm_rights)
         return 3;
 
     default:
-        _fail("Invalid VM rights", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 86, __func__);
+        _fail("Invalid VM rights", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 86, __func__);
     }
 }
 
@@ -10069,7 +10069,7 @@ map_kernel_frame(paddr_t paddr, pptr_t vaddr, vm_rights_t vm_rights, vm_attribut
 {
     uint32_t idx = (vaddr & ((1ul<<(pageBitsForSize(ARMSection)))-1ul)) >> pageBitsForSize(ARMSmallPage);
 
-    if(!(vaddr >= 0xfff00000)) _assert_fail("vaddr >= PPTR_TOP", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 134, __FUNCTION__); /* vaddr lies in the region the global PT covers */
+    if(!(vaddr >= 0xfff00000)) _assert_fail("vaddr >= PPTR_TOP", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 134, __FUNCTION__); /* vaddr lies in the region the global PT covers */
 
     armKSGlobalPT[idx] =
         pte_pte_small_new(
@@ -10145,9 +10145,9 @@ map_kernel_window(void)
         phys += (1ul<<(pageBitsForSize(ARMSection)));
         idx++;
     }
-# 241 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c"
+# 241 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c"
     /* crosscheck whether we have mapped correctly so far */
-    if(!(phys == (0xfff00000 - (0xf0000000 - 0x80000000)))) _assert_fail("phys == PADDR_TOP", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 242, __FUNCTION__);
+    if(!(phys == (0xfff00000 - (0xf0000000 - 0x80000000)))) _assert_fail("phys == PADDR_TOP", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 242, __FUNCTION__);
 
     /* map page table covering last 1M of virtual address space to page directory */
     armKSGlobalPD[idx] =
@@ -10323,7 +10323,7 @@ handleVMFault(tcb_t *thread, vm_fault_type_t vm_faultType)
     }
 
     default:
-        _fail("Invalid VM fault type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 418, __func__);
+        _fail("Invalid VM fault type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 418, __func__);
     }
 }
 
@@ -10332,14 +10332,14 @@ invalidateASID(pde_t *pd)
 {
     pd[0xff0] = pde_pde_invalid_new(0, false);
 }
-# 445 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c"
+# 445 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c"
 void
 unmapPageTable(pde_t *pd, uint32_t pdIndex, pte_t* pt)
 {
-    if(!(pd)) _assert_fail("pd", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 448, __FUNCTION__);
-    if(!(pt)) _assert_fail("pt", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 449, __FUNCTION__);
-    if(!(pde_get_pdeType(pd[pdIndex]) == pde_pde_coarse)) _assert_fail("pde_get_pdeType(pd[pdIndex]) == pde_pde_coarse", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 450, __FUNCTION__);
-    if(!(ptrFromPAddr (pde_pde_coarse_get_address(pd[pdIndex])) == pt)) _assert_fail("ptrFromPAddr (pde_pde_coarse_get_address(pd[pdIndex])) == pt", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 451, __FUNCTION__);
+    if(!(pd)) _assert_fail("pd", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 448, __FUNCTION__);
+    if(!(pt)) _assert_fail("pt", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 449, __FUNCTION__);
+    if(!(pde_get_pdeType(pd[pdIndex]) == pde_pde_coarse)) _assert_fail("pde_get_pdeType(pd[pdIndex]) == pde_pde_coarse", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 450, __FUNCTION__);
+    if(!(ptrFromPAddr (pde_pde_coarse_get_address(pd[pdIndex])) == pt)) _assert_fail("ptrFromPAddr (pde_pde_coarse_get_address(pd[pdIndex])) == pt", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 451, __FUNCTION__);
 
     pd[pdIndex] = pde_pde_invalid_new(0, 0);
     cleanByVA_PoU((word_t)&pd[pdIndex], addrFromPPtr(&pd[pdIndex]));
@@ -10357,7 +10357,7 @@ unmapAllPageTables(pde_t *pd)
             cap_t ptCap;
             cte_t *ptCte;
             ptCte = cdtFind(cap_page_table_cap_new(((unsigned int)(pd)), i, (uint32_t)paddr_to_pptr(pde_pde_coarse_get_address(pd[i]))));
-            if(!(ptCte)) _assert_fail("ptCte", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 469, __FUNCTION__);
+            if(!(ptCte)) _assert_fail("ptCte", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 469, __FUNCTION__);
             ptCap = cap_page_table_cap_set_capPTMappedObject(ptCte->cap, 0);
             cdtUpdate(ptCte, ptCap);
             unmapPageTable(pd, i, ((pte_t *)(cap_page_table_cap_get_capPTBasePtr(ptCap))));
@@ -10369,7 +10369,7 @@ unmapAllPageTables(pde_t *pd)
                 cap_t frameCap;
                 cte_t *frameCte;
                 frameCte = cdtFind(cap_frame_cap_new(((uint32_t)(pd) >> 12), i, ARMSuperSection, 0, ( ((uint32_t)(pd) >> 10) & ((1ul<<(2))-1ul)), (uint32_t)paddr_to_pptr(pde_pde_section_get_address(pd[i]))));
-                if(!(frameCte)) _assert_fail("frameCte", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 481, __FUNCTION__);
+                if(!(frameCte)) _assert_fail("frameCte", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 481, __FUNCTION__);
                 frameCap = cap_frame_cap_set_capFMappedObject(frameCte->cap, 0);
                 cdtUpdate(frameCte, frameCap);
                 unmapPagePDE(ARMSuperSection, pd, i, (void *)cap_frame_cap_get_capFBasePtr(frameCap));
@@ -10378,7 +10378,7 @@ unmapAllPageTables(pde_t *pd)
                 cap_t frameCap;
                 cte_t *frameCte;
                 frameCte = cdtFind(cap_frame_cap_new(((uint32_t)(pd) >> 12), i, ARMSection, 0, ( ((uint32_t)(pd) >> 10) & ((1ul<<(2))-1ul)), (uint32_t)paddr_to_pptr(pde_pde_section_get_address(pd[i]))));
-                if(!(frameCte)) _assert_fail("frameCte", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 490, __FUNCTION__);
+                if(!(frameCte)) _assert_fail("frameCte", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 490, __FUNCTION__);
                 frameCap = cap_frame_cap_set_capFMappedObject(frameCte->cap, 0);
                 cdtUpdate(frameCte, frameCap);
                 unmapPagePDE(ARMSection, pd, i, (void *)cap_frame_cap_get_capFBasePtr(frameCap));
@@ -10414,7 +10414,7 @@ void unmapPagePTE(vm_page_size_t page_size, pte_t *pt, unsigned int ptIndex, voi
     (void)addr;
 
     ptCte = cdtFindWithExtra(cap_page_table_cap_new(0, 0, ((unsigned int)(pt))));
-    if(!(ptCte)) _assert_fail("ptCte", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 526, __FUNCTION__);
+    if(!(ptCte)) _assert_fail("ptCte", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 526, __FUNCTION__);
     pd = ((pde_t *)(cap_page_table_cap_get_capPTMappedObject(ptCte->cap)));
     pdIndex = cap_page_table_cap_get_capPTMappedIndex(ptCte->cap);
 
@@ -10427,8 +10427,8 @@ void unmapPagePTE(vm_page_size_t page_size, pte_t *pt, unsigned int ptIndex, voi
         if (pt[ptIndex].words[0] == pte_pte_invalid_new().words[0]) {
             return;
         }
-        if(!(pte_get_pteType(pt[ptIndex]) == pte_pte_small)) _assert_fail("pte_get_pteType(pt[ptIndex]) == pte_pte_small", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 539, __FUNCTION__);
-        if(!(pte_pte_small_get_address(pt[ptIndex]) == addr)) _assert_fail("pte_pte_small_get_address(pt[ptIndex]) == addr", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 540, __FUNCTION__);
+        if(!(pte_get_pteType(pt[ptIndex]) == pte_pte_small)) _assert_fail("pte_get_pteType(pt[ptIndex]) == pte_pte_small", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 539, __FUNCTION__);
+        if(!(pte_pte_small_get_address(pt[ptIndex]) == addr)) _assert_fail("pte_pte_small_get_address(pt[ptIndex]) == addr", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 540, __FUNCTION__);
 
         pt[ptIndex] = pte_pte_invalid_new();
         cleanByVA_PoU((word_t)&pt[ptIndex], addrFromPPtr(&pt[ptIndex]));
@@ -10446,8 +10446,8 @@ void unmapPagePTE(vm_page_size_t page_size, pte_t *pt, unsigned int ptIndex, voi
         if (pt[ptIndex].words[0] == pte_pte_invalid_new().words[0]) {
             return;
         }
-        if(!(pte_get_pteType(pt[ptIndex]) == pte_pte_large)) _assert_fail("pte_get_pteType(pt[ptIndex]) == pte_pte_large", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 558, __FUNCTION__);
-        if(!(pte_pte_large_get_address(pt[ptIndex]) == addr)) _assert_fail("pte_pte_large_get_address(pt[ptIndex]) == addr", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 559, __FUNCTION__);
+        if(!(pte_get_pteType(pt[ptIndex]) == pte_pte_large)) _assert_fail("pte_get_pteType(pt[ptIndex]) == pte_pte_large", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 558, __FUNCTION__);
+        if(!(pte_pte_large_get_address(pt[ptIndex]) == addr)) _assert_fail("pte_pte_large_get_address(pt[ptIndex]) == addr", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 559, __FUNCTION__);
 
         for (i = 0; i < (1ul<<(ARMLargePageBits - ARMSmallPageBits)); i++) {
             pt[ptIndex + i] = pte_pte_invalid_new();
@@ -10459,7 +10459,7 @@ void unmapPagePTE(vm_page_size_t page_size, pte_t *pt, unsigned int ptIndex, voi
         break;
     }
     default:
-        _fail("Invalid page size", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 571, __func__);
+        _fail("Invalid page size", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 571, __func__);
     }
 
     if (pd) {
@@ -10484,9 +10484,9 @@ unmapPagePDE(vm_page_size_t page_size, pde_t *pd, unsigned int pdIndex, void *pp
             return;
         }
 
-        if(!(pde_get_pdeType(pd[pdIndex]) == pde_pde_section)) _assert_fail("pde_get_pdeType(pd[pdIndex]) == pde_pde_section", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 596, __FUNCTION__);
-        if(!(pde_pde_section_get_size(pd[pdIndex]) == 0)) _assert_fail("pde_pde_section_get_size(pd[pdIndex]) == 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 597, __FUNCTION__);
-        if(!(pde_pde_section_get_address(pd[pdIndex]) == addr)) _assert_fail("pde_pde_section_get_address(pd[pdIndex]) == addr", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 598, __FUNCTION__);
+        if(!(pde_get_pdeType(pd[pdIndex]) == pde_pde_section)) _assert_fail("pde_get_pdeType(pd[pdIndex]) == pde_pde_section", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 596, __FUNCTION__);
+        if(!(pde_pde_section_get_size(pd[pdIndex]) == 0)) _assert_fail("pde_pde_section_get_size(pd[pdIndex]) == 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 597, __FUNCTION__);
+        if(!(pde_pde_section_get_address(pd[pdIndex]) == addr)) _assert_fail("pde_pde_section_get_address(pd[pdIndex]) == addr", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 598, __FUNCTION__);
 
         pd[pdIndex] = pde_pde_invalid_new(0, 0);
         cleanByVA_PoU((word_t)&pd[pdIndex], addrFromPPtr(&pd[pdIndex]));
@@ -10505,9 +10505,9 @@ unmapPagePDE(vm_page_size_t page_size, pde_t *pd, unsigned int pdIndex, void *pp
             return;
         }
 
-        if(!(pde_get_pdeType(pd[pdIndex]) == pde_pde_section)) _assert_fail("pde_get_pdeType(pd[pdIndex]) == pde_pde_section", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 617, __FUNCTION__);
-        if(!(pde_pde_section_get_size(pd[pdIndex]) == 1)) _assert_fail("pde_pde_section_get_size(pd[pdIndex]) == 1", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 618, __FUNCTION__);
-        if(!(pde_pde_section_get_address(pd[pdIndex]) == addr)) _assert_fail("pde_pde_section_get_address(pd[pdIndex]) == addr", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 619, __FUNCTION__);
+        if(!(pde_get_pdeType(pd[pdIndex]) == pde_pde_section)) _assert_fail("pde_get_pdeType(pd[pdIndex]) == pde_pde_section", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 617, __FUNCTION__);
+        if(!(pde_pde_section_get_size(pd[pdIndex]) == 1)) _assert_fail("pde_pde_section_get_size(pd[pdIndex]) == 1", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 618, __FUNCTION__);
+        if(!(pde_pde_section_get_address(pd[pdIndex]) == addr)) _assert_fail("pde_pde_section_get_address(pd[pdIndex]) == addr", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 619, __FUNCTION__);
 
         for (i = 0; i < (1ul<<(ARMSuperSectionBits - ARMSectionBits)); i++) {
             pd[pdIndex + i] = pde_pde_invalid_new(0, 0);
@@ -10519,7 +10519,7 @@ unmapPagePDE(vm_page_size_t page_size, pde_t *pd, unsigned int pdIndex, void *pp
     }
 
     default:
-        _fail("Invalid ARM page type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 631, __func__);
+        _fail("Invalid ARM page type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 631, __func__);
         break;
     }
 
@@ -10536,7 +10536,7 @@ void unmapAllPages(pde_t *pd, uint32_t pdIndex, pte_t *pt)
             cte_t *frameCte;
             cap_t frameCap;
             frameCte = cdtFind(cap_frame_cap_new(((uint32_t)(pt) >> 12), i, ARMSmallPage, 0, ( ((uint32_t)(pt) >> 10) & ((1ul<<(2))-1ul)), (uint32_t)paddr_to_pptr(pte_pte_small_ptr_get_address(pt + i))));
-            if(!(frameCte)) _assert_fail("frameCte", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 648, __FUNCTION__);
+            if(!(frameCte)) _assert_fail("frameCte", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 648, __FUNCTION__);
             frameCap = cap_frame_cap_set_capFMappedObject(frameCte->cap, 0);
             cdtUpdate(frameCte, frameCap);
             unmapPagePTE(ARMSmallPage, pt, i, (void *)cap_frame_cap_get_capFBasePtr(frameCap));
@@ -10547,7 +10547,7 @@ void unmapAllPages(pde_t *pd, uint32_t pdIndex, pte_t *pt)
             cte_t *frameCte;
             cap_t frameCap;
             frameCte = cdtFind(cap_frame_cap_new(((uint32_t)(pt) >> 12), i, ARMLargePage, 0, ( ((uint32_t)(pt) >> 10) & ((1ul<<(2))-1ul)), (uint32_t)paddr_to_pptr(pte_pte_large_ptr_get_address(pt + i))));
-            if(!(frameCte)) _assert_fail("frameCte", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 659, __FUNCTION__);
+            if(!(frameCte)) _assert_fail("frameCte", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 659, __FUNCTION__);
             frameCap = cap_frame_cap_set_capFMappedObject(frameCte->cap, 0);
             cdtUpdate(frameCte, frameCap);
             unmapPagePTE(ARMLargePage, pt, i, (void *)cap_frame_cap_get_capFBasePtr(frameCap));
@@ -10717,7 +10717,7 @@ flushPage(vm_page_size_t page_size, pde_t* pd, word_t vptr)
     word_t base_addr;
     bool_t root_switched;
 
-    if(!((vptr & ((1ul<<(pageBitsForSize(page_size)))-1ul)) == 0)) _assert_fail("(vptr & MASK(pageBitsForSize(page_size))) == 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 829, __FUNCTION__);
+    if(!((vptr & ((1ul<<(pageBitsForSize(page_size)))-1ul)) == 0)) _assert_fail("(vptr & MASK(pageBitsForSize(page_size))) == 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 829, __FUNCTION__);
 
     /* Switch to the address space to allow a cache clean by VA */
     root_switched = setVMRootForFlush(pd);
@@ -10741,7 +10741,7 @@ flushTable(pde_t* pd, word_t vptr, pte_t* pt)
     pde_t stored_hw_asid;
     bool_t root_switched;
 
-    if(!((vptr & ((1ul<<(8 + ARMSmallPageBits))-1ul)) == 0)) _assert_fail("(vptr & MASK(PT_BITS + ARMSmallPageBits)) == 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 853, __FUNCTION__);
+    if(!((vptr & ((1ul<<(8 + ARMSmallPageBits))-1ul)) == 0)) _assert_fail("(vptr & MASK(PT_BITS + ARMSmallPageBits)) == 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 853, __FUNCTION__);
 
     /* Switch to the address space to allow a cache clean by VA */
     root_switched = setVMRootForFlush(pd);
@@ -10816,7 +10816,7 @@ makeUserPTE(vm_page_size_t page_size, paddr_t paddr,
     }
 
     default:
-        _fail("Invalid PTE frame type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 928, __func__);
+        _fail("Invalid PTE frame type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 928, __func__);
     }
 
     return pte;
@@ -10841,7 +10841,7 @@ makeUserPDE(vm_page_size_t page_size, paddr_t paddr, bool_t parity,
         break;
 
     default:
-        _fail("Invalid PDE frame type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 953, __func__);
+        _fail("Invalid PDE frame type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 953, __func__);
     }
 
     if (cacheable) {
@@ -11056,7 +11056,7 @@ createSafeMappingEntries_PTE
         return ret;
 
     default:
-        _fail("Invalid or unexpected ARM page type.", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 1168, __func__);
+        _fail("Invalid or unexpected ARM page type.", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 1168, __func__);
 
     }
 }
@@ -11127,7 +11127,7 @@ createSafeMappingEntries_PDE
         return ret;
 
     default:
-        _fail("Invalid or unexpected ARM page type.", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 1239, __func__);
+        _fail("Invalid or unexpected ARM page type.", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 1239, __func__);
 
     }
 }
@@ -11271,7 +11271,7 @@ decodeARMFrameInvocation(word_t label, unsigned int length,
             ptIndex = cap_frame_cap_get_capFMappedIndex(cap);
 
             ptCte = cdtFindWithExtra(cap_page_table_cap_new(0, 0, ((unsigned int)(pt))));
-            if(!(ptCte)) _assert_fail("ptCte", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 1383, __FUNCTION__);
+            if(!(ptCte)) _assert_fail("ptCte", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 1383, __FUNCTION__);
             pd = ((pde_t *)(cap_page_table_cap_get_capPTMappedObject(ptCte->cap)));
             if (__builtin_expect(!!(!pd), 0)) {
                 do { kprintf("\033[0m" "\033[30;1m" "<<" "\033[0m" "\033[32m" "seL4" "\033[0m" "\033[30;1m" " [%s/%d T%x \"%s\" @%x]: ", __func__, 1386, (int)ksCurThread, ksCurThread->tcbName, (int)getRestartPC(ksCurThread)); kprintf("Page Flush: Page Table is not mapped."); kprintf(">>" "\033[0m" "\n"); } while (0);
@@ -11329,7 +11329,7 @@ decodeARMFrameInvocation(word_t label, unsigned int length,
 
 
         /* Check that there are enough message registers */
-        if(!(n_msgRegisters >= 1)) _assert_fail("n_msgRegisters >= 1", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 1441, __FUNCTION__);
+        if(!(n_msgRegisters >= 1)) _assert_fail("n_msgRegisters >= 1", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 1441, __FUNCTION__);
 
         setThreadState(ksCurThread, ThreadState_Restart);
         return performPageGetAddress((void*)cap_frame_cap_get_capFBasePtr(cap));
@@ -11490,7 +11490,7 @@ decodeARMMMUInvocation(word_t label, unsigned int length, cptr_t cptr,
         return decodeARMFrameInvocation (label, length, cte,
                                          cap, extraCaps, buffer);
     default:
-        _fail("Invalid ARM arch cap type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 1602, __func__);
+        _fail("Invalid ARM arch cap type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 1602, __func__);
     }
 }
 
@@ -11601,7 +11601,7 @@ performPageInvocationUnmap(cap_t cap, cte_t *ctSlot)
                          (void *)cap_frame_cap_get_capFBasePtr(cap));
             break;
         default:
-            _fail("Invalid ARM page type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 1713, __func__);
+            _fail("Invalid ARM page type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 1713, __func__);
             break;
         }
     }
@@ -11647,7 +11647,7 @@ doFlush(int label, vptr_t start, vptr_t end, paddr_t pstart)
         isb();
         break;
     default:
-        _fail("Invalid operation, shouldn't get here.\n", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/kernel/vspace.c", 1759, __func__);
+        _fail("Invalid operation, shouldn't get here.\n", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/kernel/vspace.c", 1759, __func__);
     }
 }
 
@@ -11719,7 +11719,7 @@ kernelDataAbort(word_t pc)
 
     halt();
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/cache.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/cache.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11730,7 +11730,7 @@ kernelDataAbort(word_t pc)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11740,8 +11740,8 @@ kernelDataAbort(word_t pc)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/cache.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/cache.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11751,8 +11751,8 @@ kernelDataAbort(word_t pc)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/cache.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/cache.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11762,7 +11762,7 @@ kernelDataAbort(word_t pc)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/cache.c" 2
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/cache.c" 2
 
 
 
@@ -11936,7 +11936,7 @@ cleanInvalidateL1Caches(void)
     invalidate_I_PoU();
     dsb();
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/capdl.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/capdl.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11949,7 +11949,7 @@ cleanInvalidateL1Caches(void)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11959,8 +11959,8 @@ cleanInvalidateL1Caches(void)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/capdl.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/capdl.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11970,8 +11970,8 @@ cleanInvalidateL1Caches(void)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/capdl.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/capdl.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11981,8 +11981,8 @@ cleanInvalidateL1Caches(void)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/capdl.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/capdl.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/capdl.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/capdl.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -11992,8 +11992,8 @@ cleanInvalidateL1Caches(void)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/capdl.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/capdl.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/capdl.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/capdl.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12003,8 +12003,8 @@ cleanInvalidateL1Caches(void)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/capdl.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/debug_helpers.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/capdl.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/debug_helpers.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12018,7 +12018,7 @@ cleanInvalidateL1Caches(void)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/io.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12028,9 +12028,9 @@ cleanInvalidateL1Caches(void)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/debug_helpers.h" 2
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/capdl.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/debug_helpers.h" 2
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/capdl.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12040,7 +12040,7 @@ cleanInvalidateL1Caches(void)
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/capdl.c" 2
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/capdl.c" 2
 
 
 
@@ -12325,7 +12325,7 @@ void capDL(void)
         } while (result);
     }
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/debug.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/debug.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12336,7 +12336,7 @@ void capDL(void)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12346,8 +12346,8 @@ void capDL(void)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/debug.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/debug.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12357,8 +12357,8 @@ void capDL(void)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/debug.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/debug.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12368,8 +12368,8 @@ void capDL(void)
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h"
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12379,8 +12379,8 @@ void capDL(void)
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12390,7 +12390,7 @@ void capDL(void)
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h" 2
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h" 2
 
 void debug_init(void) __attribute__((externally_visible));
 
@@ -12425,7 +12425,7 @@ void uncatch_vector(vector_t vector) __attribute__((externally_visible));
 /*********************************/
 
 /* Debug ID Register */
-# 65 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h"
+# 65 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h"
 static inline uint32_t
 getDIDR(void)
 {
@@ -12438,7 +12438,7 @@ getDIDR(void)
 
 
 /* Debug Status and Control Register */
-# 92 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h"
+# 92 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h"
 static inline uint32_t
 getDSCR(void)
 {
@@ -12457,7 +12457,7 @@ setDSCR(uint32_t x)
 
 
 /* Vector Catch Register */
-# 119 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h"
+# 119 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h"
 static inline uint32_t
 getVCR(void)
 {
@@ -12535,7 +12535,7 @@ setBVR(int n, uint32_t x)
 
 
 /* Breakpoint Control Registers */
-# 204 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/debug.h"
+# 204 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/debug.h"
 static inline uint32_t
 getBCR(int n)
 {
@@ -12593,8 +12593,8 @@ setBCR(int n, uint32_t x)
         break;
     }
 }
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/debug.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/debug.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12604,8 +12604,8 @@ setBCR(int n, uint32_t x)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/debug.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/debug.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12615,7 +12615,7 @@ setBCR(int n, uint32_t x)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/debug.c" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/debug.c" 2
 
 typedef struct {
     uint32_t va;
@@ -12762,7 +12762,7 @@ uncatch_vector(vector_t vector)
     vcr &= ~(1ul<<(vector));
     setVCR(vcr);
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/errata.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/errata.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12773,7 +12773,7 @@ uncatch_vector(vector_t vector)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12783,8 +12783,8 @@ uncatch_vector(vector_t vector)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/errata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/errata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12794,8 +12794,8 @@ uncatch_vector(vector_t vector)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/errata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/errata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12805,8 +12805,8 @@ uncatch_vector(vector_t vector)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/errata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/hardware.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/errata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12816,7 +12816,7 @@ uncatch_vector(vector_t vector)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/errata.c" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/errata.c" 2
 
 /* Prototyped here as this is referenced from assembly */
 void arm_errata(void);
@@ -12847,7 +12847,7 @@ errata_arm1136(void)
             readAuxiliaryControlRegister() | (1ul<<(31)));
     }
 }
-# 70 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/errata.c"
+# 70 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/errata.c"
 __attribute__((__section__(".boot.text"))) void __attribute__((externally_visible)) arm_errata(void)
 {
 
@@ -12858,7 +12858,7 @@ __attribute__((__section__(".boot.text"))) void __attribute__((externally_visibl
 
 
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/hardware.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/hardware.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12869,7 +12869,7 @@ __attribute__((__section__(".boot.text"))) void __attribute__((externally_visibl
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12879,8 +12879,8 @@ __attribute__((__section__(".boot.text"))) void __attribute__((externally_visibl
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/hardware.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/hardware.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12890,8 +12890,8 @@ __attribute__((__section__(".boot.text"))) void __attribute__((externally_visibl
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/hardware.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/hardware.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12901,7 +12901,7 @@ __attribute__((__section__(".boot.text"))) void __attribute__((externally_visibl
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/hardware.c" 2
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/hardware.c" 2
 
 word_t __attribute__((__pure__))
 getRestartPC(tcb_t *thread)
@@ -12914,7 +12914,7 @@ setNextPC(tcb_t *thread, word_t v)
 {
     setRegister(thread, LR_svc, v);
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/registerset.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/registerset.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12925,7 +12925,7 @@ setNextPC(tcb_t *thread, word_t v)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine/registerset.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12935,7 +12935,7 @@ setNextPC(tcb_t *thread, word_t v)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/machine/registerset.c" 2
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/machine/registerset.c" 2
 
 const register_t msgRegisters[] = {
     R2, R3, R4, R5
@@ -12957,7 +12957,7 @@ const register_t exceptionMessage[] = {
 const register_t syscallMessage[] = {
     R0, R1, R2, R3, R4, R5, R6, R7, FaultInstruction, SP, LR, CPSR
 };
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/model/statedata.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/model/statedata.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12968,7 +12968,7 @@ const register_t syscallMessage[] = {
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12978,8 +12978,8 @@ const register_t syscallMessage[] = {
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/model/statedata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/model/statedata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -12989,8 +12989,8 @@ const register_t syscallMessage[] = {
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/model/statedata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/types.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/model/statedata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13000,8 +13000,8 @@ const register_t syscallMessage[] = {
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/model/statedata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/model/statedata.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/model/statedata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13011,8 +13011,8 @@ const register_t syscallMessage[] = {
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/model/statedata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/structures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/model/statedata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13022,8 +13022,8 @@ const register_t syscallMessage[] = {
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/model/statedata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/linker.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/model/statedata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/linker.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13033,8 +13033,8 @@ const register_t syscallMessage[] = {
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/model/statedata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/model/statedata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13044,7 +13044,7 @@ const register_t syscallMessage[] = {
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/model/statedata.c" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/model/statedata.c" 2
 
 /* The global frame, mapped in all address spaces */
 word_t armKSGlobalsFrame[(1ul<<(ARMSmallPageBits)) / sizeof(word_t)]
@@ -13059,7 +13059,7 @@ pde_t armKSGlobalPD[(1ul<<(12))] __attribute__((__aligned__((1ul<<((12 +2)))))) 
 
 /* The global, privileged, page table. */
 pte_t armKSGlobalPT[(1ul<<(8))] __attribute__((__aligned__((1ul<<((8 +2)))))) __attribute__((__section__(".bss.aligned")));
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/interrupt.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/interrupt.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13070,7 +13070,7 @@ pte_t armKSGlobalPT[(1ul<<(8))] __attribute__((__aligned__((1ul<<((8 +2)))))) __
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13080,8 +13080,8 @@ pte_t armKSGlobalPT[(1ul<<(8))] __attribute__((__aligned__((1ul<<((8 +2)))))) __
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13091,9 +13091,9 @@ pte_t armKSGlobalPT[(1ul<<(8))] __attribute__((__aligned__((1ul<<((8 +2)))))) __
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/interrupt.c" 2
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/interrupt.c" 2
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/interrupt.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/interrupt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13103,7 +13103,7 @@ pte_t armKSGlobalPT[(1ul<<(8))] __attribute__((__aligned__((1ul<<((8 +2)))))) __
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/interrupt.c" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/interrupt.c" 2
 
 exception_t
 Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
@@ -13111,7 +13111,7 @@ Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
     current_syscall_error.type = seL4_IllegalOperation;
     return EXCEPTION_SYSCALL_ERROR;
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13122,7 +13122,7 @@ Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13132,8 +13132,8 @@ Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13143,8 +13143,8 @@ Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13154,8 +13154,8 @@ Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13165,8 +13165,8 @@ Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13176,8 +13176,8 @@ Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/model/statedata.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13187,8 +13187,8 @@ Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/objecttype.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13198,7 +13198,7 @@ Arch_decodeInterruptControl(unsigned int length, extra_caps_t extraCaps)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c" 2
 
 deriveCap_ret_t
 Arch_deriveCap(cte_t *slot, cap_t cap)
@@ -13224,7 +13224,7 @@ Arch_deriveCap(cte_t *slot, cap_t cap)
     default:
         /* This assert has no equivalent in haskell,
          * as the options are restricted by type */
-        _fail("Invalid arch cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c", 43, __func__);
+        _fail("Invalid arch cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c", 43, __func__);
     }
 }
 
@@ -13348,7 +13348,7 @@ Arch_recycleCap(bool_t is_final, cap_t cap)
     }
 
     default:
-        _fail("Arch_recycleCap: invalid cap type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c", 167, __func__);
+        _fail("Arch_recycleCap: invalid cap type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c", 167, __func__);
     }
 
     return cap_null_cap_new();
@@ -13431,7 +13431,7 @@ Arch_getObjectSize(word_t t)
     case seL4_ARM_PageDirectoryObject:
         return 2 + 12;
     default:
-        _fail("Invalid object type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c", 250, __func__);
+        _fail("Invalid object type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c", 250, __func__);
         return 0;
     }
 }
@@ -13532,7 +13532,7 @@ Arch_createObject(object_t t, void *regionBase, int userSize, bool_t deviceMemor
          * got an API type" and the case where an invalid object type is
          * passed (which is impossible in haskell).
          */
-        _fail("Arch_createObject got an API type or invalid object type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/objecttype.c", 351, __func__);
+        _fail("Arch_createObject got an API type or invalid object type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/objecttype.c", 351, __func__);
     }
 }
 
@@ -13563,7 +13563,7 @@ Arch_isFrameType(word_t t)
         return false;
     }
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13574,7 +13574,7 @@ Arch_isFrameType(word_t t)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13584,8 +13584,8 @@ Arch_isFrameType(word_t t)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13595,8 +13595,8 @@ Arch_isFrameType(word_t t)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13606,8 +13606,8 @@ Arch_isFrameType(word_t t)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13617,8 +13617,8 @@ Arch_isFrameType(word_t t)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13628,8 +13628,8 @@ Arch_isFrameType(word_t t)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/tcb.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/tcb.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13639,7 +13639,7 @@ Arch_isFrameType(word_t t)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c" 2
 
 static inline unsigned int
 setMR(tcb_t *receiver, word_t* receiveIPCBuffer,
@@ -13690,7 +13690,7 @@ setMRs_lookup_failure(tcb_t *receiver, word_t* receiveIPCBuffer,
                      lookup_fault_guard_mismatch_get_bitsFound(luf));
 
     default:
-        _fail("Invalid lookup failure", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c", 67, __func__);
+        _fail("Invalid lookup failure", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c", 67, __func__);
     }
 }
 
@@ -13719,7 +13719,7 @@ setMRs_fault(tcb_t *sender, tcb_t* receiver, word_t *receiveIPCBuffer)
     case fault_unknown_syscall: {
         unsigned int i;
 
-        if(!(n_syscallMessage >= n_msgRegisters)) _assert_fail("n_syscallMessage >= n_msgRegisters", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c", 96, __FUNCTION__);
+        if(!(n_syscallMessage >= n_msgRegisters)) _assert_fail("n_syscallMessage >= n_msgRegisters", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c", 96, __FUNCTION__);
         for (i = 0; i < n_msgRegisters; i++) {
             setRegister(receiver, msgRegisters[i],
                         getRegister(sender, syscallMessage[i]));
@@ -13741,7 +13741,7 @@ setMRs_fault(tcb_t *sender, tcb_t* receiver, word_t *receiveIPCBuffer)
     case fault_user_exception: {
         unsigned int i;
 
-        if(!(n_exceptionMessage < n_msgRegisters)) _assert_fail("n_exceptionMessage < n_msgRegisters", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c", 118, __FUNCTION__);
+        if(!(n_exceptionMessage < n_msgRegisters)) _assert_fail("n_exceptionMessage < n_msgRegisters", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c", 118, __FUNCTION__);
         for (i = 0; i < n_exceptionMessage; i++) {
             setRegister(receiver, msgRegisters[i],
                         getRegister(sender, exceptionMessage[i]));
@@ -13754,7 +13754,7 @@ setMRs_fault(tcb_t *sender, tcb_t* receiver, word_t *receiveIPCBuffer)
     }
 
     default:
-        _fail("Invalid fault", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c", 131, __func__);
+        _fail("Invalid fault", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c", 131, __func__);
     }
 }
 
@@ -13796,7 +13796,7 @@ setMRs_syscall_error(tcb_t *thread, word_t *receiveIPCBuffer)
         return setMR(thread, receiveIPCBuffer, 0,
                      current_syscall_error.memoryLeft);
     default:
-        _fail("Invalid syscall error", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/arch/arm/object/tcb.c", 173, __func__);
+        _fail("Invalid syscall error", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/arch/arm/object/tcb.c", 173, __func__);
     }
 }
 
@@ -13816,7 +13816,7 @@ void
 Arch_leaveVMAsyncTransfer(tcb_t *tcb)
 {
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/assert.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/assert.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13827,7 +13827,7 @@ Arch_leaveVMAsyncTransfer(tcb_t *tcb)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13837,8 +13837,8 @@ Arch_leaveVMAsyncTransfer(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/assert.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/assert.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13848,7 +13848,7 @@ Arch_leaveVMAsyncTransfer(tcb_t *tcb)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/assert.c" 2
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/assert.c" 2
 
 
 
@@ -13882,7 +13882,7 @@ void _assert_fail(
            ;
     halt();
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/inlines.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/inlines.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13893,7 +13893,7 @@ void _assert_fail(
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13903,8 +13903,8 @@ void _assert_fail(
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/inlines.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/inlines.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13914,12 +13914,12 @@ void _assert_fail(
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/inlines.c" 2
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/inlines.c" 2
 
 lookup_fault_t current_lookup_fault;
 fault_t current_fault;
 syscall_error_t current_syscall_error;
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13930,7 +13930,7 @@ syscall_error_t current_syscall_error;
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13940,8 +13940,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/boot.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/boot.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13951,8 +13951,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13962,8 +13962,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cdt.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cdt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13973,8 +13973,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13984,8 +13984,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -13995,8 +13995,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14006,8 +14006,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14017,8 +14017,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/boot.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/boot.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14028,8 +14028,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/vspace.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14039,8 +14039,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/linker.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/linker.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14050,8 +14050,8 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14061,7 +14061,7 @@ syscall_error_t current_syscall_error;
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c" 2
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c" 2
 
 /* (node-local) state accessed only during bootstrapping */
 
@@ -14072,7 +14072,7 @@ insert_region(region_t reg)
 {
     unsigned int i;
 
-    if(!(reg.start <= reg.end)) _assert_fail("reg.start <= reg.end", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c", 33, __FUNCTION__);
+    if(!(reg.start <= reg.end)) _assert_fail("reg.start <= reg.end", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c", 33, __FUNCTION__);
     if (is_reg_empty(reg)) {
         return true;
     }
@@ -14175,7 +14175,7 @@ write_slot(slot_ptr_t slot_ptr, cap_t cap)
 typedef int
 
  __assert_failed_root_cnode_size_valid
-# 133 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c"
+# 133 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c"
  [(16 < 32 - 4 && (1U << 16) >= 12 /* slot where dynamically allocated caps start */) ? 1 : -1];
 
 
@@ -14230,12 +14230,12 @@ create_irq_cnode(void)
 /* Check domain scheduler assumptions. */
 typedef int
  __assert_failed_num_domains_valid
-# 185 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c"
+# 185 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c"
  [(1 >= 1 && 1 <= 256) ? 1 : -1];
 
 typedef int
  __assert_failed_num_priorities_valid
-# 187 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c"
+# 187 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c"
  [(256 >= 1 && 256 <= 256) ? 1 : -1];
 
 
@@ -14246,10 +14246,10 @@ create_domain_cap(cap_t root_cnode_cap)
     unsigned int i;
 
     /* Check domain scheduler assumptions. */
-    if(!(ksDomScheduleLength > 0)) _assert_fail("ksDomScheduleLength > 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c", 197, __FUNCTION__);
+    if(!(ksDomScheduleLength > 0)) _assert_fail("ksDomScheduleLength > 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c", 197, __FUNCTION__);
     for (i = 0; i < ksDomScheduleLength; i++) {
-        if(!(ksDomSchedule[i].domain < 1)) _assert_fail("ksDomSchedule[i].domain < CONFIG_NUM_DOMAINS", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c", 199, __FUNCTION__);
-        if(!(ksDomSchedule[i].length > 0)) _assert_fail("ksDomSchedule[i].length > 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c", 200, __FUNCTION__);
+        if(!(ksDomSchedule[i].domain < 1)) _assert_fail("ksDomSchedule[i].domain < CONFIG_NUM_DOMAINS", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c", 199, __FUNCTION__);
+        if(!(ksDomSchedule[i].length > 0)) _assert_fail("ksDomSchedule[i].length > 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c", 200, __FUNCTION__);
     }
 
     cap = cap_domain_cap_new();
@@ -14447,7 +14447,7 @@ create_initial_thread(
     ksCurThread = ksIdleThread;
     ksCurDomain = ksDomSchedule[ksDomScheduleIdx].domain;
     ksDomainTime = ksDomSchedule[ksDomScheduleIdx].length;
-    if(!(ksCurDomain < 1 && ksDomainTime > 0)) _assert_fail("ksCurDomain < CONFIG_NUM_DOMAINS && ksDomainTime > 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c", 398, __FUNCTION__);
+    if(!(ksCurDomain < 1 && ksDomainTime > 0)) _assert_fail("ksCurDomain < CONFIG_NUM_DOMAINS && ksDomainTime > 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c", 398, __FUNCTION__);
 
     /* initialise current thread pointer */
     switchToThread(tcb); /* initialises ksCurThread */
@@ -14535,7 +14535,7 @@ create_untypeds_for_region(
             size_bits = align_bits;
         }
 
-        if(!(size_bits >= (8 * sizeof(word_t)) / 8)) _assert_fail("size_bits >= WORD_BITS / 8", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/boot.c", 486, __FUNCTION__);
+        if(!(size_bits >= (8 * sizeof(word_t)) / 8)) _assert_fail("size_bits >= WORD_BITS / 8", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/boot.c", 486, __FUNCTION__);
         if (!provide_untyped_cap(root_cnode_cap, deviceMemory, reg.start, size_bits, first_untyped_slot)) {
             return false;
         }
@@ -14584,7 +14584,7 @@ bi_finalise(void)
         slot_pos_start, slot_pos_end
     };
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14595,7 +14595,7 @@ bi_finalise(void)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14605,8 +14605,8 @@ bi_finalise(void)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14616,8 +14616,8 @@ bi_finalise(void)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14627,8 +14627,8 @@ bi_finalise(void)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -14638,7 +14638,7 @@ bi_finalise(void)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c" 2
 
 
 
@@ -14816,7 +14816,7 @@ typed_comparator(cte_t *a, cte_t *b, tie_comp_t tie_break)
 
 
         [cap_zombie_cap] = just_tie_break,
-# 202 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c"
+# 202 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c"
     };
     /* Typed objects do not overlap, so sufficient to compare base address */
     cmp = ({ typeof(cap_get_capPtr(a->cap)) _a = (cap_get_capPtr(a->cap)); typeof(cap_get_capPtr(b->cap)) _b = (cap_get_capPtr(b->cap)); _a == _b ? ( 0) : (_a > _b ? ( 1) : (-1)); });
@@ -14826,9 +14826,9 @@ typed_comparator(cte_t *a, cte_t *b, tie_comp_t tie_break)
     /* at this point we *know* the types must be equal, so call the
      * per cap type comparator, if it needs one. */
     type = cap_get_capType(a->cap);
-    if(!(type < (sizeof(typeof(comparator))/sizeof(typeof((comparator)[0]))))) _assert_fail("type < ARRAY_SIZE(comparator)", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 211, __FUNCTION__);
+    if(!(type < (sizeof(typeof(comparator))/sizeof(typeof((comparator)[0]))))) _assert_fail("type < ARRAY_SIZE(comparator)", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 211, __FUNCTION__);
     comp = comparator[type];
-    if(!(comp)) _assert_fail("comp", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 213, __FUNCTION__);
+    if(!(comp)) _assert_fail("comp", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 213, __FUNCTION__);
     return comp(a, b, tie_break);
 }
 
@@ -14849,7 +14849,7 @@ irq_comparator(cte_t *a, cte_t *b, tie_comp_t tie_break)
             return tie_break(a, b, ((void *)0));
         } else {
             /* both irq handlers, compare on irq */
-            if(!(typeA == cap_irq_handler_cap)) _assert_fail("typeA == cap_irq_handler_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 234, __FUNCTION__);
+            if(!(typeA == cap_irq_handler_cap)) _assert_fail("typeA == cap_irq_handler_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 234, __FUNCTION__);
             cmp = ({ typeof(cap_irq_handler_cap_get_capIRQ(a->cap)) _a = (cap_irq_handler_cap_get_capIRQ(a->cap)); typeof(cap_irq_handler_cap_get_capIRQ(b->cap)) _b = (cap_irq_handler_cap_get_capIRQ(b->cap)); _a == _b ? ( 0) : (_a > _b ? ( 1) : (-1)); });
             if (cmp != ( 0)) {
                 return cmp;
@@ -14859,11 +14859,11 @@ irq_comparator(cte_t *a, cte_t *b, tie_comp_t tie_break)
     } else if (typeA == cap_irq_control_cap) {
         return (-1);
     } else {
-        if(!(typeA == cap_irq_handler_cap)) _assert_fail("typeA == cap_irq_handler_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 244, __FUNCTION__);
+        if(!(typeA == cap_irq_handler_cap)) _assert_fail("typeA == cap_irq_handler_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 244, __FUNCTION__);
         return ( 1);
     }
 }
-# 290 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c"
+# 290 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c"
 static inline int
 compare_space(int space, cte_t *a, cte_t *b, tie_comp_t tie_break)
 {
@@ -14881,9 +14881,9 @@ compare_space(int space, cte_t *a, cte_t *b, tie_comp_t tie_break)
 
 
     };
-    if(!(space < (sizeof(typeof(comparator))/sizeof(typeof((comparator)[0]))))) _assert_fail("space < ARRAY_SIZE(comparator)", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 307, __FUNCTION__);
+    if(!(space < (sizeof(typeof(comparator))/sizeof(typeof((comparator)[0]))))) _assert_fail("space < ARRAY_SIZE(comparator)", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 307, __FUNCTION__);
     comp = comparator[space];
-    if(!(comp)) _assert_fail("comp", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 309, __FUNCTION__);
+    if(!(comp)) _assert_fail("comp", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 309, __FUNCTION__);
     return comp(a, b, tie_break);
 }
 
@@ -14916,7 +14916,7 @@ static inline int has_extra_comparator(cte_t *a, cte_t *b, comp_t pre_slot)
     if (cmp != ( 0)) {
         return cmp;
     }
-    if(!(pre_slot)) _assert_fail("pre_slot", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 342, __FUNCTION__);
+    if(!(pre_slot)) _assert_fail("pre_slot", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 342, __FUNCTION__);
     cmp = pre_slot(a, b);
     /* if the extra comparison was not equal then we found something, so we will claim that we found equality,
      * otherwise return a psudo-random result */
@@ -15089,10 +15089,10 @@ build_largest_child(cap_t cap)
     case cap_frame_cap:
     case cap_page_table_cap:
     case cap_page_directory_cap:
-# 527 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c"
+# 527 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c"
         return cap;
     default:
-        _fail("Unknown cap type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 529, __func__);
+        _fail("Unknown cap type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 529, __func__);
     }
 }
 
@@ -15219,8 +15219,8 @@ void
 cdtInsert(cte_t *parentSlot, cte_t *newSlot)
 {
     word_t depth;
-    if(!(cap_get_capType(newSlot->cap) != cap_null_cap)) _assert_fail("cap_get_capType(newSlot->cap) != cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 656, __FUNCTION__);
-    if(!(!parentSlot || cap_get_capType(parentSlot->cap) != cap_null_cap)) _assert_fail("!parentSlot || cap_get_capType(parentSlot->cap) != cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 657, __FUNCTION__);
+    if(!(cap_get_capType(newSlot->cap) != cap_null_cap)) _assert_fail("cap_get_capType(newSlot->cap) != cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 656, __FUNCTION__);
+    if(!(!parentSlot || cap_get_capType(parentSlot->cap) != cap_null_cap)) _assert_fail("!parentSlot || cap_get_capType(parentSlot->cap) != cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 657, __FUNCTION__);
     if (!parentSlot || (cap_get_capSpaceType(parentSlot->cap) != cap_get_capSpaceType(newSlot->cap))) {
         depth = 0;
     } else {
@@ -15236,7 +15236,7 @@ cdtInsert(cte_t *parentSlot, cte_t *newSlot)
 void
 cdtRemove(cte_t *slot)
 {
-    if(!(cap_get_capType(slot->cap) != cap_null_cap)) _assert_fail("cap_get_capType(slot->cap) != cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 673, __FUNCTION__);
+    if(!(cap_get_capType(slot->cap) != cap_null_cap)) _assert_fail("cap_get_capType(slot->cap) != cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 673, __FUNCTION__);
     ksRootCTE = aaRemove(false, ksRootCTE, slot);
     slot->cteMDBNode = mdb_node_new(0, false, false, 0);
 }
@@ -15244,8 +15244,8 @@ cdtRemove(cte_t *slot)
 void
 cdtMove(cte_t *oldSlot, cte_t *newSlot)
 {
-    if(!(cap_get_capType(oldSlot->cap) != cap_null_cap)) _assert_fail("cap_get_capType(oldSlot->cap) != cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 681, __FUNCTION__);
-    if(!(cap_get_capType(newSlot->cap) != cap_null_cap)) _assert_fail("cap_get_capType(newSlot->cap) != cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 682, __FUNCTION__);
+    if(!(cap_get_capType(oldSlot->cap) != cap_null_cap)) _assert_fail("cap_get_capType(oldSlot->cap) != cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 681, __FUNCTION__);
+    if(!(cap_get_capType(newSlot->cap) != cap_null_cap)) _assert_fail("cap_get_capType(newSlot->cap) != cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 682, __FUNCTION__);
     ksRootCTE = aaRemove(false, ksRootCTE, oldSlot);
 
     newSlot->cteMDBNode = mdb_node_new(0, mdb_node_get_cdtDepth(oldSlot->cteMDBNode), 0, 0);
@@ -15271,7 +15271,7 @@ void
 cdtSwap(cap_t cap1, cte_t *slot1, cap_t cap2, cte_t *slot2)
 {
     word_t depth1, depth2;
-    if(!(slot1 != slot2)) _assert_fail("slot1 != slot2", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 708, __FUNCTION__);
+    if(!(slot1 != slot2)) _assert_fail("slot1 != slot2", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 708, __FUNCTION__);
     if (cap_get_capType(slot1->cap) != cap_null_cap) {
         ksRootCTE = aaRemove(false, ksRootCTE, slot1);
     }
@@ -15415,9 +15415,9 @@ static cte_t *aaInsert(cte_t *rootSlot, cte_t *newSlot)
     cte_t *left, *right;
 
     if (!newSlot) {
-        _fail("inserting null CTE", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 852, __func__);
+        _fail("inserting null CTE", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 852, __func__);
     }
-    if(!(newSlot != rootSlot)) _assert_fail("newSlot != rootSlot", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 854, __FUNCTION__);
+    if(!(newSlot != rootSlot)) _assert_fail("newSlot != rootSlot", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 854, __FUNCTION__);
 
     if (!rootSlot) {
 
@@ -15440,7 +15440,7 @@ static cte_t *aaInsert(cte_t *rootSlot, cte_t *newSlot)
             break;
 
         default:
-            _fail("Inserting duplicate", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 877, __func__);
+            _fail("Inserting duplicate", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 877, __func__);
         }
 
         rootSlot = aaSkew(rootSlot);
@@ -15455,10 +15455,10 @@ static cte_t *aaRemove(bool_t isSwapped, cte_t *rootSlot, cte_t *targetSlot)
     cte_t *left, *right;
 
     if (!targetSlot) {
-        _fail("removing null", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 892, __func__);
+        _fail("removing null", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 892, __func__);
     }
     if (!rootSlot) {
-        _fail("removing from null", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 895, __func__);
+        _fail("removing from null", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 895, __func__);
     }
 
     switch (compSlot(targetSlot, rootSlot)) {
@@ -15599,7 +15599,7 @@ static cte_t *aaSplit(cte_t *slot)
             mdb_node_ptr_set_cdtLevel(&right->cteMDBNode, level);
 
             /* check level dosn't overflow */
-            if(!(mdb_node_get_cdtLevel(right->cteMDBNode) == level)) _assert_fail("mdb_node_get_cdtLevel(right->cteMDBNode) == level", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c", 1036, __FUNCTION__);
+            if(!(mdb_node_get_cdtLevel(right->cteMDBNode) == level)) _assert_fail("mdb_node_get_cdtLevel(right->cteMDBNode) == level", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c", 1036, __FUNCTION__);
 
             mdb_node_ptr_set_cdtLeft(&right->cteMDBNode, ((unsigned int)(slot)));
 
@@ -15674,11 +15674,11 @@ printCTE(char *msg, cte_t *cte)
         kprintf("%s [NULL]@0x%x", msg, cte);
     } else {
         kprintf("%s [%d %s(%d) { addr = 0x%x, size = 0x%x } left: 0x%x right: 0x%x badge: %d depth: %d extra: 0x%x]@0x%x\n", msg, mdb_node_get_cdtLevel(cte->cteMDBNode), printCap(cte->cap), cap_get_capType(cte->cap), cap_get_capType(cte->cap) == cap_null_cap ? 0 : (word_t)cap_get_capSpacePtr(cte->cap), cap_get_capType(cte->cap) == cap_null_cap ? 0 : cap_get_capSpaceSize(cte->cap), mdb_node_get_cdtLeft(cte->cteMDBNode), mdb_node_get_cdtRight(cte->cteMDBNode), cap_get_capBadge(cte->cap), mdb_node_get_cdtDepth(cte->cteMDBNode), cap_get_capType(cte->cap) == cap_null_cap ? 0 : cap_get_capExtraComp(cte->cap), cte)
-# 1122 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cdt.c"
+# 1122 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cdt.c"
                    ;
     }
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15689,7 +15689,7 @@ printCTE(char *msg, cte_t *cte)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15699,8 +15699,8 @@ printCTE(char *msg, cte_t *cte)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15710,8 +15710,8 @@ printCTE(char *msg, cte_t *cte)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15721,8 +15721,8 @@ printCTE(char *msg, cte_t *cte)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15732,8 +15732,8 @@ printCTE(char *msg, cte_t *cte)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15743,8 +15743,8 @@ printCTE(char *msg, cte_t *cte)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15754,8 +15754,8 @@ printCTE(char *msg, cte_t *cte)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15765,7 +15765,7 @@ printCTE(char *msg, cte_t *cte)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c" 2
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c" 2
 
 lookupCap_ret_t
 lookupCap(tcb_t *thread, cptr_t cPtr)
@@ -15916,7 +15916,7 @@ resolveAddressBits(cap_t nodeCap, cptr_t capptr, unsigned int n_bits)
         levelBits = radixBits;
 
         /* Haskell error: "All CNodes must resolve bits" */
-        if(!(levelBits != 0)) _assert_fail("levelBits != 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/cspace.c", 168, __FUNCTION__);
+        if(!(levelBits != 0)) _assert_fail("levelBits != 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/cspace.c", 168, __FUNCTION__);
 
         if (__builtin_expect(!!(levelBits > n_bits), 0)) {
             current_lookup_fault =
@@ -15951,7 +15951,7 @@ resolveAddressBits(cap_t nodeCap, cptr_t capptr, unsigned int n_bits)
     ret.status = EXCEPTION_NONE;
     return ret;
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/faulthandler.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/faulthandler.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15962,7 +15962,7 @@ resolveAddressBits(cap_t nodeCap, cptr_t capptr, unsigned int n_bits)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15972,8 +15972,8 @@ resolveAddressBits(cap_t nodeCap, cptr_t capptr, unsigned int n_bits)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/faulthandler.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/faulthandler.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15983,8 +15983,8 @@ resolveAddressBits(cap_t nodeCap, cptr_t capptr, unsigned int n_bits)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/faulthandler.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/faulthandler.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/faulthandler.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/faulthandler.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -15994,8 +15994,8 @@ resolveAddressBits(cap_t nodeCap, cptr_t capptr, unsigned int n_bits)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/faulthandler.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/faulthandler.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16005,8 +16005,8 @@ resolveAddressBits(cap_t nodeCap, cptr_t capptr, unsigned int n_bits)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/faulthandler.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/faulthandler.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16016,8 +16016,8 @@ resolveAddressBits(cap_t nodeCap, cptr_t capptr, unsigned int n_bits)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/faulthandler.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/faulthandler.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16027,7 +16027,7 @@ resolveAddressBits(cap_t nodeCap, cptr_t capptr, unsigned int n_bits)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/faulthandler.c" 2
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/faulthandler.c" 2
 
 void
 handleFault(tcb_t *tptr)
@@ -16131,7 +16131,7 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
 
     setThreadState(tptr, ThreadState_Inactive);
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16142,7 +16142,7 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16152,8 +16152,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16163,8 +16163,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16174,8 +16174,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/faults.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/faults.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16185,8 +16185,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16196,8 +16196,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16207,8 +16207,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16218,8 +16218,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16229,8 +16229,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16240,8 +16240,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16251,8 +16251,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/thread.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16262,8 +16262,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16273,8 +16273,8 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/linker.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/linker.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16284,7 +16284,7 @@ handleDoubleFault(tcb_t *tptr, fault_t ex1)
  *
  * @TAG(GD_GPL)
  */
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c" 2
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c" 2
 
 static message_info_t
 transferCaps(message_info_t info, extra_caps_t caps,
@@ -16350,7 +16350,7 @@ activateThread(void)
         break;
 
     default:
-        _fail("Current thread is blocked", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c", 89, __func__);
+        _fail("Current thread is blocked", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c", 89, __func__);
     }
 }
 
@@ -16399,11 +16399,11 @@ void
 doReplyTransfer(tcb_t *sender, tcb_t *receiver, cte_t *slot)
 {
     if(!(thread_state_get_tsType(receiver->tcbState) == ThreadState_BlockedOnReply)) _assert_fail("thread_state_get_tsType(receiver->tcbState) == ThreadState_BlockedOnReply",
- "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c"
-# 137 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c"
+ "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c"
+# 137 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c"
     ,
  138
-# 137 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c"
+# 137 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c"
     , __FUNCTION__)
                                       ;
 
@@ -16598,8 +16598,8 @@ chooseThread(void)
         uint32_t l2index = ((1 << 5) - 1) - __builtin_clz(ksReadyQueuesL2Bitmap[dom][l1index]);
         prio = l1index_to_prio(l1index) | l2index;
         thread = ksReadyQueues[ready_queues_index(dom, prio)].head;
-        if(!(thread)) _assert_fail("thread", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c", 331, __FUNCTION__);
-        if(!(isRunnable(thread))) _assert_fail("isRunnable(thread)", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/kernel/thread.c", 332, __FUNCTION__);
+        if(!(thread)) _assert_fail("thread", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c", 331, __FUNCTION__);
+        if(!(isRunnable(thread))) _assert_fail("isRunnable(thread)", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/kernel/thread.c", 332, __FUNCTION__);
         switchToThread(thread);
         return;
     }
@@ -16739,7 +16739,7 @@ rescheduleRequired(void)
     }
     ksSchedulerAction = ((tcb_t*)~0);
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/machine/io.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/machine/io.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16750,7 +16750,7 @@ rescheduleRequired(void)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdarg.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdarg.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16768,8 +16768,8 @@ rescheduleRequired(void)
 
 
 typedef __builtin_va_list va_list;
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/machine/io.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/machine/io.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -16779,7 +16779,7 @@ typedef __builtin_va_list va_list;
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/machine/io.c" 2
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/machine/io.c" 2
 
 
 
@@ -17008,7 +17008,7 @@ kprintf(const char *format, ...)
     __builtin_va_end(args);
     return i;
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/preemption.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/preemption.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17019,7 +17019,7 @@ kprintf(const char *format, ...)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17029,8 +17029,8 @@ kprintf(const char *format, ...)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/preemption.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/preemption.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/preemption.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/preemption.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17044,7 +17044,7 @@ kprintf(const char *format, ...)
 
 
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17054,11 +17054,11 @@ kprintf(const char *format, ...)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/preemption.h" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/preemption.h" 2
 
 exception_t preemptionPoint(void);
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/preemption.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/preemption.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17068,8 +17068,8 @@ exception_t preemptionPoint(void);
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/preemption.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/preemption.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17079,8 +17079,8 @@ exception_t preemptionPoint(void);
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/preemption.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/preemption.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17090,7 +17090,7 @@ exception_t preemptionPoint(void);
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/preemption.c" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/preemption.c" 2
 
 /*
  * Possibly preempt the current thread to allow an interrupt to be handled.
@@ -17118,7 +17118,7 @@ preemptionPoint(void)
 
     return EXCEPTION_NONE;
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/statedata.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/statedata.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17129,7 +17129,7 @@ preemptionPoint(void)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17139,8 +17139,8 @@ preemptionPoint(void)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/statedata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/statedata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17150,8 +17150,8 @@ preemptionPoint(void)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/statedata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/statedata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17161,8 +17161,8 @@ preemptionPoint(void)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/statedata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/statedata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17172,8 +17172,8 @@ preemptionPoint(void)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/statedata.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/statedata.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17183,7 +17183,7 @@ preemptionPoint(void)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/model/statedata.c" 2
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/model/statedata.c" 2
 
 /* Pointer to the head of the scheduler queue for each priority */
 tcb_queue_t ksReadyQueues[(1 * 256)];
@@ -17221,7 +17221,7 @@ word_t ksDomainTime;
 
 /* An index into ksDomSchedule for active domain and length. */
 uint32_t ksDomScheduleIdx;
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17232,7 +17232,7 @@ uint32_t ksDomScheduleIdx;
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17242,9 +17242,9 @@ uint32_t ksDomScheduleIdx;
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c" 2
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c" 2
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17254,8 +17254,8 @@ uint32_t ksDomScheduleIdx;
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17265,8 +17265,8 @@ uint32_t ksDomScheduleIdx;
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17276,8 +17276,8 @@ uint32_t ksDomScheduleIdx;
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17287,8 +17287,8 @@ uint32_t ksDomScheduleIdx;
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/endpoint.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/endpoint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17298,8 +17298,8 @@ uint32_t ksDomScheduleIdx;
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17309,8 +17309,8 @@ uint32_t ksDomScheduleIdx;
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17320,9 +17320,9 @@ uint32_t ksDomScheduleIdx;
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c" 2
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c" 2
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/asyncendpoint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/asyncendpoint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17332,7 +17332,7 @@ uint32_t ksDomScheduleIdx;
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c" 2
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c" 2
 
 static inline tcb_queue_t __attribute__((__pure__))
 aep_ptr_get_queue(async_endpoint_t *aepptr)
@@ -17396,7 +17396,7 @@ sendAsyncIPC(async_endpoint_t *aepptr, word_t badge)
         dest = aep_queue.head;
 
         /* Haskell error "WaitingAEP AEP must have non-empty queue" */
-        if(!(dest)) _assert_fail("dest", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c", 85, __FUNCTION__);
+        if(!(dest)) _assert_fail("dest", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c", 85, __FUNCTION__);
 
         /* Dequeue TCB */
         aep_queue = tcbEPDequeue(dest, aep_queue);
@@ -17492,7 +17492,7 @@ asyncIPCCancel(tcb_t *threadPtr, async_endpoint_t *aepptr)
     tcb_queue_t aep_queue;
 
     /* Haskell error "asyncIPCCancel: async endpoint must be waiting" */
-    if(!(async_endpoint_ptr_get_state(aepptr) == AEPState_Waiting)) _assert_fail("async_endpoint_ptr_get_state(aepptr) == AEPState_Waiting", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c", 181, __FUNCTION__);
+    if(!(async_endpoint_ptr_get_state(aepptr) == AEPState_Waiting)) _assert_fail("async_endpoint_ptr_get_state(aepptr) == AEPState_Waiting", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c", 181, __FUNCTION__);
 
     /* Dequeue TCB */
     aep_queue = aep_ptr_get_queue(aepptr);
@@ -17518,7 +17518,7 @@ completeAsyncIPC(async_endpoint_t *aepptr, tcb_t *tcb)
         badge = async_endpoint_ptr_get_aepMsgIdentifier(aepptr);
         setRegister(tcb, badgeRegister, badge);
     } else {
-        _fail("tried to complete async ipc with inactive AEP", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/asyncendpoint.c", 207, __func__);
+        _fail("tried to complete async ipc with inactive AEP", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/asyncendpoint.c", 207, __func__);
     }
 }
 
@@ -17540,7 +17540,7 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
     async_endpoint_ptr_set_aepBoundTCB(aepptr, (word_t)tcb);
     tcb->boundAsyncEndpoint = aepptr;
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17551,7 +17551,7 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17561,8 +17561,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17572,8 +17572,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17583,7 +17583,7 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
 # 1 "./api/invocation.h" 1
 /* @LICENSE(OKL_CORE) */
 
@@ -17592,8 +17592,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  * To add an invocation call number, edit libsel4/include/interfaces/sel4.xml.
  *
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17603,8 +17603,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/types.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17614,8 +17614,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17625,8 +17625,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17636,8 +17636,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17647,8 +17647,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17658,8 +17658,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17669,8 +17669,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17680,8 +17680,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17691,8 +17691,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17702,8 +17702,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cdt.h" 1
+# 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cdt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17713,8 +17713,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/preemption.h" 1
+# 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/preemption.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17724,8 +17724,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 27 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 27 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17735,8 +17735,8 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 28 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 28 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -17746,7 +17746,7 @@ bindAsyncEndpoint(tcb_t *tcb, async_endpoint_t *aepptr)
  *
  * @TAG(GD_GPL)
  */
-# 29 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c" 2
+# 29 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c" 2
 
 struct finaliseSlot_ret {
     exception_t status;
@@ -17769,7 +17769,7 @@ decodeCNodeInvocation(word_t label, unsigned int length, cap_t cap,
     exception_t status;
 
     /* Haskell error: "decodeCNodeInvocation: invalid cap" */
-    if(!(cap_get_capType(cap) == cap_cnode_cap)) _assert_fail("cap_get_capType(cap) == cap_cnode_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 51, __FUNCTION__);
+    if(!(cap_get_capType(cap) == cap_cnode_cap)) _assert_fail("cap_get_capType(cap) == cap_cnode_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 51, __FUNCTION__);
 
     if (label < CNodeRevoke || label > CNodeSaveCaller) {
         do { kprintf("\033[0m" "\033[30;1m" "<<" "\033[0m" "\033[32m" "seL4" "\033[0m" "\033[30;1m" " [%s/%d T%x \"%s\" @%x]: ", __func__, 54, (int)ksCurThread, ksCurThread->tcbName, (int)getRestartPC(ksCurThread)); kprintf("CNodeCap: Illegal Operation attempted."); kprintf(">>" "\033[0m" "\n"); } while (0);
@@ -17895,7 +17895,7 @@ decodeCNodeInvocation(word_t label, unsigned int length, cap_t cap,
             break;
 
         default:
-            if(!(0)) _assert_fail("0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 177, __FUNCTION__);
+            if(!(0)) _assert_fail("0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 177, __FUNCTION__);
             return EXCEPTION_NONE;
         }
 
@@ -18096,7 +18096,7 @@ invokeCNodeSaveCaller(cte_t *destSlot)
         break;
 
     default:
-        _fail("caller capability must be null or reply", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 378, __func__);
+        _fail("caller capability must be null or reply", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 378, __func__);
         break;
     }
 
@@ -18107,7 +18107,7 @@ void
 cteInsert(cap_t newCap, cte_t *srcSlot, cte_t *destSlot)
 {
     /* Haskell error: "cteInsert to non-empty destination" */
-    if(!(cap_get_capType(destSlot->cap) == cap_null_cap)) _assert_fail("cap_get_capType(destSlot->cap) == cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 389, __FUNCTION__);
+    if(!(cap_get_capType(destSlot->cap) == cap_null_cap)) _assert_fail("cap_get_capType(destSlot->cap) == cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 389, __FUNCTION__);
 
     destSlot->cap = newCap;
     cdtInsert(srcSlot, destSlot);
@@ -18117,7 +18117,7 @@ void
 cteMove(cap_t newCap, cte_t *srcSlot, cte_t *destSlot)
 {
     /* Haskell error: "cteMove to non-empty destination" */
-    if(!(cap_get_capType(destSlot->cap) == cap_null_cap)) _assert_fail("cap_get_capType(destSlot->cap) == cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 399, __FUNCTION__);
+    if(!(cap_get_capType(destSlot->cap) == cap_null_cap)) _assert_fail("cap_get_capType(destSlot->cap) == cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 399, __FUNCTION__);
 
     destSlot->cap = newCap;
     if (cap_get_capType(newCap) == cap_reply_cap) {
@@ -18210,7 +18210,7 @@ capRemovable(cap_t cap, cte_t* slot)
         return (n == 0 || (n == 1 && slot == z_slot));
     }
     default:
-        _fail("finaliseCap should only return Zombie or NullCap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 492, __func__);
+        _fail("finaliseCap should only return Zombie or NullCap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 492, __func__);
     }
 }
 
@@ -18284,13 +18284,13 @@ reduceZombie(cte_t* slot, bool_t immediate)
     word_t n, type;
     exception_t status;
 
-    if(!(cap_get_capType(slot->cap) == cap_zombie_cap)) _assert_fail("cap_get_capType(slot->cap) == cap_zombie_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 566, __FUNCTION__);
+    if(!(cap_get_capType(slot->cap) == cap_zombie_cap)) _assert_fail("cap_get_capType(slot->cap) == cap_zombie_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 566, __FUNCTION__);
     ptr = (cte_t*)cap_zombie_cap_get_capZombiePtr(slot->cap);
     n = cap_zombie_cap_get_capZombieNumber(slot->cap);
     type = cap_zombie_cap_get_capZombieType(slot->cap);
 
     /* Haskell error: "reduceZombie: expected unremovable zombie" */
-    if(!(n > 0)) _assert_fail("n > 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 572, __FUNCTION__);
+    if(!(n > 0)) _assert_fail("n > 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 572, __FUNCTION__);
 
     if (immediate) {
         cte_t* endSlot = &ptr[n - 1];
@@ -18311,7 +18311,7 @@ reduceZombie(cte_t* slot, bool_t immediate)
             if (ptr == ptr2 &&
                     cap_zombie_cap_get_capZombieNumber(slot->cap) == n &&
                     cap_zombie_cap_get_capZombieType(slot->cap) == type) {
-                if(!(cap_get_capType(endSlot->cap) == cap_null_cap)) _assert_fail("cap_get_capType(endSlot->cap) == cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 593, __FUNCTION__);
+                if(!(cap_get_capType(endSlot->cap) == cap_null_cap)) _assert_fail("cap_get_capType(endSlot->cap) == cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 593, __FUNCTION__);
                 /* We could call cdtUpdate here, but we know it is not necessary
                  * because a zombie is not ordered in the aaTree by its zombieNumber
                  * and so cdtUpdate will always be a noop. Skipping the call to cdtUpdate
@@ -18322,21 +18322,21 @@ reduceZombie(cte_t* slot, bool_t immediate)
                 /* Haskell error:
                  * "Expected new Zombie to be self-referential."
                  */
-                if(!(ptr2 == slot && ptr != slot)) _assert_fail("ptr2 == slot && ptr != slot", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 604, __FUNCTION__);
+                if(!(ptr2 == slot && ptr != slot)) _assert_fail("ptr2 == slot && ptr != slot", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 604, __FUNCTION__);
             }
             break;
         }
 
         default:
-            _fail("Expected recursion to result in Zombie.", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 610, __func__);
+            _fail("Expected recursion to result in Zombie.", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 610, __func__);
         }
     } else {
         /* Haskell error: "Cyclic zombie passed to unexposed reduceZombie" */
-        if(!(ptr != slot)) _assert_fail("ptr != slot", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 614, __FUNCTION__);
+        if(!(ptr != slot)) _assert_fail("ptr != slot", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 614, __FUNCTION__);
 
         if (cap_get_capType(ptr->cap) == cap_zombie_cap) {
             /* Haskell error: "Moving self-referential Zombie aside." */
-            if(!(ptr != ((cte_t *)(cap_zombie_cap_get_capZombiePtr(ptr->cap))))) _assert_fail("ptr != CTE_PTR(cap_zombie_cap_get_capZombiePtr(ptr->cap))", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c", 618, __FUNCTION__);
+            if(!(ptr != ((cte_t *)(cap_zombie_cap_get_capZombiePtr(ptr->cap))))) _assert_fail("ptr != CTE_PTR(cap_zombie_cap_get_capZombiePtr(ptr->cap))", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c", 618, __FUNCTION__);
         }
 
         capSwapForDelete(ptr, slot);
@@ -18357,11 +18357,11 @@ cteDeleteOne(cte_t* slot)
         fc_ret = finaliseCap(slot->cap, final, true);
         /* Haskell error: "cteDeleteOne: cap should be removable" */
         if(!(capRemovable(fc_ret.remainder, slot) && fc_ret.irq == irqInvalid)) _assert_fail("capRemovable(fc_ret.remainder, slot) && fc_ret.irq == irqInvalid",
- "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c"
-# 638 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c"
+ "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c"
+# 638 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c"
         ,
  639
-# 638 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/cnode.c"
+# 638 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/cnode.c"
         , __FUNCTION__)
                                         ;
         emptySlot(slot, irqInvalid);
@@ -18488,7 +18488,7 @@ loadCapTransfer(word_t *buffer)
     const int offset = seL4_MsgMaxLength + ((1ul<<(seL4_MsgExtraCapBits))-1) + 2;
     return capTransferFromWords(buffer + offset);
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18499,7 +18499,7 @@ loadCapTransfer(word_t *buffer)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18509,8 +18509,8 @@ loadCapTransfer(word_t *buffer)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18520,8 +18520,8 @@ loadCapTransfer(word_t *buffer)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18531,8 +18531,8 @@ loadCapTransfer(word_t *buffer)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/registerset.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/registerset.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18542,8 +18542,8 @@ loadCapTransfer(word_t *buffer)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18553,8 +18553,8 @@ loadCapTransfer(word_t *buffer)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/asyncendpoint.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/asyncendpoint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18564,8 +18564,8 @@ loadCapTransfer(word_t *buffer)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18575,8 +18575,8 @@ loadCapTransfer(word_t *buffer)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/endpoint.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/endpoint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18586,8 +18586,8 @@ loadCapTransfer(word_t *buffer)
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18597,7 +18597,7 @@ loadCapTransfer(word_t *buffer)
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c" 2
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c" 2
 
 static inline tcb_queue_t __attribute__((__pure__))
 ep_ptr_get_queue(endpoint_t *epptr)
@@ -18659,7 +18659,7 @@ sendIPC(bool_t blocking, bool_t do_call, word_t badge,
         dest = queue.head;
 
         /* Haskell error "Receive endpoint queue must not be empty" */
-        if(!(dest)) _assert_fail("dest", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c", 81, __FUNCTION__);
+        if(!(dest)) _assert_fail("dest", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c", 81, __FUNCTION__);
 
         /* Dequeue the first TCB */
         queue = tcbEPDequeue(dest, queue);
@@ -18699,7 +18699,7 @@ receiveIPC(tcb_t *thread, cap_t cap)
     async_endpoint_t *aepptr;
 
     /* Haskell error "receiveIPC: invalid cap" */
-    if(!(cap_get_capType(cap) == cap_endpoint_cap)) _assert_fail("cap_get_capType(cap) == cap_endpoint_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c", 121, __FUNCTION__);
+    if(!(cap_get_capType(cap) == cap_endpoint_cap)) _assert_fail("cap_get_capType(cap) == cap_endpoint_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c", 121, __FUNCTION__);
 
     epptr = ((endpoint_t *)(cap_endpoint_cap_get_capEPPtr(cap)));
     diminish = !cap_endpoint_cap_get_capCanSend(cap);
@@ -18744,7 +18744,7 @@ receiveIPC(tcb_t *thread, cap_t cap)
             sender = queue.head;
 
             /* Haskell error "Send endpoint queue must not be empty" */
-            if(!(sender)) _assert_fail("sender", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c", 166, __FUNCTION__);
+            if(!(sender)) _assert_fail("sender", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c", 166, __FUNCTION__);
 
             /* Dequeue the first TCB */
             queue = tcbEPDequeue(sender, queue);
@@ -18819,7 +18819,7 @@ ipcCancel(tcb_t *tptr)
         epptr = ((endpoint_t *)(thread_state_ptr_get_blockingIPCEndpoint(state)));
 
         /* Haskell error "blockedIPCCancel: endpoint must not be idle" */
-        if(!(endpoint_ptr_get_state(epptr) != EPState_Idle)) _assert_fail("endpoint_ptr_get_state(epptr) != EPState_Idle", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c", 241, __FUNCTION__);
+        if(!(endpoint_ptr_get_state(epptr) != EPState_Idle)) _assert_fail("endpoint_ptr_get_state(epptr) != EPState_Idle", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c", 241, __FUNCTION__);
 
         /* Dequeue TCB */
         queue = ep_ptr_get_queue(epptr);
@@ -18927,10 +18927,10 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
     }
 
     default:
-        _fail("invalid EP state", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/endpoint.c", 349, __func__);
+        _fail("invalid EP state", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/endpoint.c", 349, __func__);
     }
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18941,7 +18941,7 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18951,8 +18951,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18962,8 +18962,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18973,7 +18973,7 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
 # 1 "./api/invocation.h" 1
 /* @LICENSE(OKL_CORE) */
 
@@ -18982,8 +18982,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  * To add an invocation call number, edit libsel4/include/interfaces/sel4.xml.
  *
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -18993,8 +18993,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19004,8 +19004,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19015,8 +19015,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19026,8 +19026,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19037,8 +19037,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/asyncendpoint.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/asyncendpoint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19048,8 +19048,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19059,8 +19059,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19070,8 +19070,8 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19081,7 +19081,7 @@ epCancelBadgedSends(endpoint_t *epptr, word_t badge)
  *
  * @TAG(GD_GPL)
  */
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c" 2
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c" 2
 
 exception_t
 decodeIRQControlInvocation(word_t label, unsigned int length,
@@ -19311,7 +19311,7 @@ handleInterrupt(irq_t irq)
 
     default:
         /* No corresponding haskell error */
-        _fail("Invalid IRQ state", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/interrupt.c", 253, __func__);
+        _fail("Invalid IRQ state", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/interrupt.c", 253, __func__);
     }
 
     ackInterrupt(irq);
@@ -19329,7 +19329,7 @@ setIRQState(irq_state_t irqState, irq_t irq)
     intStateIRQTable[irq] = irqState;
     maskInterrupt(irqState == IRQInactive, irq);
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19340,7 +19340,7 @@ setIRQState(irq_state_t irqState, irq_t irq)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19350,8 +19350,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19361,8 +19361,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19372,8 +19372,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19383,8 +19383,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19394,8 +19394,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/object/objecttype.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19405,8 +19405,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19416,8 +19416,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19427,8 +19427,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19438,8 +19438,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/asyncendpoint.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/asyncendpoint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19449,8 +19449,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/endpoint.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/endpoint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19460,8 +19460,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19471,8 +19471,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/interrupt.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/interrupt.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19482,8 +19482,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 1
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19493,8 +19493,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h" 1
+# 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19504,8 +19504,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19515,8 +19515,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 27 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 27 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19526,8 +19526,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 28 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h" 1
+# 28 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19537,8 +19537,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 29 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine.h" 1
+# 29 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19548,8 +19548,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 30 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 30 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19559,8 +19559,8 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 31 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/string.h" 1
+# 31 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/string.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -19570,7 +19570,7 @@ setIRQState(irq_state_t irqState, irq_t irq)
  *
  * @TAG(GD_GPL)
  */
-# 32 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c" 2
+# 32 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c" 2
 
 word_t getObjectSize(word_t t, word_t userObjSize)
 {
@@ -19589,7 +19589,7 @@ word_t getObjectSize(word_t t, word_t userObjSize)
         case seL4_UntypedObject:
             return userObjSize;
         default:
-            _fail("Invalid object type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c", 50, __func__);
+            _fail("Invalid object type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c", 50, __func__);
             return 0;
         }
     }
@@ -19683,7 +19683,7 @@ finaliseCap(cap_t cap, bool_t final, bool_t exposed)
     }
 
     if (exposed) {
-        _fail("finaliseCap: failed to finalise immediately.", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c", 144, __func__);
+        _fail("finaliseCap: failed to finalise immediately.", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c", 144, __func__);
     }
 
     switch (cap_get_capType(cap)) {
@@ -19713,7 +19713,7 @@ finaliseCap(cap_t cap, bool_t final, bool_t exposed)
             suspend(tcb);
             replySlot = (((cte_t *)((unsigned int)(tcb)&~((1ul<<(((4 + 4)+1)))-1ul)))+(tcbReply));
             if (cap_get_capType(replySlot->cap) == cap_reply_cap) {
-                if(!(cap_reply_cap_get_capTCBPtr(replySlot->cap) == 0)) _assert_fail("cap_reply_cap_get_capTCBPtr(replySlot->cap) == 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c", 174, __FUNCTION__);
+                if(!(cap_reply_cap_get_capTCBPtr(replySlot->cap) == 0)) _assert_fail("cap_reply_cap_get_capTCBPtr(replySlot->cap) == 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c", 174, __FUNCTION__);
                 replySlot->cap = cap_null_cap_new();
             }
             Arch_prepareThreadDelete(tcb);
@@ -19761,7 +19761,7 @@ recycleCap(bool_t is_final, cap_t cap)
 
     switch (cap_get_capType(cap)) {
     case cap_null_cap:
-        _fail("recycleCap: can't reconstruct Null", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c", 222, __func__);
+        _fail("recycleCap: can't reconstruct Null", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c", 222, __func__);
         break;
     case cap_domain_cap:
         return cap;
@@ -19783,19 +19783,19 @@ recycleCap(bool_t is_final, cap_t cap)
             /* Haskell error:
              * "Zombie cap should point at inactive thread" */
             if(!(ts == ThreadState_Inactive || ts != ThreadState_IdleThreadState)) _assert_fail("ts == ThreadState_Inactive || ts != ThreadState_IdleThreadState",
- "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c"
-# 243 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c"
+ "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c"
+# 243 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c"
             ,
  244
-# 243 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c"
+# 243 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c"
             , __FUNCTION__)
                                                      ;
             /* Haskell error:
              * "Zombie cap should not point at queued thread" */
-            if(!(!thread_state_get_tcbQueued(tcb->tcbState))) _assert_fail("!thread_state_get_tcbQueued(tcb->tcbState)", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c", 247, __FUNCTION__);
+            if(!(!thread_state_get_tcbQueued(tcb->tcbState))) _assert_fail("!thread_state_get_tcbQueued(tcb->tcbState)", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c", 247, __FUNCTION__);
             /* Haskell error:
              * "Zombie cap should not point at bound thread" */
-            if(!(tcb->boundAsyncEndpoint == ((void *)0))) _assert_fail("tcb->boundAsyncEndpoint == NULL", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c", 250, __FUNCTION__);
+            if(!(tcb->boundAsyncEndpoint == ((void *)0))) _assert_fail("tcb->boundAsyncEndpoint == NULL", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c", 250, __FUNCTION__);
 
             /* makeObject doesn't exist in C, objects are initialised by
              * zeroing. The effect of recycle in Haskell is to reinitialise
@@ -20050,7 +20050,7 @@ maskCapRights(cap_rights_t cap_rights, cap_t cap)
     }
 
     default:
-        _fail("Invalid cap type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c", 505, __func__); /* Sentinel for invalid enums */
+        _fail("Invalid cap type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c", 505, __func__); /* Sentinel for invalid enums */
     }
 }
 
@@ -20118,7 +20118,7 @@ createObject(object_t t, void *regionBase, int userSize, bool_t deviceMemory)
         return cap_untyped_cap_new(deviceMemory, userSize, ((unsigned int)(regionBase)));
 
     default:
-        _fail("Invalid object type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c", 573, __func__);
+        _fail("Invalid object type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c", 573, __func__);
     }
 }
 
@@ -20241,7 +20241,7 @@ decodeInvocation(word_t label, unsigned int length,
                                           cap_irq_handler_cap_get_capIRQ(cap), extraCaps, buffer);
 
     default:
-        _fail("Invalid cap type", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/objecttype.c", 696, __func__);
+        _fail("Invalid cap type", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/objecttype.c", 696, __func__);
     }
 }
 
@@ -20269,7 +20269,7 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
     doReplyTransfer(ksCurThread, thread, slot);
     return EXCEPTION_NONE;
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20280,7 +20280,7 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20290,8 +20290,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20301,7 +20301,7 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
 # 1 "./api/invocation.h" 1
 /* @LICENSE(OKL_CORE) */
 
@@ -20310,8 +20310,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  * To add an invocation call number, edit libsel4/include/interfaces/sel4.xml.
  *
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20321,8 +20321,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20332,8 +20332,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20343,8 +20343,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20354,8 +20354,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20365,8 +20365,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/tcb.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/tcb.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20376,8 +20376,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20387,8 +20387,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20398,8 +20398,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20409,8 +20409,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20420,8 +20420,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20431,8 +20431,8 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 25 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/string.h" 1
+# 25 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/string.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -20442,7 +20442,7 @@ performInvocation_Reply(tcb_t *thread, cte_t *slot)
  *
  * @TAG(GD_GPL)
  */
-# 26 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c" 2
+# 26 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c" 2
 
 static inline void
 addToBitmap(word_t dom, word_t prio)
@@ -20623,13 +20623,13 @@ setupCallerCap(tcb_t *sender, tcb_t *receiver)
     callerSlot = (((cte_t *)((unsigned int)(receiver)&~((1ul<<(((4 + 4)+1)))-1ul)))+(tcbCaller));
     masterCap = replySlot->cap;
     /* Haskell error: "Sender must have a valid master reply cap" */
-    if(!(cap_get_capType(masterCap) == cap_reply_cap)) _assert_fail("cap_get_capType(masterCap) == cap_reply_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c", 206, __FUNCTION__);
-    if(!(cap_reply_cap_get_capReplyMaster(masterCap))) _assert_fail("cap_reply_cap_get_capReplyMaster(masterCap)", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c", 207, __FUNCTION__);
-    if(!(((tcb_t *)(cap_reply_cap_get_capTCBPtr(masterCap))) == ((void *)0))) _assert_fail("TCB_PTR(cap_reply_cap_get_capTCBPtr(masterCap)) == NULL", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c", 208, __FUNCTION__);
+    if(!(cap_get_capType(masterCap) == cap_reply_cap)) _assert_fail("cap_get_capType(masterCap) == cap_reply_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c", 206, __FUNCTION__);
+    if(!(cap_reply_cap_get_capReplyMaster(masterCap))) _assert_fail("cap_reply_cap_get_capReplyMaster(masterCap)", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c", 207, __FUNCTION__);
+    if(!(((tcb_t *)(cap_reply_cap_get_capTCBPtr(masterCap))) == ((void *)0))) _assert_fail("TCB_PTR(cap_reply_cap_get_capTCBPtr(masterCap)) == NULL", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c", 208, __FUNCTION__);
     cap_reply_cap_ptr_set_capCallerSlot(&replySlot->cap, ((unsigned int)(callerSlot)));
     callerCap = callerSlot->cap;
     /* Haskell error: "Caller cap must not already exist" */
-    if(!(cap_get_capType(callerCap) == cap_null_cap)) _assert_fail("cap_get_capType(callerCap) == cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/tcb.c", 212, __FUNCTION__);
+    if(!(cap_get_capType(callerCap) == cap_null_cap)) _assert_fail("cap_get_capType(callerCap) == cap_null_cap", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/tcb.c", 212, __FUNCTION__);
     callerSlot->cap = cap_reply_cap_new(((unsigned int)(((void *)0))), false, ((unsigned int)(sender)));
 }
 
@@ -21507,7 +21507,7 @@ setThreadName(tcb_t *tcb, const char *name)
 {
     strlcpy(tcb->tcbName, name, ((1ul<<((4 + 4))) - sizeof(tcb_t)));
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21518,7 +21518,7 @@ setThreadName(tcb_t *tcb, const char *name)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/config.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/config.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21528,8 +21528,8 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21539,8 +21539,8 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/failures.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/failures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21550,8 +21550,8 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/api/syscall.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/api/syscall.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21561,7 +21561,7 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
 # 1 "./api/invocation.h" 1
 /* @LICENSE(OKL_CORE) */
 
@@ -21570,8 +21570,8 @@ setThreadName(tcb_t *tcb, const char *name)
  * To add an invocation call number, edit libsel4/include/interfaces/sel4.xml.
  *
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21581,8 +21581,8 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21592,8 +21592,8 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/untyped.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/untyped.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21603,8 +21603,8 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/objecttype.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/objecttype.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21614,8 +21614,8 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/cnode.h" 1
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/cnode.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21625,8 +21625,8 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 21 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/cspace.h" 1
+# 21 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/cspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21636,8 +21636,8 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 22 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/thread.h" 1
+# 22 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/thread.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21647,8 +21647,8 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 23 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 23 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21658,7 +21658,7 @@ setThreadName(tcb_t *tcb, const char *name)
  *
  * @TAG(GD_GPL)
  */
-# 24 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/object/untyped.c" 2
+# 24 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/object/untyped.c" 2
 
 static word_t
 alignUp(word_t baseValue, unsigned int alignment)
@@ -21891,7 +21891,7 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
 
     return EXCEPTION_NONE;
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21902,7 +21902,7 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/types.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/types.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21912,8 +21912,8 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21923,8 +21923,8 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/kernel/vspace.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21934,8 +21934,8 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/machine.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21945,8 +21945,8 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/kernel/vspace.h" 1
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/kernel/vspace.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21956,8 +21956,8 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
  *
  * @TAG(GD_GPL)
  */
-# 16 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine.h" 1
+# 16 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21967,8 +21967,8 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
  *
  * @TAG(GD_GPL)
  */
-# 17 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/arch/arm/arch/linker.h" 1
+# 17 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/arch/arm/arch/linker.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21978,8 +21978,8 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
  *
  * @TAG(GD_GPL)
  */
-# 18 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/devices.h" 1
+# 18 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/devices.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -21989,8 +21989,8 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
  *
  * @TAG(GD_GPL)
  */
-# 19 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/hardware.h" 1
+# 19 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/hardware.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22000,7 +22000,7 @@ invokeUntyped_Retype(cte_t *srcSlot, void* regionBase,
  *
  * @TAG(GD_GPL)
  */
-# 20 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c" 2
+# 20 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c" 2
 
 
 
@@ -22193,7 +22193,7 @@ enum IPGConstants {
     IPG_CLK_HIGHFREQ = 2,
     IPG_CLK_32K = 3
 };
-# 222 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/hardware.c"
+# 222 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/hardware.c"
 __attribute__((__section__(".boot.text"))) void
 map_kernel_devices(void)
 {
@@ -22387,7 +22387,7 @@ handleSpuriousIRQ(void)
 {
     /* Do nothing */
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/io.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/io.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22398,7 +22398,7 @@ handleSpuriousIRQ(void)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22408,8 +22408,8 @@ handleSpuriousIRQ(void)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/io.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/io.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22419,8 +22419,8 @@ handleSpuriousIRQ(void)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/io.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/machine/io.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/io.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/machine/io.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22430,8 +22430,8 @@ handleSpuriousIRQ(void)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/io.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/plat/imx31/plat/machine/devices.h" 1
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/io.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/plat/imx31/plat/machine/devices.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22441,8 +22441,8 @@ handleSpuriousIRQ(void)
  *
  * @TAG(GD_GPL)
  */
-# 15 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/io.c" 2
-# 37 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/plat/imx31/machine/io.c"
+# 15 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/io.c" 2
+# 37 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/plat/imx31/machine/io.c"
 enum UARTControlBits {
     UART_SR1_TRDY = 13,
     UART_SR1_RRDY = 9
@@ -22472,7 +22472,7 @@ unsigned char getDebugChar(void)
 
     return *((volatile uint32_t *)(0xfff03000 + (0x00 /* UART Receiver Register */)));
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/string.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/string.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22483,7 +22483,7 @@ unsigned char getDebugChar(void)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22493,8 +22493,8 @@ unsigned char getDebugChar(void)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/string.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/string.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/string.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/string.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22504,7 +22504,7 @@ unsigned char getDebugChar(void)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/string.c" 2
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/string.c" 2
 
 
 
@@ -22540,7 +22540,7 @@ unsigned int strlcat(char *dest, const char *src, unsigned int size)
     }
     return len;
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/util.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/util.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22551,7 +22551,7 @@ unsigned int strlcat(char *dest, const char *src, unsigned int size)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/assert.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/assert.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22561,8 +22561,8 @@ unsigned int strlcat(char *dest, const char *src, unsigned int size)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/util.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/stdint.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/util.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/stdint.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22572,8 +22572,8 @@ unsigned int strlcat(char *dest, const char *src, unsigned int size)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/util.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/util.h" 1
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/util.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/util.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22583,7 +22583,7 @@ unsigned int strlcat(char *dest, const char *src, unsigned int size)
  *
  * @TAG(GD_GPL)
  */
-# 14 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/util.c" 2
+# 14 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/util.c" 2
 
 /*
  * Zero 'n' bytes of memory starting from 's'.
@@ -22596,8 +22596,8 @@ memzero(void *s, unsigned int n)
     uint8_t *p = s;
 
     /* Ensure alignment constraints are met. */
-    if(!((unsigned int)s % 4 == 0)) _assert_fail("(unsigned int)s % 4 == 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/util.c", 26, __FUNCTION__);
-    if(!(n % 4 == 0)) _assert_fail("n % 4 == 0", "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/util.c", 27, __FUNCTION__);
+    if(!((unsigned int)s % 4 == 0)) _assert_fail("(unsigned int)s % 4 == 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/util.c", 26, __FUNCTION__);
+    if(!(n % 4 == 0)) _assert_fail("n % 4 == 0", "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/util.c", 27, __FUNCTION__);
 
     /* We will never memzero an area larger than the largest current
        live object */
@@ -22708,7 +22708,7 @@ str_to_int(const char* str)
 
     return val;
 }
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/config/default_domain.c"
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/config/default_domain.c"
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22719,7 +22719,7 @@ str_to_int(const char* str)
  * @TAG(GD_GPL)
  */
 
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/object/structures.h" 1
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/object/structures.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22729,8 +22729,8 @@ str_to_int(const char* str)
  *
  * @TAG(GD_GPL)
  */
-# 12 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/config/default_domain.c" 2
-# 1 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/include/model/statedata.h" 1
+# 12 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/config/default_domain.c" 2
+# 1 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/include/model/statedata.h" 1
 /*
  * Copyright 2014, General Dynamics C4 Systems
  *
@@ -22740,7 +22740,7 @@ str_to_int(const char* str)
  *
  * @TAG(GD_GPL)
  */
-# 13 "/home/kq/kangqiao_seL4/RefOS_x86/kernel/src/config/default_domain.c" 2
+# 13 "/home/kq/kangqiao_seL4/RefOS_partition_all/kernel/src/config/default_domain.c" 2
 
 /* Default schedule. */
 const dschedule_t ksDomSchedule[] = {

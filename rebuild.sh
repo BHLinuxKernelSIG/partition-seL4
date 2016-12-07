@@ -5,3 +5,4 @@ make clean
 make kzm_debug_defconfig
 make silentoldconfig
 make
+

@@ -8,132 +8,95 @@
 #include "shared.h"
 
 #include "partinit.h"
-#include <partition.h>
+#include "partition.h"
+#include "port.h"
 
 #include <refos-util/dprintf.h>
+#include "../process/process.h"
+#include "deployment.h"
 
-#define num_of_part 2
-#define num_part1_proc 2
-#define num_part2_proc 3
-
-void hello_init()
+void spawn_system_process()
 {
-    procServ.hello_cptr = get_tcb_cptr_from_pid(4);
-    procServ.hello1_cptr = get_tcb_cptr_from_pid(5);
-    procServ.hello2_cptr = get_tcb_cptr_from_pid(6);
-    procServ.hello3_cptr = get_tcb_cptr_from_pid(7);
-    procServ.hello4_cptr = get_tcb_cptr_from_pid(8);
-}
+    int error;
 
-void build_struct(struct partition **part, struct process **proc,int num_part)
-{
-    seL4_DebugPrintf("building structs.....\n");
-    config_part(part[0], 
-                part[1],
-                0,
-                5,
-                5,
-                2,
-                1000);
-
-    //seL4_DebugPrintf("after 1st config_part\n");
-
-    config_part(part[1], 
-                part[0],
-                1,
-                5,
-                5,
-                3,
-                1000);
-
-    //seL4_DebugPrintf("after 2nd config_part\n");
-
-    config_proc(proc[0],
-                part[0],
-                0,
-                100,
-                "hello0",
-                0,
-                procServ.hello_cptr);
-
-    //seL4_DebugPrintf("after 1st config_proc\n");
-
-    config_proc(proc[1],
-                part[0],
-                1,
-                100,
-                "hello1",
-                0,
-                procServ.hello2_cptr);
-
-    //seL4_DebugPrintf("after 2nd config_proc\n");
-
-
-    config_proc(proc[2],
-                part[0],
-                2,
-                100,
-                "hello2",
-                0,
-                procServ.hello2_cptr);
-
-    //seL4_DebugPrintf("after 3rd config_proc\n");
-
-    config_proc(proc[3],
-                part[1],
-                3,
-                100,
-                "hello3",
-                0,
-                procServ.hello3_cptr);
-
-    //seL4_DebugPrintf("after 4th config_proc\n");
-
-    config_proc(proc[4],
-                part[1],
-                4,
-                100,
-                "hello4",
-                0,
-                procServ.hello4_cptr);
-
-    //seL4_DebugPrintf("after 5th config_proc\n");
-
-    part[0]->procs[0] = proc[0];
-    part[0]->procs[1] = proc[1];
-    part[0]->next->procs[0] = proc[2];
-    part[0]->next->procs[1] = proc[3];
-    part[0]->next->procs[2] = proc[4];
-}
-
-int part_init()
-{
-    hello_init();
-
-    //int *num = (int *)create_shared_mem(0x1000);
-    //*num = num_of_part;
-
-    //struct partition* start = (struct partition *)(num + 1);
-    struct partition* part_array[2];
-    for(int i = 0; i < 2; i ++)
-    {
-        part_array[i] = malloc(sizeof(struct partition));
+    error = proc_load_direct("console_server", 252, "", PID_NULL, 
+            PROCESS_PERMISSION_DEVICE_IRQ | PROCESS_PERMISSION_DEVICE_MAP |
+            PROCESS_PERMISSION_DEVICE_IOPORT);
+    if (error) {
+        ROS_WARNING("Procserv could not start console_server.");
+        assert(!"RefOS system startup error.");
     }
 
-    struct process *proc_array[5];
-    for(int i = 0; i < 5;i ++)
-    {
-        proc_array[i] = malloc(sizeof(struct process));
+    error = proc_load_direct("file_server", 250, "", PID_NULL, 0x0);
+    if (error) {
+        ROS_WARNING("Procserv could not start file_server.");
+        assert(!"RefOS system startup error.");
     }
+}
 
-    // build all stucts
-    build_struct(part_array, proc_array, 2);
+seL4_CPtr get_tcb_cptr_from_pid(int pid, int tid)
+{
+    struct proc_pcb* pcb = pid_get_pcb(&procServ.PIDList, pid);
+    struct proc_tcb* tcb = (struct proc_tcb*)cvector_get(&pcb->threads, tid);
+    seL4_CPtr hello_cptr = thread_tcb_obj(tcb);
+    return hello_cptr;
+}
 
-    //#ifdef CONFIG_PART_DEBUG
+// system init function
 
-    traverse_all_parts(part_array, proc_array, 2);
+extern uint64_t time_array[POK_CONFIG_NB_THREADS];
 
-    //#endif
+void test_array()
+{
+    for (int i = 0; i < 5; i++)
+    {
+        seL4_DebugPrintf("timecap %d is %d\n", i, time_array[i]);
+    }
+}
 
+int system_init()
+{
+#ifdef CONFIG_PART_DEBUG
+    seL4_DebugPrintf("\n============ System Init Start =============\n");
+#endif
+
+    // start fileserv and console serv
+#ifdef CONFIG_PART_DEBUG
+    seL4_DebugPrintf("\nspawning system threads...\n");
+#endif
+
+    spawn_system_process();
+
+#ifdef CONFIG_PART_DEBUG
+    seL4_DebugPrintf("...finished\n");
+#endif
+    
+    // create partition data structs
+    partition_init();
+#ifdef CONFIG_PART_DEBUG
+    traverse_all_parts();
+#endif
+    
+    // create process data structs
+    process_init();
+
+#ifdef CONFIG_PART_DEBUG
+    traverse_all_procs();
+#endif
+
+    // init scheduling data structs
+    sched_init();
+
+    // port init [TODO]
+    port_init();
+
+    // create scheduler thread and start scheduling
+    create_timer_thread();
+
+#ifdef CONFIG_PART_DEBUG
+    seL4_DebugPrintf("\n============ System Init Finished =============\n");
+#endif
+
+    // will return to main() and start finite loop
     return 0;
 }
