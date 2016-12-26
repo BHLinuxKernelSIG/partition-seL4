@@ -47,6 +47,8 @@ void GET_PROCESS_STATUS (PROCESS_ID_TYPE id,
 	*return_code = NO_ERROR;
 }
 
+/*not implemented, use proc_clone instead*/
+// TODO: implement this API
 void CREATE_PROCESS (PROCESS_ATTRIBUTE_TYPE  *attributes,
 					 PROCESS_ID_TYPE         *process_id,
 					 RETURN_CODE_TYPE        *return_code )
@@ -54,14 +56,14 @@ void CREATE_PROCESS (PROCESS_ATTRIBUTE_TYPE  *attributes,
 	seL4_DebugPrintf("Function %s not implemented yet\n", __FUNCTION__);
 }
 
-void STOP_SELF ()
+// TODO
+void STOP_SELF()
 {
-	int error = proc_stop_self();
-	if (error)
-		seL4_DebugPrintf("stop self error\n");
+	RPC_NBSend1(SYS_STOP_SELF);
 }
 
 
+// TODO
 void SET_PRIORITY (PROCESS_ID_TYPE  process_id,
 				   PRIORITY_TYPE    prio,
 				   RETURN_CODE_TYPE *return_code )
@@ -83,26 +85,28 @@ void SET_PRIORITY (PROCESS_ID_TYPE  process_id,
 		return;
 	}
 
-	pok_ret_t error = proc_set_prio(process_id, prio);
-	*return_code = error;
+	RPC_NBSend3(SYS_SET_PRIORITY,process_id, prio);
+	*return_code = NO_ERROR;
 }
 
+// TODO
 void SUSPEND_SELF (SYSTEM_TIME_TYPE time_out,
 				   RETURN_CODE_TYPE *return_code )
 {
-	if (time_out > 0)
+	if (time_out > 0) // not implemented
 	{
 		*return_code = NOT_AVAILABLE;
 	}
 	else
 	{
-		pok_ret_t error = proc_stop_self();
-		*return_code = error;
+		//pok_ret_t error = proc_stop_self();
+		RPC_NBSend1(SYS_SUSPEND_SELF);
+		*return_code = NO_ERROR;
 	}
 	return;
 }
 
-
+// TODO
 void SUSPEND (PROCESS_ID_TYPE    process_id,
 			  RETURN_CODE_TYPE   *return_code )
 {
@@ -122,10 +126,11 @@ void SUSPEND (PROCESS_ID_TYPE    process_id,
 		*return_code = NO_ACTION;
 		return;
 	}
-	pok_ret_t error = proc_stop(process_id);
-	*return_code =  error;
+	RPC_NBSend2(SYS_SUSPEND, process_id);
+	*return_code =  NO_ERROR;
 }
 
+// TODO
 void RESUME (PROCESS_ID_TYPE     process_id,
 			 RETURN_CODE_TYPE    *return_code )
 {
@@ -146,25 +151,23 @@ void RESUME (PROCESS_ID_TYPE     process_id,
 		return;
 	}
 
-
-	pok_ret_t error = proc_resume(process_id);
-	*return_code = error;
+	pok_ret_t error = RPC_NBSend2(SYS_RESUME, process_id);
+	*return_code = NO_ERROR;
 }
 
 void START (PROCESS_ID_TYPE   process_id,
 			RETURN_CODE_TYPE   *return_code )
 {
-	pok_ret_t error = proc_resume(process_id);
-	*return_code = error;
+	RESUME (process_id, return_code);
 }
 
+// not implemented
 void STOP (PROCESS_ID_TYPE    process_id,
 		   RETURN_CODE_TYPE *return_code )
 {
-	(void) process_id;
-	SUSPEND(process_id, return_code);
 }
 
+// not implemented
 void DELAYED_START (PROCESS_ID_TYPE   process_id,
 				    SYSTEM_TIME_TYPE  delay_time,
 				    RETURN_CODE_TYPE *return_code )
@@ -172,6 +175,7 @@ void DELAYED_START (PROCESS_ID_TYPE   process_id,
 	*return_code = NOT_AVAILABLE;
 }
 
+// not implemented
 void LOCK_PREEMPTION (LOCK_LEVEL_TYPE     *lock_level,
 					  RETURN_CODE_TYPE    *return_code )
 {
@@ -179,6 +183,7 @@ void LOCK_PREEMPTION (LOCK_LEVEL_TYPE     *lock_level,
 	*return_code = NOT_AVAILABLE;
 }
 
+// not implemented
 void UNLOCK_PREEMPTION (LOCK_LEVEL_TYPE   *lock_level,
 					    RETURN_CODE_TYPE  *return_code )
 

@@ -17,6 +17,8 @@
 
 #define POK_CONFIG_PARTITIONS_SIZE  {120 * 1024,120 * 1024}
 #define POK_CONFIG_PARTITIONS_NTHREADS {2,3}
+
+/*do not use this*/
 #define POK_CONFIG_THREADS_NANME \
 {\
 "fileserv/hello_world", \
@@ -26,6 +28,7 @@
 "fileserv/hello_world4"  \
 }
 
+/*now use this one*/
 #define CONFIG_MAIN_THREADS_NANE \
 {\
 "fileserv/hello_world", \

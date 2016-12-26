@@ -26,6 +26,8 @@
 #include <sel4platsupport/timer.h>
 #include <platsupport/plat/timer.h>
 
+#include <sys_apex.h>
+
 seL4_CPtr get_tcb_cptr_from_pid(int pid, int tid);
 
 simple_t simple;
@@ -34,18 +36,6 @@ vka_t vka;
 vspace_t vspace;
 seL4_timer_t *timer;
 
-typedef enum {
-    SYS_SET_PARTITION_MODE = 0xf000
-} syscall_num_t;
-
-/*! @brief Process server IPC message handler.
-    
-    Handles dispatching of all process server IPC messages. Calls each individual dispatcher until
-    the correct dispatcher for the message type has been found.
-
-    @param s The process server global state.
-    @param msg The process server recieved message info.
- */
 static void
 proc_server_handle_message(struct procserv_state *s, struct procserv_msg *msg)
 {

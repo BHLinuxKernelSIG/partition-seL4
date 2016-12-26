@@ -23,13 +23,10 @@ extern seL4_timer_t* timer;
 extern simple_t simple;
 
 uint8_t current_partition;
-
-
 uint64_t pok_tick_counter = 0;
 
 seL4_CPtr need_suspend = 0;
 
-// Global Schedule information
 
 uint64_t pok_sched_slots[POK_CONFIG_SCHEDULING_NBSLOTS] = 
     POK_CONFIG_SCHEDULING_SLOTS;

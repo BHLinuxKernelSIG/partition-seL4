@@ -51,6 +51,11 @@ typedef   enum { FIFO = 0, PRIORITY = 1 } QUEUING_DISCIPLINE_TYPE;
 typedef   APEX_LONG_INTEGER     SYSTEM_TIME_TYPE; /* 64-bit signed integer with a 1 nanosecond LSB */
 #define   INFINITE_TIME_VALUE       -1
 
+void RPC_NBSend1(int mess1);
+void RPC_NBSend2(int mess1, int mess2);
+void RPC_NBSend3(int mess1, int mess2, int mess3);
+void RPC_NBSend4(int mess1, int mess2, int mess3, int mess4);
+
 typedef enum
 {
 		POK_ERRNO_OK                    =   0,

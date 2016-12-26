@@ -1,15 +1,6 @@
 #include <apex_common.h>
 #include <apex_part.h>
-#include <refos-util/dprintf.h>
-
-
-void RPC_NBSend2(int mess1, int mess2)
-{
-        seL4_MessageInfo_t tag = seL4_MessageInfo_new(0,0,0,2);
-        seL4_SetMR(0, mess1);
-        seL4_SetMR(1, mess2);
-        seL4_NBSend(REFOS_PROCSERV_EP, tag);
-}
+#include <refos-util/dprintf.h>SYS_STOP_SELF
 
 void GET_PARTITION_STATUS (PARTITION_STATUS_TYPE *status,
                            RETURN_CODE_TYPE      *return_code)
