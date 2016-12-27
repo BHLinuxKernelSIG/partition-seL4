@@ -55,25 +55,34 @@
 {POK_SCHED_RR,POK_SCHED_RR}
 
 #define POK_CONFIG_NB_PORTS         2
+#define POK_PORTS_BY_PARTITION      {0, 1}
+#define POK_CONFIG_PARTITIONS_PORTS {0, 1}
 
-#define POK_CONFIG_NB_ALLPORTS  2
+#define POK_PORTS_NAME {"dataout", "datain"}
+#define POK_PORTS_KIND {POK_PORT_KIND_SAMPLING, POK_PORT_KIND_SAMPLING}
+#define POK_PORTS_ID    {0, 1};
+#define POK_PORTS_DESTS {1, NULL}
+
 
 #define POK_NEEDS_DEBUG
 
+/*
 #define num_of_part 2
 #define num_of_proc 5
 #define num_part1_proc 2
 #define num_part2_proc 3
+*/
 
 #define MIN_PRIORITY_VALUE       1
 #define MAX_PRIORITY_VALUE       63
-
 
 typedef enum
 {
    dataout = 0,
    datain  = 1
 }pok_ports_identitiers_t;
+
+
 
 /*
 typedef unsigned short        uint8_t;

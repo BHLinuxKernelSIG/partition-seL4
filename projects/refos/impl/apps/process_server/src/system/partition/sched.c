@@ -316,19 +316,12 @@ void scheduler_thread()
     seL4_Word sender;
     current_partition = 0;
 
-    suspend_all();
+    //suspend_all();
     while(1) {
         timer_oneshot_relative(timer->timer, 1000 * 1000);
         seL4_Wait(aep.cptr, &sender);
-	    sel4_timer_handle_single_irq(timer);
+	      sel4_timer_handle_single_irq(timer);
         pok_tick_counter += 1;
-        /*
-        if (need_suspend > 0){
-        	seL4_TCB_Suspend(need_suspend);
-        	need_suspend = 0;
-        }
-        */
-        //seL4_DebugPrintf("\n[pok_sched] scheduler start\n");
         pok_sched();
     }
 

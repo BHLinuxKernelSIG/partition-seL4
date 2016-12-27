@@ -48,7 +48,6 @@ void GET_PROCESS_STATUS (PROCESS_ID_TYPE id,
 }
 
 /*not implemented, use proc_clone instead*/
-// TODO: implement this API
 void CREATE_PROCESS (PROCESS_ATTRIBUTE_TYPE  *attributes,
 					 PROCESS_ID_TYPE         *process_id,
 					 RETURN_CODE_TYPE        *return_code )
@@ -151,7 +150,7 @@ void RESUME (PROCESS_ID_TYPE     process_id,
 		return;
 	}
 
-	pok_ret_t error = RPC_NBSend2(SYS_RESUME, process_id);
+	RPC_NBSend2(SYS_RESUME, process_id);
 	*return_code = NO_ERROR;
 }
 

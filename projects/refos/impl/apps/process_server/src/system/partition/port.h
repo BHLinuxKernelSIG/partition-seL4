@@ -12,7 +12,7 @@
 #define bool_t int
 #define pok_bool_t int
 
-void port_init();
+extern void port_init();
 
 typedef enum
 {
@@ -49,16 +49,12 @@ typedef struct
 	 pok_port_queueing_discipline_t   discipline;
 	 pok_bool_t                       ready;
 	 bool_t                           empty;
-	 int                          kind;
-	 unsigned long int                         refresh;
-	 unsigned long int                         last_receive;
-	 //pok_lockobj_t                    lock;
+	 int                              kind;
+	 unsigned long int                refresh;
+	 unsigned long int                last_receive;
 	 bool_t                           must_be_flushed;
 	 char *data;
 }pok_port_t;
-
-extern pok_port_t  pok_ports[];
-//extern pok_queue_t pok_queue;
 
 typedef struct
 {
@@ -67,5 +63,14 @@ typedef struct
    unsigned long        refresh;
    bool_t               validity;
 }pok_port_sampling_status_t;
+
+extern pok_port_t  pok_ports[];
+extern const char  pok_queue_data[1024];
+
+extern uint8_t pok_ports_by_partition[];
+extern char*   pok_ports_names[];
+extern uint8_t pok_ports_identifiers[];
+extern uint8_t pok_ports_nb_destinations[]; 
+extern uint8_t pok_ports_kind[];
 
 #endif

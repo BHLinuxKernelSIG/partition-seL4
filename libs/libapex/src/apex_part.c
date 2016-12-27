@@ -1,6 +1,6 @@
 #include <apex_common.h>
 #include <apex_part.h>
-#include <refos-util/dprintf.h>SYS_STOP_SELF
+#include <refos-util/dprintf.h>
 
 void GET_PARTITION_STATUS (PARTITION_STATUS_TYPE *status,
                            RETURN_CODE_TYPE      *return_code)

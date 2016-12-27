@@ -26,7 +26,7 @@
 #include <sel4platsupport/timer.h>
 #include <platsupport/plat/timer.h>
 
-#include <sys_apex.h>
+#include "sys_apex.h"
 
 seL4_CPtr get_tcb_cptr_from_pid(int pid, int tid);
 
@@ -47,6 +47,7 @@ proc_server_handle_message(struct procserv_state *s, struct procserv_msg *msg)
     struct proc_pcb *pcb = pid_get_pcb_from_badge(
                                     &procServ.PIDList, msg->badge);
 
+    // test code
     if (label == 0xabcd)
     {
         POK_CURRENT_THREAD.status = POK_STATE_WAIT_NEXT_ACTIVATION;
@@ -65,6 +66,55 @@ proc_server_handle_message(struct procserv_state *s, struct procserv_msg *msg)
         pok_ret_t ret = pok_partition_set_mode
                               (current_partition, mode);
         assert(ret == POK_ERRNO_OK);
+        return;
+    }
+
+    if (label == SYS_STOP_SELF)
+    {
+        POK_CURRENT_THREAD.status = POK_STATE_STOPPED;
+        pok_sched();
+        return;
+    }
+
+    if (label == SYS_SUSPEND_SELF)
+    {
+        POK_CURRENT_THREAD.status = POK_STATE_STOPPED;
+        pok_sched();
+        return;
+    }
+
+    if (label == SYS_SET_PRIORITY)
+    {
+        int id = seL4_GetMR(1);
+        int prio = seL4_GetMR(2);
+        if (POK_CURRENT_PARTITION.low > id || POK_CURRENT_PARTITION.high < id)
+          return;
+        proc_array[id].wakeup_time = POK_GETTICK();
+        proc_array[id].prio = prio;
+        pok_sched();
+        return;
+    }
+
+    if (label == SYS_SUSPEND)
+    {
+        int id = seL4_GetMR(1);
+        if (POK_CURRENT_PARTITION.low > id || 
+             POK_CURRENT_PARTITION.high < id)
+            return;
+        proc_array[id].status = POK_STATE_STOPPED;
+        pok_sched();
+        return;
+    }
+
+    if (label == SYS_RESUME)
+    {
+        int id = seL4_GetMR(1);
+        if (POK_CURRENT_PARTITION.low > id || 
+               POK_CURRENT_PARTITION.high < id)
+        return;
+        proc_array[id].wakeup_time = POK_GETTICK();
+        proc_array[id].status = POK_STATE_RUNNABLE;
+        pok_sched();
         return;
     }
 

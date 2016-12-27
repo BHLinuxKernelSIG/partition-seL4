@@ -63,105 +63,119 @@ int proc_port_sampling_create_handler(void *user,
                                     int period, 
                                     int *id)
 {
-    struct proc_pcb* pcb = (struct proc_pcb*)user;
-    struct partition *part = pcb->proc->part;
+   pok_ret_t ret;
 
-    *id = 0;
-    int gid = *id;
+   ret = pok_port_create (name, size, core, POK_PORT_KIND_SAMPLING, id);
+seL4_DebugPrintf("[create handler] create returned %d\n", ret);
+   while(1);
+   if (ret != POK_ERRNO_OK)
+   {
+      return ret;
+   }
 
-    //pok_ports[gid].index      = pok_queue.size - pok_queue.available_size;
-    pok_ports[gid].off_b      = 0;
-    pok_ports[gid].off_e      = 0;
-    pok_ports[gid].size       = size;
-    pok_ports[gid].full       = FALSE;
-    //pok_ports[gid].partition  = pok_current_partition;
-    pok_ports[gid].partition  = part;
-    pok_ports[gid].direction  = core;
-    pok_ports[gid].ready      = TRUE;
-    pok_ports[gid].kind       = POK_PORT_KIND_SAMPLING;
+   pok_ports[*id].refresh        = period;
+   pok_ports[*id].last_receive   = 0;
 
-    //pok_queue.available_size  = pok_queue.available_size - size;
-    pok_ports[gid].refresh        = period;
-    pok_ports[gid].last_receive   = 0;
+   
 
-    pok_ports[gid].data = malloc(size);
-
-    procServ.shared_dspace = ram_dspace_create(&procServ.dspaceList, size);
-
-    //caps[gid] = procServ.shared_dspace->pages[0].cptr;
-
-    return 0;
+   return ret;
 }
 
-int proc_port_sampling_write_handler(void *user, int id, void* addr, int len)
+int proc_port_sampling_write_handler(void *user, int id, void* data, int len)
 {
-    int error;
-    struct proc_pcb* pcb = (struct proc_pcb*)user;
+   if (data == NULL)
+   {
+      return POK_ERRNO_EINVAL;
+   }
 
-    pok_ports[id].must_be_flushed = TRUE;
+   if (id > POK_CONFIG_NB_PORTS)
+   {
+      return POK_ERRNO_EINVAL;
+   }
 
-    vspace_t *vspace = &pcb->vspace.vspace;
-    seL4_CPtr cap = vspace_get_cap(vspace, addr);
+   if (! pok_own_port (POK_SCHED_CURRENT_PARTITION, id))
+   {
+      return POK_ERRNO_PORT;
+   }
 
-    cspacepath_t loadee_frame_cap;
-    cspacepath_t loader_frame_cap;
+   if (pok_ports[id].ready != TRUE)
+   {
+      return POK_ERRNO_EINVAL;
+   }
+   
+   if (len > pok_ports[id].size)
+   {
+      return POK_ERRNO_EINVAL;
+   }
 
-    vka_cspace_make_path(&procServ.vka, cap, &loadee_frame_cap);
+   if (pok_ports[id].direction != POK_PORT_DIRECTION_OUT)
+   {
+      return POK_ERRNO_DIRECTION;
+   }
 
-    error = vka_cnode_copy(&loader_frame_cap, &loadee_frame_cap, seL4_AllRights);
-    assert(error == 0);
+   pok_port_write(id, data, len);
+   
+   pok_ports[id].must_be_flushed = TRUE;
 
-    char *loader_vaddr = vspace_map_pages(&procServ.vspace, 
-                                        &loader_frame_cap.capPtr, 
-                                        NULL, 
-                                        seL4_AllRights,
-                                        1, 
-                                        seL4_PageBits, 
-                                        1
-                            );
-
-    if (len > pok_ports[id].size)
-    {
-        return POK_ERRNO_SIZE;
-    }
-
-    memcpy(pok_ports[id].data, loader_vaddr, len);
-
-    pok_ports[id].empty = FALSE;
-    //pok_ports[pid].last_receive = POK_GETTICK ();
-
-    return POK_ERRNO_OK;    
+   return POK_ERRNO_OK;
 }
 
-int proc_port_sampling_read_handler(void *user, int id, void *addr, 
+int proc_port_sampling_read_handler(void *user, int id, void *data, 
                                     int* len, int *valid)
 {
-    int error;
+   pok_ret_t ret;
 
-    struct proc_pcb* pcb = (struct proc_pcb*)user;
-    vspace_t *vspace = &pcb->vspace.vspace;
-    seL4_CPtr cap = vspace_get_cap(vspace, addr);
+   if (data == NULL)
+   {
+      return POK_ERRNO_EINVAL;
+   }
 
-    cspacepath_t loadee_frame_cap;
-    cspacepath_t loader_frame_cap;
+   if (id > POK_CONFIG_NB_PORTS)
+   {
+      return POK_ERRNO_EINVAL;
+   }
 
-    vka_cspace_make_path(&procServ.vka, cap, &loadee_frame_cap);
+   if (! pok_own_port (POK_SCHED_CURRENT_PARTITION, id))
+   {
+      return POK_ERRNO_PORT;
+   }
 
-    error = vka_cnode_copy(&loader_frame_cap, &loadee_frame_cap, seL4_AllRights);
-    assert(error == 0);
+   if (pok_ports[id].ready != TRUE)
+   {
+      return POK_ERRNO_PORT;
+   }
 
-    char *loader_vaddr = vspace_map_pages(&procServ.vspace, 
-                                          &loader_frame_cap.capPtr, 
-                                          NULL, 
-                                          seL4_AllRights,
-                                          1, 
-                                          seL4_PageBits, 
-                                          1
-                                    );
+   if (pok_ports[id].kind != POK_PORT_KIND_SAMPLING)
+   {
+      return POK_ERRNO_EINVAL;
+   }
 
-    memcpy(loader_vaddr, pok_ports[id].data, pok_ports[id].size);
+   if (pok_ports[id].direction != POK_PORT_DIRECTION_IN)
+   {
+      return POK_ERRNO_MODE;
+   }
 
-    return 0;
+   ret = pok_port_get((uint8_t)id, data, pok_ports[id].size);
+
+   if (ret == POK_ERRNO_EMPTY)
+   {
+      *len = 0;
+      *valid = 0;
+      return POK_ERRNO_EMPTY;
+   }
+
+   if ( (pok_ports[id].last_receive + pok_ports[id].refresh) < POK_GETTICK ())
+   {
+      *valid = FALSE;
+   }
+   else
+   {
+      *valid = TRUE;
+   }
+
+   *len =  pok_ports[id].size;
+
+   return POK_ERRNO_OK;
 }
 
 //==================process interface ==================//
@@ -321,7 +335,7 @@ int proc_get_name_from_pid_handler(void *user, int pid)
 
 int proc_get_pid_from_name_handler(void *user, char *name)
 {
-    for (int i = 0; i < num_of_proc; i++)
+    for (int i = 0; i < POK_CONFIG_NB_THREADS; i++)
     {
         if (!strcmp(name, proc_array[i].name))
             return i;

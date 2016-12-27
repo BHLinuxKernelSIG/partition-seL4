@@ -13,7 +13,20 @@
 #define SYSTEM_LIMIT_NUMBER_OF_EVENTS         256  /* partition scope */
 
 typedef enum {
-	SYS_SET_PARTITION_MODE = 0xf000
+	SYS_APEX_START = 0Xf000,
+    SYS_SET_PARTITION_MODE,
+    
+    SYS_STOP_SELF,
+    SYS_SUSPEND_SELF,
+    
+    SYS_SET_PRIORITY,
+    
+    SYS_SUSPEND,
+    SYS_RESUME,
+
+    SYS_GIVE_UP_PERIOD,
+
+    SYS_APEX_MAX
 } syscall_num_t;
 
 /*----------------------*/
@@ -46,8 +59,10 @@ typedef   void             (* SYSTEM_ADDRESS_TYPE);
 typedef   APEX_BYTE*       MESSAGE_ADDR_TYPE;
 typedef   APEX_INTEGER     MESSAGE_SIZE_TYPE;
 typedef   APEX_INTEGER     MESSAGE_RANGE_TYPE;
+
 typedef   enum { SOURCE = 0, DESTINATION = 1 } PORT_DIRECTION_TYPE;
 typedef   enum { FIFO = 0, PRIORITY = 1 } QUEUING_DISCIPLINE_TYPE;
+
 typedef   APEX_LONG_INTEGER     SYSTEM_TIME_TYPE; /* 64-bit signed integer with a 1 nanosecond LSB */
 #define   INFINITE_TIME_VALUE       -1
 

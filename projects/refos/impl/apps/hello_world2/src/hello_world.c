@@ -29,20 +29,12 @@
 #include <apex_part.h>
 #include <apex_sampling.h>
 
-void test_ping()
-{
-        seL4_MessageInfo_t tag = seL4_MessageInfo_new(0,0,0,1);
-        seL4_SetMR(0, 0xabcd);
-        //printf("[hello0]will call process server\n");
-        seL4_NBSend(REFOS_PROCSERV_EP, tag);
-}
-
 void thread3()
 {
     while(1)
     {
         seL4_DebugPrintf("[PART 1] hello world from part 1 thread 3 \n");
-        test_ping();
+        giveup_period();
     }
 }
 
@@ -51,7 +43,13 @@ void thread4()
     while(1)
     {
         seL4_DebugPrintf("[PART 1] hello world from part 1 thread 4 \n");
-        test_ping();
+        char tmp[100];
+        MESSAGE_SIZE_TYPE size;
+        VALIDITY_TYPE valid;
+        RETURN_CODE_TYPE ret;
+        READ_SAMPLING_MESSAGE(1, tmp, &size, &valid, &ret);
+
+        giveup_period();
     }
 }
 
@@ -62,14 +60,27 @@ int main(void)
     
     refos_initialise();
 
+    seL4_DebugPrintf("[PART 1] hello world from part 1 thread 2\n");
+
     proc_clone(thread3, &clone_stack1[0][4096], 0, 0);
     proc_clone(thread4, &clone_stack2[1][4096], 0, 0);
-    
-    seL4_DebugPrintf("[PART 1] hello world from part 1 thread 2\n");
+
+    RETURN_CODE_TYPE ret;
+    SAMPLING_PORT_ID_TYPE port_id;
+    char *name = "datain";
+    CREATE_SAMPLING_PORT (name,
+                          100,
+                          DESTINATION,
+                          1000, // not implemented
+                          &port_id,
+                          &ret);
+    assert(ret == 0);
+    assert(port_id == 1);
+
+    seL4_DebugPrintf("[PART 1] Port id %d created.\n", port_id);
     seL4_DebugPrintf("[PART 1] Init finish, will set to normal.\n");
 
     OPERATING_MODE_TYPE mode = NORMAL;
-    RETURN_CODE_TYPE ret;
     SET_PARTITION_MODE(mode, &ret);
 
     return 0;

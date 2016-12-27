@@ -9,9 +9,9 @@
 #define POK_GETTICK() pok_tick_counter
 extern uint64_t pok_tick_counter;
 
-void create_timer_thread();
-void sched_init();
-uint32_t pok_sched_part_rr (const uint32_t index_low, 
+extern void create_timer_thread();
+extern void sched_init();
+extern uint32_t pok_sched_part_rr (const uint32_t index_low, 
 	                        const uint32_t index_high,
 	                        const uint32_t prev_thread,
 	                        const uint32_t current_thread);
@@ -49,5 +49,7 @@ extern seL4_CPtr need_suspend;
 
 extern uint64_t pok_sched_slots[POK_CONFIG_SCHEDULING_NBSLOTS];
 extern uint8_t  pok_sched_slots_allocation[POK_CONFIG_SCHEDULING_NBSLOTS];
+
+extern void pok_sched();
 
 #endif

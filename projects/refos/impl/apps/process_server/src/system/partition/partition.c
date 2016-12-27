@@ -64,9 +64,6 @@ void setup_main_thread(int id, int part_id)
    proc_array[id].prio = 1;                 //prio_array[id];
    proc_array[id].base_priority =  1;       //    prio_array[id];
 
-   //proc_array[id].period          = period_array[id];
-   //proc_array[id].next_activation = period_array[id];
-
    proc_array[id].period = 0;
    proc_array[id].next_activation = 0;
 
@@ -94,8 +91,8 @@ void setup_main_thread(int id, int part_id)
 
 void setup_main_thread_ktcb(uint32_t proc_id, uint8_t part_id)
 {
-	proc_array[proc_id].ktcb = 
-	    get_tcb_cptr_from_pid(part_id + CONFIG_PCB_OFFSET, 0);
+      proc_array[proc_id].ktcb = 
+	       get_tcb_cptr_from_pid(part_id + CONFIG_PCB_OFFSET, 0);
 }
 
 void partition_init()
@@ -179,36 +176,11 @@ pok_ret_t pok_partition_thread_create (uint32_t* thread_id,
 
    part_array[partition_id].thread_index += 1;
 
-
-    //proc_array[id].prio      = attr->priority;
-    //proc_array[id].base_priority      = attr->priority;
-
    proc_array[id].prio = prio_array[id];
    proc_array[id].base_priority = prio_array[id];
 
-   /*
-   if (attr->period > 0)
-   {
-      proc_array[id].period          = attr->period;
-      proc_array[id].next_activation = attr->period;
-   }
-   */
-
    proc_array[id].period          = period_array[id];
    proc_array[id].next_activation = period_array[id];
-
-/*
-   if (attr->time_capacity > 0)
-   {
-      proc_array[id].timecap = attr->time_capacity;
-      proc_array[id].remaining_time_capacity = attr->time_capacity;
-   }
-   else
-   {
-      proc_array[id].remaining_time_capacity   = POK_THREAD_DEFAULT_TIME_CAPACITY;
-      proc_array[id].timecap   = POK_THREAD_DEFAULT_TIME_CAPACITY;
-   }
- */
 
    proc_array[id].timecap = time_array[id];
    proc_array[id].remaining_time_capacity = time_array[id];
@@ -263,9 +235,6 @@ void process_init()
       	proc_array[i].end_time = 0;
       	proc_array[i].wakeup_time = 0;
   	}
-
-  	//proc_array[0].status = POK_STATE_RUNNABLE;
-  	//proc_array[2].status = POK_STATE_RUNNABLE;
     return;
 }
 
@@ -311,8 +280,8 @@ pok_ret_t pok_partition_set_mode
 	 }
          //pok_sched_stop_thread(part_array[pid].thread_main);
 	 proc_array[part_array[pid].thread_main].status = POK_STATE_STOPPED;
-         pok_sched ();
-         break;
+   pok_sched ();
+   break;
 
       default:
          return POK_ERRNO_PARTITION_MODE;
